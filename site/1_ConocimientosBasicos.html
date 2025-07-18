@@ -1,0 +1,818 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/1_ConocimientosBasicos.html">
+      
+      
+        <link rel="prev" href="0_Modelo_Capas.html">
+      
+      
+        <link rel="next" href="A_ProblemasEVE.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Conocimientos Básicos - CiberSeguridad Redes.</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conocimientos-basicos-l2-capa-2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="CiberSeguridad Redes." class="md-header__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CiberSeguridad Redes.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conocimientos Básicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="CiberSeguridad Redes." class="md-nav__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    CiberSeguridad Redes.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1. WARM UP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1. WARM UP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="0_Modelo_Capas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo Capas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conocimientos Básicos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="1_ConocimientosBasicos.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conocimientos Básicos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#direccion-fisica-o-mac-media-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirección Física o MAC (Media Access Control).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trama-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trama Ethernet:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hubs-o-concentradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      HUBs o Concentradores.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-arp-address-resolution-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocolo ARP (Address Resolution Protocol).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tormenta-de-broadcast-bucles-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tormenta de Broadcast / Bucles de red.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ANEXO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ANEXO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_ProblemasEVE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problemas Simulador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="conocimientos-basicos-l2-capa-2"><strong>Conocimientos básicos L2 (Capa 2).</strong><a class="headerlink" href="#conocimientos-basicos-l2-capa-2" title="Permanent link">¶</a></h1>
+<h2 id="direccion-fisica-o-mac-media-access-control"><strong>Dirección Física o MAC (Media Access Control).</strong><a class="headerlink" href="#direccion-fisica-o-mac-media-access-control" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Todo dispositivo que tenga una tarjeta de red (alámbrica, inalámbrica, bluetooth, etc.) tiene una dirección MAC.</p>
+</li>
+<li>
+<p>Cada dirección MAC es única, es decir, dos dispositivos de mismo o diferente fabricante no pueden tener la misma dirección MAC.</p>
+</li>
+<li>
+<p>La dirección MAC de un adaptador de red no se puede modificar, aunque sí podemos enviar tramas modificando el campo que muestra nuestra dirección MAC. Es decir, que podemos enviar tramas modificando nuestra MAC, pero si alguien se hace físicamente con nuestro equipo podrá ver la MAC verdadera de nuestro adaptador.</p>
+</li>
+<li>
+<p>La MAC está representada por 48 bits, dispuestos mediante 12 dígitos hexadecimales. Por ejemplo 00:1e:c2:ff:78:ad.</p>
+</li>
+<li>
+<p>Los primeros 3 pares de hexadecimales hacen referencia al fabricante (OUI).</p>
+</li>
+<li>
+<p>Lo últimos 3 pares de hexadecimales hacen referencia al dispositivo.</p>
+</li>
+<li>
+<p>Existen páginas que nos indican una MAC a que empresa pertenece.</p>
+<p>💥https://www.wireshark.org/tools/oui-lookup.html</p>
+</li>
+</ul>
+<p><ins class="critic">Tipos de direcciones MAC.</ins></p>
+<p>💥 Unicast: Son direccionas MAC que van dirigidas a un dispositivo en concreto. </p>
+<figure>
+  <img src="imagenes/warmup/07.png" width="700">
+</figure>
+
+<p>💥 Broadcast: Es una dirección MAC especial (ff:ff:ff:ff:ff:ff) que indica que se debe enviar a todos los dispositivos.</p>
+<figure>
+  <img src="imagenes/warmup/08.png" width="700">
+</figure>
+
+<p>💥 Multicast: La trama se envía a un grupo de dispositivos. Comienzan con el OUI 01:00:5e.</p>
+<figure>
+  <img src="imagenes/warmup/09.png" width="700">
+</figure>
+
+<h2 id="trama-ethernet"><strong>Trama Ethernet:</strong><a class="headerlink" href="#trama-ethernet" title="Permanent link">¶</a></h2>
+<p>Ethernet es uno de los protocolos más habituales en la capa 2. El objetivo es hacer hincapié en que cada protocolo tiene sus cabeceras, cada uno con una razón de ser. Comprender en profundidad un protocolo nos puede ayudar a defendernos o a pensar en posibles ataques a realizar.</p>
+<figure>
+  <img src="imagenes/warmup/10.jpg" width="700">
+</figure>
+
+<ul>
+<li>
+<p>Preámbulo: Sirve para saber cuándo empieza y acaba una trama. Si recibe la secuencia 10101010 quiere decir que comienza una trama, si recibe la secuencia 10101011 es que acaba la trama.</p>
+</li>
+<li>
+<p>Dest.Addr/Source Addr: Son las direcciones MAC del destinatario y del origen. Se pone primero el destino porque algunos equipos de red al leer el destino envían directamente la trama para ser más rápidos.</p>
+</li>
+<li>
+<p>Type: Tipo de protocolo de capa 3 encapsulado.</p>
+</li>
+<li>
+<p>Data: Datos que transporta.</p>
+</li>
+<li>
+<p>FCS: Para la detección de errores durante el transporte.</p>
+</li>
+</ul>
+<h2 id="hubs-o-concentradores">HUBs o Concentradores.<a class="headerlink" href="#hubs-o-concentradores" title="Permanent link">¶</a></h2>
+<p>Son equipos obsoletos que debemos evitar.</p>
+<figure>
+  <img src="imagenes/warmup/11.jpg" width="300">
+</figure>
+
+<ul>
+<li>
+<p>Físicamente son muy parecidos a los switches/conmutadores.</p>
+</li>
+<li>
+<p>Su principal problema es que cuando reciben una trama lo envían a todos los puertos excepto por aquel por donde ha recibido la trama. Por lo que se genera tráfico redundante y además todo el mundo sería capaz de recoger el tráfico de los demás poniendo las tarjetas de red en modo promiscuo.</p>
+</li>
+<li>
+<p>El modo promiscuo no es más que decirle  a tu adaptador de red que capture también el tráfico cuya MAC de destino no sea la suya.</p>
+</li>
+<li>
+<p>Además solo tiene un mismo <mark class="critic">dominio de colisión</mark>, esto quiere decir que si la computadora A envía una trama a la vez que el PC B, se producirá una colisión y tendrán que volver a reenviar las tramas otra vez hasta que no se produzca una colisión.</p>
+</li>
+</ul>
+<figure>
+  <img src="imagenes/warmup/12.png" width="700">
+</figure>
+
+<p>Por supuesto el <mark class="critic">dominio de broadcast</mark> es compartido, por lo que si un equipo envía una mensaje broadcast lo reciben todos.</p>
+<h2 id="switches"><strong>Switches</strong><a class="headerlink" href="#switches" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/warmup/13.png" width="700">
+</figure>
+
+<ul>
+<li>
+<p>Un mensaje Unicast solo se envía al puerto donde se encuentre el destinatario. Es por tanto <mark class="critic">más seguro que un HUB.</mark></p>
+</li>
+<li>
+<p>Un mensaje Broadcast se envía por todos los puertos, al no ser que haya sido segmentado mediante <mark class="critic">VLANs</mark>.</p>
+</li>
+<li>
+<p>Existe un <mark class="critic">dominio de colisión por puerto</mark>, es decir, que si el PC A envía una trama y el PC B envía otra, al estar en puertos diferentes no se produce una colisión. Por lo tanto tiene muchísimo <mark class="critic">mejor rendimiento</mark> que un hub.</p>
+</li>
+<li>
+<p>La conmutación (capa 2) es más rápida que el enrutamiento de los routers (capa 3).</p>
+</li>
+<li>
+<p>Existen switches gestionables y no gestionables.</p>
+<p>💥 <mark class="critic">Para la ciberseguridad siempre es recomendable hacer uso de switches gestionables.</mark></p>
+</li>
+<li>
+<p>Existen switches L3, que tienen funcionalidades de router, aunque habitualmente no soportan tantos protocolos/funcionalidades como un router.</p>
+</li>
+</ul>
+<p><ins class="critic">¿Qué es la tabla CAM (Content Addressable Memory)?</ins></p>
+<p>La tabla CAM (el nombre puede cambiar dependiendo del fabricante), es una tabla donde el switch almacena las MAC que conoce y el puerto por donde las conoció.</p>
+<figure>
+  <img src="imagenes/warmup/13.jpg" width="700">
+</figure>
+
+<p>El tipo de dirección es dinámica o estática. </p>
+<ul>
+<li>
+<p>Dinámica es aprendida por el switch al recibir una petición.</p>
+</li>
+<li>
+<p>Estática es que ha sido configurada a mano por un administrador.</p>
+</li>
+</ul>
+<p><ins class="critic">¿Qué pasa si se llena la tabla CAM?</ins></p>
+<p>La tabla CAM tiene una memoria asignada, especialmente en equipos antiguos o baratos esta memoria no es muy grande. Cuando se llena y no puede almacenar más entradas el switch envía la trama recibida a todos los puertos, a la vez que elimina las entradas más antiguas e inserta las nuevas.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>CAM overflow attack</strong></p>
+<p></p><center>
+Es un ataque que llena la tabla CAM con MACs falsas constantemente, de esta forma el switch comienza a mandar el tráfico del resto de equipos reales como si fuera broadcast.
+</center>
+</div>
+<p><ins class="critic">¿Qué pasa cuando un switch recibe una trama?</ins></p>
+<figure>
+  <img src="imagenes/warmup/14.png" width="700">
+</figure>
+
+<h2 id="protocolo-arp-address-resolution-protocol"><strong>Protocolo ARP (Address Resolution Protocol).</strong><a class="headerlink" href="#protocolo-arp-address-resolution-protocol" title="Permanent link">¶</a></h2>
+<p><mark class="critic">Es un protocolo cuyo objetivo es averiguar la dirección MAC de una IP. </mark></p>
+<p>Cualquier host (ordenador, tablet, móvil, servidor, …) necesita tanto de la MAC como de la IP para comunicarse con otros hosts. Para ello dispone de una tabla ARP donde tiene un listado de las IPs/MACs que conoce.</p>
+<p>Imaginemos que queremos llegar a una IP, pero no sabemos su MAC ¿qué rellenamos en el campo dirección destino de nuestra trama?</p>
+<p><strong>Ejemplo:</strong></p>
+<p><strong>1.</strong> El “PC A” quiere comunicarse con el equipo 192.168.5.14 (PC B) pero no sabe su MAC. 
+Utiliza el protocolo ARP para enviar un mensaje Broadcast (ARP Request) preguntando quien tiene asignada la IP 192.168.5.14.</p>
+<figure>
+  <img src="imagenes/warmup/16.png" width="700">
+</figure>
+
+<ol start="2">
+<li>
+<p>Aquel equipo que tenga asignada dicha IP hace dos cosas:</p>
+<p>a.  Se guarda en su tabla ARP la dirección y MAC del solicitante.</p>
+<p>b.  Envía un mensaje ARP reply al solicitante informándole de su MAC.</p>
+</li>
+</ol>
+<figure>
+  <img src="imagenes/warmup/17.png" width="700">
+</figure>
+
+<ol start="3">
+<li>El PC A recibe el ARP reply y se anota en su tabla ARP la IP y la MAC del PC B. Ya pueden comunicarse con normalidad.</li>
+</ol>
+<figure>
+  <img src="imagenes/warmup/18.png" width="700">
+</figure>
+
+<p><ins class="critic">Ejemplo de captura de tráfico de un ARP request y un ARP reply.</ins></p>
+<figure>
+  <img src="imagenes/warmup/19.png" width="900">
+  <figcaption>Ejemplo, el 192.168.0.1 pregunta por la MAC del 192.168.0.11.</figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title"><strong>RARP</strong></p>
+<p></p><center>
+El protocolo RARP (Reverse Address Resolution Protocol) es un protocol que permite averiguar una IP a partir de una MAC.
+</center>
+</div>
+<p><ins class="critic">¿Hace falta un router para que dos PCs se vean entre sí?</ins></p>
+<p>No, no es necesario siempre y cuando estén en la misma red. </p>
+<p>Mediante el protocolo ARP podemos averiguar por dónde hay que enviar el paquete.</p>
+<figure>
+  <img src="imagenes/warmup/20.png" width="400">
+</figure>
+
+<div class="admonition warning">
+<p class="admonition-title"><strong>Redes Diferentes</strong></p>
+<p></p><center>
+Cuando queramos acceder a otra red diferente sí será necesario un router.
+</center>
+</div>
+<p>Tras hacer un ping de uno de los equipos al otro extremo, podemos observar que el switch almacena las MACs de ambos (el que manda el arp-request y el que contesta con el arp-reply).</p>
+<figure>
+  <img src="imagenes/warmup/21.png" width="400">
+</figure>
+
+<p>Depende de la memoria de los switches pueden almacenar más o menos MACs.</p>
+<figure>
+  <img src="imagenes/warmup/22.png" width="400">
+</figure>
+
+<p>Como podemos ver, el switch que usamos en el laboratorio puede almacenar muchas MACs, no obstante no todos los switches son así.</p>
+<figure>
+  <img src="imagenes/warmup/23.png" width="700">
+</figure>
+
+<h2 id="tormenta-de-broadcast-bucles-de-red"><strong>Tormenta de Broadcast / Bucles de red.</strong><a class="headerlink" href="#tormenta-de-broadcast-bucles-de-red" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/warmup/24.jpg" width="400">
+</figure>
+
+<p><ins class="critic">¿Qué pasa cuando un switch recibe una trama broadcast?</ins></p>
+<p>Que redirige esa trama por todos los puertos excepto por aquel por el que recibió la trama.</p>
+<p><strong>Ejemplo</strong></p>
+<p>Tenemos un switch con 3 puertos: A, B y C.</p>
+<p>El puerto A está conectado a un PC.</p>
+<p>El puerto B y C están interconectados entre sí.</p>
+<p><strong>1.</strong>  El equipo A envía un mensaje broadcast.</p>
+<p><strong>2.</strong>  El switch reenvía dicho mensaje por los puertos B y C.</p>
+<p><strong>3.</strong>  El switch recibe un broadcast del puerto B y lo reenvía por A y C.</p>
+<div class="highlight"><pre><span></span><code>i.  C reenvía el broadcast recibido a A y B.
+
+    ii. B reenvía el broadcast a A y C
+
+        iii.C reenvía el broadcast a A y B
+
+            iv. ….
+</code></pre></div>
+<p><strong>4.</strong>  A la vez recibe del puerto C el mismo broadcast y lo reenvía a A y B.</p>
+<div class="highlight"><pre><span></span><code>i.  B reenvía el broadcast recibido a A y C.
+
+    ii. C reenvía el broadcast a A y B
+
+      iii.  B reenvía el broadcast a A y C.
+
+          iv.   ….
+</code></pre></div>
+<p>Lo que sucede es que en pocos segundos la red se inunda de mensajes broadcast, lo que colapsa de inmediato la red.</p>
+<p>Las tramas Ethernet de capa 2 no soportan ningún campo <mark class="critic">TTL (Time To Live)</mark>, por lo que no saben si una trama ha estado durante mucho tiempo en la red saltando de switch en switch. Lo que no permite crear una política que elimine tramas cuando hayan estado ya un tiempo en nuestra electrónica de capa 2. Es decir, el bucle de red no se arregla hasta que elimines el bucle.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Salvador Serrano Pérez - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "content.code.copy"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
