@@ -34,6 +34,16 @@
    --md-footer-bg-color--dark:          hsla(232, 15%, 10%, 1); 
   }
 
+  /* Center Markdown Tables (requires md_in_html extension) */
+.center-table {
+    text-align: center;
+}
+
+.md-typeset .center-table :is(td,th):not([align]) {
+    /* Reset alignment for table cells */
+    text-align: initial;
+}
+
 
   ul li {
     list-style-type: '✨';

@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/index.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/3_CAM_Overflow.html">
       
       
+        <link rel="prev" href="1_ConocimientosBasicos.html">
+      
+      
+        <link rel="next" href="4_ConocimientosL3.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>CiberSeguridad Redes.</title>
+        <title>PoC CAM Overflow - CiberSeguridad Redes.</title>
       
     
     
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#practica-ataque-cam-overflow" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to MkDocs
+              PoC CAM Overflow
             
           </span>
         </div>
@@ -227,8 +231,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -244,11 +250,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -264,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             UD1. WARM UP
@@ -321,10 +327,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="3_CAM_Overflow.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PoC CAM Overflow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="3_CAM_Overflow.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -335,6 +363,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -508,21 +574,85 @@
 
 
 
-<div><h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">¶</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">¶</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div></div>
+<div><h1 id="practica-ataque-cam-overflow"><strong>Práctica ataque CAM Overflow.</strong><a class="headerlink" href="#practica-ataque-cam-overflow" title="Permanent link">¶</a></h1>
+<p>Vamos a realizar un ataque sobre un switch y pasarle MACs generadas aleatoriamente, con el fin de llenar su tabla CAM y generar mensajes broadcast en la red. <mark class="critic">No es necesario que consigamos el overflow</mark>. Si realmente queremos hacer el overflow es muy recomendable usar un switch que no pueda almacenar gran cantidad de MACs.</p>
+<h2 id="instrucciones"><strong>Instrucciones</strong><a class="headerlink" href="#instrucciones" title="Permanent link">¶</a></h2>
+<p>Se deben adjuntar capturas del proceso.</p>
+<ol>
+<li>
+<p>Crea un diseño tal que así.</p>
+<p>a.  Net: Es una red de Management.</p>
+<p>b.  Switch: Es un switch Cisco.</p>
+<p>c.  Linux: Es un Linux con imagen Kali 2021.</p>
+</li>
+</ol>
+<center>
+<figure>
+  <img src="imagenes/warmup/44.png" width="200">
+</figure>
+  </center>
+
+<ol start="2">
+<li>
+<p>Desde el <ins class="critic">Kali</ins> descarga el script de python “cam_overflow.py”. Podéis encontrarlo en github o en el aules del curso.</p>
+</li>
+<li>
+<p>Una vez descargado elimina la red de Management para que no afecte a tu casa/aula el ataque.</p>
+</li>
+</ol>
+<center>
+<figure>
+  <img src="imagenes/warmup/45.png" width="200">
+</figure>
+  </center>
+
+<ol start="4">
+<li>Da <ins class="critic">permisos de ejecución</ins> al script y lanza el ataque. Por defecto está en 10000 paquetes.</li>
+</ol>
+<center>
+<figure>
+  <img src="imagenes/warmup/46.png" width="300">
+</figure>
+  </center>
+
+<ol start="5">
+<li>Metete en el switch  y cámbiale el hostname por uno tuyo para verificar que es tu equipo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>enable
+configure terminal
+hostname TU_NOMBRE
+end
+write
+</code></pre></div>
+<ol start="6">
+<li>Metete en el switch y comprueba que se han insertado MACs ficticias, para ello usa el comando:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>show mac address-table
+</code></pre></div>
+<center>
+<figure>
+  <img src="imagenes/warmup/47.png" width="500">
+</figure>
+</center>
+
+<h2 id="preguntas"><strong>Preguntas</strong><a class="headerlink" href="#preguntas" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>¿Para qué sirve la librería de python scapy?</p>
+</li>
+<li>
+<p>Entra dentro del código del script y comenta brevemente lo que crees que está haciendo línea por línea.</p>
+</li>
+<li>
+<p>¿Qué información almacena la tabla CAM de un switch?</p>
+</li>
+<li>
+<p>En un switch Cisco ¿con qué comando puedo saber cuánto tiempo se almacena una MAC en la tabla CAM? ¿y con cuál puedo limpiar todas las entradas de la tabla CAM?</p>
+</li>
+<li>
+<p>Busca información de qué son las plantillas sdm de cisco y cómo pueden afectar a la tabla CAM.</p>
+</li>
+</ol></div>
 
 
 
