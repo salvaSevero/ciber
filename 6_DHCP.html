@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_ComandosCisco2.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/6_DHCP.html">
       
       
-        <link rel="prev" href="2_ComandosCisco.html">
+        <link rel="prev" href="5_TeoriaVLAN.html">
       
       
-        <link rel="next" href="A_Usuarios.html">
+        <link rel="next" href="7_ConceptosL4.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Cisco Router - CiberSeguridad Redes.</title>
+        <title>DHCP - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco-router" class="md-skip">
+        <a href="#dhcp" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Cisco Router
+              DHCP
             
           </span>
         </div>
@@ -231,8 +231,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -254,11 +256,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -274,7 +276,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             UD1. WARM UP
@@ -400,10 +402,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="6_DHCP.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    DHCP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="6_DHCP.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -414,6 +438,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mensajes-del-protocolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mensajes del protocolo.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servidor-dhcp-relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor DHCP Relay.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,10 +515,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -472,11 +532,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -492,7 +552,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -549,32 +609,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Cisco Router
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_ComandosCisco2.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -585,125 +623,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar en modo enable y posteriormente en configuración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambia-el-nombre-del-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambia el nombre del router.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#levantar-las-interfaces-que-vayamos-a-usar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Levantar las interfaces que vayamos a usar.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#darle-una-descripcion-a-la-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Darle una descripción a la interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hay-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Hay VLANS?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-ip-estatica-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la IP estática en una interfaz
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una IP dinámica por DHCP en una interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-subinterfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una subinterfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-rutas-estaticas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar rutas estáticas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-ruta-por-defecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar ruta por defecto.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ver-la-tabla-de-rutas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ver la tabla de rutas.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -755,64 +674,98 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco-router">Comandos básicos Cisco Router.<a class="headerlink" href="#comandos-basicos-cisco-router" title="Permanent link">¶</a></h1>
-<h2 id="entrar-en-modo-enable-y-posteriormente-en-configuracion">Entrar en modo enable y posteriormente en configuración<a class="headerlink" href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" title="Permanent link">¶</a></h2>
+<div><h1 id="dhcp"><strong>DHCP.</strong><a class="headerlink" href="#dhcp" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p>Permite la asignación automática de direccionamiento IP/máscara/puerta de enlace/servidores DNS.</p>
+</li>
+<li>
+<p>Puertos:</p>
+<p>💥 67/UDP (servidor)</p>
+<p>💥 68/UDP (cliente)</p>
+</li>
+<li>
+<p>Basado en el protocol “BOOTP”.</p>
+</li>
+<li>
+<p>En wireshark podremos filtrar por “bootp” o “dhcp” para buscar información de estos protocolos.</p>
+</li>
+</ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/50.png" width="400">
+  <img src="imagenes/warmup/76.png" width="700">
 </figure>
+  </center>
 
-<h2 id="cambia-el-nombre-del-router">Cambia el nombre del router.<a class="headerlink" href="#cambia-el-nombre-del-router" title="Permanent link">¶</a></h2>
+<h2 id="mensajes-del-protocolo">Mensajes del protocolo.<a class="headerlink" href="#mensajes-del-protocolo" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><mark class="critic">DISCOVER</mark>: El cliente, el cual no tiene IP, manda un mensaje de broadcast (255.255.255.255) con origen (0.0.0.0). El puerto origen 68 (cliente), el puerto destino 67 (servidor).</p>
+</li>
+<li>
+<p><mark class="critic">OFFER</mark>: El mensaje es recibido por todos los equipos de la red, pero sólo el servidor está escuchando en el puerto 67 (UDP), por lo que será éste quien conteste con una oferta, indicando la IP que le ofrece configurarse.</p>
+<p>a.  El servidor inserta en su tabla de asignaciones de forma temporal (15 – 60 segundos) la oferta mandada. Es decir, que si en ese tiempo el cliente no confirma la oferta, se libera esa IP de la tabla de asignación.</p>
+<p>b.  <ins class="critic">Ejemplo del contenido OFFER</ins>:</p>
+</li>
+</ol>
+<center>
 <figure>
-  <img src="imagenes/warmup/51.png" width="400">
+  <img src="imagenes/warmup/77.png" width="400">
 </figure>
+  </center>
 
-<h2 id="levantar-las-interfaces-que-vayamos-a-usar">Levantar las interfaces que vayamos a usar.<a class="headerlink" href="#levantar-las-interfaces-que-vayamos-a-usar" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title"><strong>INFO</strong></p>
+<p>El mensaje OFFER se envía directamente a la IP destino 192.168.0.10, pero el cliente aún no tiene configurada esa IP ¿Cómo le llega el mensaje?</p>
+</div>
+<details class="warning">
+<summary><strong>RESPUESTA</strong></summary>
+<p>El servidor tiene su MAC por lo que el paquete le llegará al cliente (se encuentran en la misma red), además lo envía al puerto 68 del cliente, el cual está esperando respuesta tras enviar el DISCOVERY.</p>
+</details>
+<p><strong>Al ser un mensaje broadcast por parte del cliente lo hace, a priori, muy fácil hacerse pasar por un servidor DHCP falso, pues todos los dispositivos en la red sabrán que está buscando un servidor DHCP</strong></p>
+<ol start="3">
+<li>
+<p><mark class="critic">REQUEST</mark>: El cliente al sopesa la oferta e indica si está de acuerdo con dicha oferta.</p>
+</li>
+<li>
+<p><mark class="critic">ACK</mark>: El servidor confirma el cambio en su tabla de asignaciones y confirma el cambio.</p>
+<p>a.  Una vez confirmado el cambio en la tabla de asignaciones estará ahí durante el tiempo estimado en el <ins class="critic">Lease Time</ins> del servidor.</p>
+<p>b.  El cliente al recibir el ACK se configura el direccionamiento en su tarjeta.</p>
+</li>
+</ol>
+<h2 id="servidor-dhcp-relay">Servidor DHCP Relay.<a class="headerlink" href="#servidor-dhcp-relay" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>En principio un servicio DHCP asigna direccionamiento IP a equipos dentro de su misma red.</p>
+</li>
+<li>
+<p>Si necesitamos asignar direccionamiento a equipos en redes diferentes necesitamos configurar TODOS los routers intermedios como DHCP Relay, para que cuando reciban un mensaje DISCOVER lo reenvíen al servidor DHCP que se encuentra en otra red, y lo mismo en sentido contrario con el OFFER y el resto de mensajes.</p>
+</li>
+</ul>
+<h3 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/warmup/52.png" width="400">
+  <img src="imagenes/warmup/78.jpg" width="600">
 </figure>
+  </center>
 
-<h2 id="darle-una-descripcion-a-la-interfaz">Darle una descripción a la interfaz.<a class="headerlink" href="#darle-una-descripcion-a-la-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/53.png" width="400">
-</figure>
-
-<h2 id="hay-vlans">¿Hay VLANS?<a class="headerlink" href="#hay-vlans" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>a. Sí --&gt; Necesito subinterfaces.
-
-b. No --&gt; Lo configuro todo en la interfaz.
-</code></pre></div>
-<h2 id="configurar-la-ip-estatica-en-una-interfaz">Configurar la IP estática en una interfaz<a class="headerlink" href="#configurar-la-ip-estatica-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/54.png" width="400">
-</figure>
-
-<h2 id="configurar-una-ip-dinamica-por-dhcp-en-una-interfaz">Configurar una IP dinámica por DHCP en una interfaz.<a class="headerlink" href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/55.png" width="400">
-</figure>
-
-<h2 id="configurar-una-subinterfaz">Configurar una subinterfaz.<a class="headerlink" href="#configurar-una-subinterfaz" title="Permanent link">¶</a></h2>
-<p>Habitualmente que el número de la subinterfaz coincida con la VLAN que representa. Se puede poner una descripción por subinterfaz</p>
-<figure>
-  <img src="imagenes/warmup/56.png" width="400">
-</figure>
-
-<h2 id="configurar-rutas-estaticas">Configurar rutas estáticas.<a class="headerlink" href="#configurar-rutas-estaticas" title="Permanent link">¶</a></h2>
-<p>El next-hop tiene que ser una IP que conozca de una red conectada directamente.</p>
-<p>Hay dos formas de establecer la ruta, indirecta o directa. Podéis escoger la que queráis.</p>
-<figure>
-  <img src="imagenes/warmup/57.png" width="400">
-</figure>
-
-<h2 id="configurar-ruta-por-defecto">Configurar ruta por defecto.<a class="headerlink" href="#configurar-ruta-por-defecto" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/58.png" width="400">
-</figure>
-
-<h2 id="ver-la-tabla-de-rutas">Ver la tabla de rutas.<a class="headerlink" href="#ver-la-tabla-de-rutas" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/59.png" width="600">
-</figure></div>
+<p>En el siguiente ejemplo hay:</p>
+<ul>
+<li>
+<p>Un DHCP Relay configurado en las VLANS 40 y 50</p>
+</li>
+<li>
+<p>Sólo en el puertos Gi1/05 (el te1/0/3 está configurado pero inactivo).</p>
+</li>
+<li>
+<p>Los servidores configurados son 124.167.1.1 y 124.200.1.1.</p>
+</li>
+</ul>
+<p>Por tanto cuando reciba un mensaje con destino 255.255.255.255 al puerto 67, lo reenvía al servidor DHCP 124.167.1.1 y 124.200.1.1.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>CUIDADO</strong></p>
+<p>En caso de que para llegar a dichos servidores DHCP tenga que pasar por otros routers, dichos routers intermedios también tendrán que tener configurado dicho servicio DHCP Relay.</p>
+</div></div>
 
 
 

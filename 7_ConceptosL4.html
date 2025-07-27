@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_ComandosCisco2.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/7_ConceptosL4.html">
       
       
-        <link rel="prev" href="2_ComandosCisco.html">
+        <link rel="prev" href="6_DHCP.html">
       
       
-        <link rel="next" href="A_Usuarios.html">
+        <link rel="next" href="A_ProblemasEVE.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Cisco Router - CiberSeguridad Redes.</title>
+        <title>Conceptos Básicos L4 - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco-router" class="md-skip">
+        <a href="#principales-protocolos-capa-de-transporte-capa-4" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Cisco Router
+              Conceptos Básicos L4
             
           </span>
         </div>
@@ -231,8 +231,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -254,11 +256,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -274,7 +276,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             UD1. WARM UP
@@ -423,10 +425,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="7_ConceptosL4.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos L4
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="7_ConceptosL4.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -437,6 +461,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-transmission-control-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP (Transmission Control Protocol).
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,10 +506,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -472,11 +523,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -492,7 +543,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -549,32 +600,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Cisco Router
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_ComandosCisco2.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -585,125 +614,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar en modo enable y posteriormente en configuración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambia-el-nombre-del-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambia el nombre del router.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#levantar-las-interfaces-que-vayamos-a-usar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Levantar las interfaces que vayamos a usar.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#darle-una-descripcion-a-la-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Darle una descripción a la interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hay-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Hay VLANS?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-ip-estatica-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la IP estática en una interfaz
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una IP dinámica por DHCP en una interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-subinterfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una subinterfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-rutas-estaticas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar rutas estáticas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-ruta-por-defecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar ruta por defecto.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ver-la-tabla-de-rutas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ver la tabla de rutas.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -755,64 +665,94 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco-router">Comandos básicos Cisco Router.<a class="headerlink" href="#comandos-basicos-cisco-router" title="Permanent link">¶</a></h1>
-<h2 id="entrar-en-modo-enable-y-posteriormente-en-configuracion">Entrar en modo enable y posteriormente en configuración<a class="headerlink" href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" title="Permanent link">¶</a></h2>
+<div><h1 id="principales-protocolos-capa-de-transporte-capa-4"><strong>Principales Protocolos Capa de Transporte (capa 4).</strong><a class="headerlink" href="#principales-protocolos-capa-de-transporte-capa-4" title="Permanent link">¶</a></h1>
+<p>Los protocolos de capa 4 suelen hacer referencia a los <ins class="critic">puertos de red</ins>. </p>
+<p>Un puerto de red no es más que un identificador de la aplicación (capa 5) para la que va dirigida el mensaje.</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Ejemplo 1</strong></p>
+<p>Si un servidor web recibe un mensaje al puerto 80, el sistema operativo sabe que ese mensaje lo tiene que entregar al servicio web (no confundir con el navegador web).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Ejemplo 2</strong></p>
+<p>Si un navegador manda un mensaje con origen puerto 3333, esa información queda registrada (conexión establecida), más adelante cuando ese equipo reciba un mensaje del servidor web al puerto 3333 sabrá que es información para el navegador, pues tiene una conexión previa establecida.</p>
+</div>
+<center>
 <figure>
-  <img src="imagenes/warmup/50.png" width="400">
+  <img src="imagenes/warmup/78.png" width="900">
 </figure>
+  </center>
 
-<h2 id="cambia-el-nombre-del-router">Cambia el nombre del router.<a class="headerlink" href="#cambia-el-nombre-del-router" title="Permanent link">¶</a></h2>
+<center>
 <figure>
-  <img src="imagenes/warmup/51.png" width="400">
+  <img src="imagenes/warmup/79.png" width="700">
 </figure>
+  </center>
 
-<h2 id="levantar-las-interfaces-que-vayamos-a-usar">Levantar las interfaces que vayamos a usar.<a class="headerlink" href="#levantar-las-interfaces-que-vayamos-a-usar" title="Permanent link">¶</a></h2>
+<h2 id="tcp-transmission-control-protocol">TCP (Transmission Control Protocol).<a class="headerlink" href="#tcp-transmission-control-protocol" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><ins class="critic">Orientado a conexión</ins>. Por tanto es obligatorio establecer una conexión entre los mensajes a partir de una serie de mensajes y a su vez mensajes de desconexión.</p>
+</li>
+<li>
+<p>Los paquetes vienen <ins class="critic">numerados</ins> y por tanto se pueden reordenar. Es decir, si el paquete 10 llega antes que el paquete 8, el protocolo TCP es capaz de reordenarlo. Siempre y cuando esos paquetes pertenezcan a la misma ventana.</p>
+</li>
+<li>
+<p><ins class="critic">Se comprueba que se reciben todos los paquetes</ins>, si por ejemplo no se recibe el paquete 10 y sí se han recibido los paquetes 11, 12 y 13, habrá que finalmente volverlos a reenviar todos.</p>
+</li>
+</ul>
+<h3 id="mensajes-de-conexion">Mensajes de conexión.<a class="headerlink" href="#mensajes-de-conexion" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/warmup/52.png" width="400">
+  <img src="imagenes/warmup/80.png" width="700">
 </figure>
+  </center>
 
-<h2 id="darle-una-descripcion-a-la-interfaz">Darle una descripción a la interfaz.<a class="headerlink" href="#darle-una-descripcion-a-la-interfaz" title="Permanent link">¶</a></h2>
+<h3 id="mensajes-de-desconexion">Mensajes de desconexión.<a class="headerlink" href="#mensajes-de-desconexion" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/warmup/53.png" width="400">
+  <img src="imagenes/warmup/81.png" width="600">
 </figure>
+  </center>
 
-<h2 id="hay-vlans">¿Hay VLANS?<a class="headerlink" href="#hay-vlans" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>a. Sí --&gt; Necesito subinterfaces.
-
-b. No --&gt; Lo configuro todo en la interfaz.
-</code></pre></div>
-<h2 id="configurar-la-ip-estatica-en-una-interfaz">Configurar la IP estática en una interfaz<a class="headerlink" href="#configurar-la-ip-estatica-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/54.png" width="400">
-</figure>
-
-<h2 id="configurar-una-ip-dinamica-por-dhcp-en-una-interfaz">Configurar una IP dinámica por DHCP en una interfaz.<a class="headerlink" href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/55.png" width="400">
-</figure>
-
-<h2 id="configurar-una-subinterfaz">Configurar una subinterfaz.<a class="headerlink" href="#configurar-una-subinterfaz" title="Permanent link">¶</a></h2>
-<p>Habitualmente que el número de la subinterfaz coincida con la VLAN que representa. Se puede poner una descripción por subinterfaz</p>
-<figure>
-  <img src="imagenes/warmup/56.png" width="400">
-</figure>
-
-<h2 id="configurar-rutas-estaticas">Configurar rutas estáticas.<a class="headerlink" href="#configurar-rutas-estaticas" title="Permanent link">¶</a></h2>
-<p>El next-hop tiene que ser una IP que conozca de una red conectada directamente.</p>
-<p>Hay dos formas de establecer la ruta, indirecta o directa. Podéis escoger la que queráis.</p>
-<figure>
-  <img src="imagenes/warmup/57.png" width="400">
-</figure>
-
-<h2 id="configurar-ruta-por-defecto">Configurar ruta por defecto.<a class="headerlink" href="#configurar-ruta-por-defecto" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/58.png" width="400">
-</figure>
-
-<h2 id="ver-la-tabla-de-rutas">Ver la tabla de rutas.<a class="headerlink" href="#ver-la-tabla-de-rutas" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/59.png" width="600">
-</figure></div>
+<h3 id="protocolos-habituales-que-usan-tcp">Protocolos habituales que usan TCP:<a class="headerlink" href="#protocolos-habituales-que-usan-tcp" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>HTTP/HTTPS (80/443).</p>
+</li>
+<li>
+<p>SMTP (25).</p>
+</li>
+<li>
+<p>FTP (20 + 21).</p>
+</li>
+<li>
+<p>TELNET (23).</p>
+</li>
+<li>
+<p>SSH (22).</p>
+</li>
+</ul>
+<h1 id="udp-user-datagram-protocol">UDP (User Datagram Protocol).<a class="headerlink" href="#udp-user-datagram-protocol" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p>Protocolo <ins class="critic">no orientado a conexión</ins>. No es necesario establecer una conexión para comenzar a enviar datos, es decir, puedes directamente comenzar a enviar datos.</p>
+</li>
+<li>
+<p>Los paquetes pueden llegar desordenados, pues <ins class="critic">no van numerados</ins>.</p>
+</li>
+<li>
+<p><ins class="critic">No es necesario confirmar la recepción</ins> de los paquetes. Si se pierde un paquete no pasa nada.</p>
+</li>
+<li>
+<p>Se suele usar este protocolo en todos aquellos casos donde la posible pérdida de datos sea un mal menor a que haya más latencia.</p>
+<p><strong>Ejemplo</strong>: Telefonía (VoIP), Juegos Online o IPTV.</p>
+<p><strong>Ejemplo</strong>: Es preferible que haya una pixelación a que se corte el vídeo. En cambio en una web es preferible esperar un segundo más y que esté todo el contenido.</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title"><strong>DNS</strong></p>
+<p>El ejemplo más raro que usa UDP es el protocolo DNS, esto se debe a que las solicitudes DNS son pequeñas y se pueden enviar en un mismo datagrama y además también se puede llevar un control de errores desde la capa de aplicación. Porsupuesto apremia una rápida respuesta sin establecer conexión pues son servidores que reciben millones de peticiones.</p>
+</div></div>
 
 
 

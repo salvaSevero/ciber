@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_ComandosCisco2.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/5_TeoriaVLAN.html">
       
       
-        <link rel="prev" href="2_ComandosCisco.html">
+        <link rel="prev" href="4_ConocimientosL3.html">
       
       
-        <link rel="next" href="A_Usuarios.html">
+        <link rel="next" href="6_DHCP.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Cisco Router - CiberSeguridad Redes.</title>
+        <title>Teoría VLAN - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco-router" class="md-skip">
+        <a href="#vlan" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Cisco Router
+              Teoría VLAN
             
           </span>
         </div>
@@ -231,8 +231,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -254,11 +256,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -274,7 +276,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             UD1. WARM UP
@@ -377,10 +379,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="5_TeoriaVLAN.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Teoría VLAN
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="5_TeoriaVLAN.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -391,6 +415,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de enlaces.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de VLANs.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roas-router-on-a-stick" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROAS (Router On A Stick).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-configuracion-de-vlans-en-un-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de configuración de VLANs en un Switch.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,10 +542,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -472,11 +559,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -492,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -549,32 +636,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Cisco Router
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_ComandosCisco2.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -585,125 +650,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar en modo enable y posteriormente en configuración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambia-el-nombre-del-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambia el nombre del router.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#levantar-las-interfaces-que-vayamos-a-usar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Levantar las interfaces que vayamos a usar.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#darle-una-descripcion-a-la-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Darle una descripción a la interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hay-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Hay VLANS?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-ip-estatica-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la IP estática en una interfaz
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una IP dinámica por DHCP en una interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-subinterfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una subinterfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-rutas-estaticas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar rutas estáticas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-ruta-por-defecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar ruta por defecto.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ver-la-tabla-de-rutas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ver la tabla de rutas.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -755,64 +701,238 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco-router">Comandos básicos Cisco Router.<a class="headerlink" href="#comandos-basicos-cisco-router" title="Permanent link">¶</a></h1>
-<h2 id="entrar-en-modo-enable-y-posteriormente-en-configuracion">Entrar en modo enable y posteriormente en configuración<a class="headerlink" href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" title="Permanent link">¶</a></h2>
+<div><h1 id="vlan"><strong>VLAN.</strong><a class="headerlink" href="#vlan" title="Permanent link">¶</a></h1>
+<p>Las VLAN o Virtual LAN permiten crear redes virtuales dentro una misma red física. Es decir, dentro de un mismo cableado, un mismo puerto y mismos equipos de red coexistirán diferentes redes.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/50.png" width="400">
+  <img src="imagenes/warmup/60.png" width="700">
 </figure>
+  </center>
 
-<h2 id="cambia-el-nombre-del-router">Cambia el nombre del router.<a class="headerlink" href="#cambia-el-nombre-del-router" title="Permanent link">¶</a></h2>
+<h2 id="ventajas"><strong>Ventajas.</strong><a class="headerlink" href="#ventajas" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Segmentamos los dominios de broadcast, es decir, el broadcast de una red virtual no se propagará a la otra red virtual.</p>
+</li>
+<li>
+<p>Podemos aplicar filtros a redes virtuales de forma independiente, pudiendo darle diferentes tipos de permisos o accesos a cada una.</p>
+</li>
+<li>
+<p>Nos permite una mejor organización y administración.</p>
+</li>
+<li>
+<p>Es más fácil acotar los problemas dependiendo de a que VLAN esté afectando.</p>
+</li>
+<li>
+<p>Tiene un ahorro económico pues usando los mismos equipos podemos segmentar la red.</p>
+</li>
+</ul>
+<h2 id="tipos-de-enlaces"><strong>Tipos de enlaces.</strong><a class="headerlink" href="#tipos-de-enlaces" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Acceso: Solo pasa una única VLAN. Habitualmente conecta con hosts/clientes.</p>
+</li>
+<li>
+<p>Troncal: Pasan varias VLANs por el mismo enlace/interfaz. </p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title"><strong>INFO</strong></p>
+<p>¿Si pasan varias VLANs por la misma interfaz como sabe el equipo cada trama a qué VLAN pertenece?</p>
+<p>El estándar 802.1Q se le asigna una etiqueta a la trama, que es básicamente un número. </p>
+<p>Por ejemplo si es la VLAN 47 y pasa por un enlace troncal se le añade una etiqueta con el número 47.</p>
+</div>
+<center>
 <figure>
-  <img src="imagenes/warmup/51.png" width="400">
+  <img src="imagenes/warmup/61.png" width="500">
 </figure>
+  </center>
 
-<h2 id="levantar-las-interfaces-que-vayamos-a-usar">Levantar las interfaces que vayamos a usar.<a class="headerlink" href="#levantar-las-interfaces-que-vayamos-a-usar" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/52.png" width="400">
-</figure>
+<h2 id="tipos-de-vlans"><strong>Tipos de VLANs.</strong><a class="headerlink" href="#tipos-de-vlans" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><ins class="critic">Datos</ins>: Son las VLANs habituales.</p>
+</li>
+<li>
+<p><ins class="critic">Administración</ins>: Son VLANs donde solo debería ir tráfico de gestión de los equipos, si es posible debería ir por puertos independientes al de los datos, de tal forma que si hay un problema con el tráfico de clientes no perderemos el acceso a nuestros equipos.</p>
+</li>
+<li>
+<p><ins class="critic">Nativa</ins>: Se usa para diferencia una VLAN sin etiqueta dentro de un enlace troncal. Se usa mayormente para gestionar equipos que no soportan el estándar dot1q. Solo puede haber una vlan nativa por cada enlace troncal.</p>
+</li>
+</ul>
+<h3 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
+<p>💥   Tenemos 3 VLANs: 10,20 y 30.</p>
+<p>💥   Cada VLAN tiene una red diferente:</p>
+<div class="highlight"><pre><span></span><code>    VLAN 10 --&gt; 172.17.10.0/24.
 
-<h2 id="darle-una-descripcion-a-la-interfaz">Darle una descripción a la interfaz.<a class="headerlink" href="#darle-una-descripcion-a-la-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/53.png" width="400">
-</figure>
+    VLAN 20 --&gt; 172.17.20.0/24.
 
-<h2 id="hay-vlans">¿Hay VLANS?<a class="headerlink" href="#hay-vlans" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>a. Sí --&gt; Necesito subinterfaces.
-
-b. No --&gt; Lo configuro todo en la interfaz.
+    VLAN 30 --&gt; 172.17.30.0/24.
 </code></pre></div>
-<h2 id="configurar-la-ip-estatica-en-una-interfaz">Configurar la IP estática en una interfaz<a class="headerlink" href="#configurar-la-ip-estatica-en-una-interfaz" title="Permanent link">¶</a></h2>
+<p>💥 Los puertos que conectan con PCs solo tienen que pasar una única VLAN, por lo que la interfaz se configura como access.</p>
+<p>💥   Los puertos que interconectan entre los switches deberán dejar pasar varias VLANs, por lo que irán en modo trunk o serán enlaces troncales.</p>
+<ul>
+<li>¿Pueden dos equipos dentro de la misma VLAN comunicarse?</li>
+</ul>
+<details class="note">
+<summary><strong>RESPUESTA</strong></summary>
+<p>Sí.</p>
+</details>
+<ul>
+<li>¿Pueden dos equipos de diferentes VLANs comunicarse? En caso negativo qué sería necesario.</li>
+</ul>
+<details class="note">
+<summary><strong>RESPUESTA</strong></summary>
+<p>No, necesitarían un router que enrutara el tráfico entre VLANs.</p>
+</details>
+<center>
 <figure>
-  <img src="imagenes/warmup/54.png" width="400">
+  <img src="imagenes/warmup/62.png" width="600">
 </figure>
+  </center>
 
-<h2 id="configurar-una-ip-dinamica-por-dhcp-en-una-interfaz">Configurar una IP dinámica por DHCP en una interfaz.<a class="headerlink" href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" title="Permanent link">¶</a></h2>
+<h2 id="roas-router-on-a-stick"><strong>ROAS (Router On A Stick).</strong><a class="headerlink" href="#roas-router-on-a-stick" title="Permanent link">¶</a></h2>
+<p>Para que dos equipos en VLANs diferentes puedan comunicarse deberá haber un router que sea capaz de entender el direccionamiento IP ¿Por qué?</p>
+<details class="note">
+<summary><strong>RESPUESTA</strong></summary>
+<p>Los switches solo entienden de MACs (capa 2), no leen la cabecera de IP origen/destino.</p>
+<p>¿Pero por qué no pueden aprender las MACs de los equipos en VLANs diferentes mediante ARP?</p>
+<p>Porque las VLANs segmentan el dominio de broadcast, es decir, un broadcast ARP para averiguar una MAC de una IP que se encuentra en otra VLAN nunca alcanzará su destino.</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title"><strong>INFO</strong></p>
+<p>En la capa 2 (Layer 2) se añade una cabecera y una cola. Los equipos de capa 2 sólo se centran en esta cabecera y capa, por lo que no miran las cabeceras IP, TCP, aplicación, etc.</p>
+</div>
+<center>
 <figure>
-  <img src="imagenes/warmup/55.png" width="400">
+  <img src="imagenes/warmup/63.png" width="600">
 </figure>
+  </center>
 
-<h2 id="configurar-una-subinterfaz">Configurar una subinterfaz.<a class="headerlink" href="#configurar-una-subinterfaz" title="Permanent link">¶</a></h2>
-<p>Habitualmente que el número de la subinterfaz coincida con la VLAN que representa. Se puede poner una descripción por subinterfaz</p>
+<p>¿Qué hay dentro de esta cabecera de capa 2? Pues dicha cabecera puede ser diferente dependiendo del protocolo usado, por ejemplo en el 802.1Q se añade una etiqueta, pero la trama habitual suele seguir el protocolo Ethernet que es el siguiente.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/56.png" width="400">
+  <img src="imagenes/warmup/64.jpg" width="600">
 </figure>
+  </center>
 
-<h2 id="configurar-rutas-estaticas">Configurar rutas estáticas.<a class="headerlink" href="#configurar-rutas-estaticas" title="Permanent link">¶</a></h2>
-<p>El next-hop tiene que ser una IP que conozca de una red conectada directamente.</p>
-<p>Hay dos formas de establecer la ruta, indirecta o directa. Podéis escoger la que queráis.</p>
+<p>Por tanto para que varias VLANs se vean entre si debemos utilizar un router. </p>
+<p>¿Necesitamos un puerto del router para cada VLAN? Podríamos hacerlo de dicha forma pero sería un gasto económico inútil, pues podemos hacer exactamente lo mismo a través de un único puerto, de ahí el concepto de ROAS (Router On A Stick).</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/57.png" width="400">
+  <img src="imagenes/warmup/65.jpg" width="600">
 </figure>
+  </center>
 
-<h2 id="configurar-ruta-por-defecto">Configurar ruta por defecto.<a class="headerlink" href="#configurar-ruta-por-defecto" title="Permanent link">¶</a></h2>
+<h2 id="ejemplo-de-configuracion-de-vlans-en-un-switch">Ejemplo de configuración de VLANs en un Switch.<a class="headerlink" href="#ejemplo-de-configuracion-de-vlans-en-un-switch" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title"><strong>INFO</strong></p>
+<p>Recordad que para entrar en modo configuración, primero hay que entrar en modo enable:</p>
+<p></p><center>
 <figure>
-  <img src="imagenes/warmup/58.png" width="400">
+    <img src="imagenes/warmup/66.png" width="300">
 </figure>
-
-<h2 id="ver-la-tabla-de-rutas">Ver la tabla de rutas.<a class="headerlink" href="#ver-la-tabla-de-rutas" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/59.png" width="600">
-</figure></div>
+</center>
+</div>
+<ol>
+<li>Crear la VLAN.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/67.png" width="300">
+    </figure>
+</center>
+</details>
+<ol start="2">
+<li>Darle Nombre a la VLAN.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/68.png" width="300">
+    </figure>
+</center>
+</details>
+<ol start="3">
+<li>Comprobar que lo has creado bien.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/69.png" width="600">
+    </figure>
+</center>
+</details>
+<ol start="4">
+<li>Configurar un puerto en Access.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/70.png" width="500">
+    </figure>
+</center>
+</details>
+<ol start="5">
+<li>Configurar un puerto en trunk con ciertas vlans.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/71.png" width="500">
+    </figure>
+</center>
+</details>
+<ol start="6">
+<li>Añadir una vlan a un puerto en trunk.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/72.png" width="500">
+    </figure>
+</center>
+</details>
+<ol start="7">
+<li>Eliminar una vlan de un puerto en trunk.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/73.png" width="500">
+    </figure>
+</center>
+</details>
+<ol start="8">
+<li>Añadir una vlan nativa en un puerto en trunk.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/74.png" width="500">
+    </figure>
+</center>
+</details>
+<ol start="9">
+<li>Borrar una VLAN del sistema.</li>
+</ol>
+<details class="warning">
+<summary><strong>COMANDO</strong></summary>
+<p></p><center>
+    <figure>
+        <img src="imagenes/warmup/75.png" width="300">
+    </figure>
+</center>
+</details></div>
 
 
 
