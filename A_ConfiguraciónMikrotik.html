@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_Usuarios.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_Configuraci%C3%B3nMikrotik.html">
       
       
-        <link rel="prev" href="A_Configuraci%C3%B3nMikrotik.html">
+        <link rel="prev" href="A_CiscoACL.html">
       
+      
+        <link rel="next" href="A_Usuarios.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Usuarios EVE-NG - CiberSeguridad Redes.</title>
+        <title>Configuración Básica - CiberSeguridad Redes.</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usuarios" class="md-skip">
+        <a href="#mikrotik-hardening" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Usuarios EVE-NG
+              Configuración Básica
             
           </span>
         </div>
@@ -722,8 +724,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -733,11 +737,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -753,43 +757,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Mikrotik
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="A_Configuraci%C3%B3nMikrotik.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configuración Básica
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
             
               
                 
@@ -807,7 +780,143 @@
         
       
       
-      <a href="A_Usuarios.html" class="md-nav__link md-nav__link--active">
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuración Básica
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="A_Configuraci%C3%B3nMikrotik.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración Básica
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mantener-el-mikrotik-actualizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mantener el Mikrotik actualizado.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-nuevo-usuario-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un nuevo usuario administrador:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deshabilitar-servicios-que-no-usaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deshabilitar servicios que no usaremos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deshabilitar-protocolos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deshabilitar Protocolos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desactivar-las-interfaces-que-no-vayan-a-usarse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desactivar las interfaces que no vayan a usarse.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-de-firewall-para-el-plano-de-control-chain-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas de Firewall para el plano de control (chain: input).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-de-firewall-para-el-plano-de-datos-chain-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas de Firewall para el plano de datos (chain: forward).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anexo.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_Usuarios.html" class="md-nav__link">
         
   
   
@@ -818,7 +927,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -847,15 +955,127 @@
 
 
 
-<div><h1 id="usuarios">Usuarios.<a class="headerlink" href="#usuarios" title="Permanent link">¶</a></h1>
-<p>Sistema EVE-NG (root/eve).</p>
-<p>Servicio Web EVE-NG (admin/eve)</p>
-<p>Kali (usuario/usuario)</p>
-<p>Mikrotik (admin - sin contraseña)</p>
-<p>Juniper (lab/lab123)</p>
-<p>Windows Server (Administrador/Usuario1234)</p>
-<p>Sophos WEB: admin/Usuario1234#   LAN PortA - 192.168.66.1:4444</p>
-<p>Sophos CLI: admin</p></div>
+<div><h1 id="mikrotik-hardening">Mikrotik Hardening.<a class="headerlink" href="#mikrotik-hardening" title="Permanent link">¶</a></h1>
+<p>Vamos a ver las políticas de seguridad más habituales que podemos configurar en los equipos de red (hardening). Practicaremos con el mikrotik y posteriormente buscaremos opciones para otros fabricantes.</p>
+<h2 id="mantener-el-mikrotik-actualizado">Mantener el Mikrotik actualizado.<a class="headerlink" href="#mantener-el-mikrotik-actualizado" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/anexo/9.png" width="600">
+</figure>
+
+<h2 id="crear-un-nuevo-usuario-administrador">Crear un nuevo usuario administrador:<a class="headerlink" href="#crear-un-nuevo-usuario-administrador" title="Permanent link">¶</a></h2>
+<p><strong>1.</strong> Crear un nuevo usuario/contraseña administrador (full).</p>
+<p><strong>2.</strong>  Si es posible delimitar una red de mantenimiento. La gestión del equipo solo se podrárealizar desde un equipo con IP de dicha red.</p>
+<p><strong>3.</strong>  Borrar o desactivar el anterior administrador (por defecto).</p>
+<figure>
+  <img src="imagenes/anexo/10.png" width="600">
+</figure>
+
+<figure>
+  <img src="imagenes/anexo/11.png" width="600">
+</figure>
+
+<h2 id="deshabilitar-servicios-que-no-usaremos">Deshabilitar servicios que no usaremos.<a class="headerlink" href="#deshabilitar-servicios-que-no-usaremos" title="Permanent link">¶</a></h2>
+<p><strong>1.</strong> Si solo vamos a hacer uso de una gestión a través de “ssh” y “winbox” no tiene sentido tener habilitados otros servicios. Por supuesto servicios como “telnet”, “ftp” o “www” deberían ser directamente evitados.</p>
+<p><strong>2.</strong> Cambiar los puertos habituales (ssh:22 y winbox: 8921).</p>
+<p><strong>3.</strong> Filtrar por red de “mantenimiento”.</p>
+<figure>
+  <img src="imagenes/anexo/12.png" width="600">
+</figure>
+
+<p>Acordaros que si cambiamos el puerto, desde el cliente tenemos que indicárselo</p>
+<figure>
+  <img src="imagenes/anexo/13.png" width="200">
+</figure>
+
+<p><strong>4.</strong> En el caso de Mikrotik (no es habitual en otros fabricantes), se puede acceder a través de la MAC. Para ello tiene unos servicios (MAC Server), que por norma general se deben desactivar por seguridad:</p>
+<figure>
+  <img src="imagenes/anexo/14.png" width="700">
+</figure>
+
+<h2 id="deshabilitar-protocolos">Deshabilitar Protocolos.<a class="headerlink" href="#deshabilitar-protocolos" title="Permanent link">¶</a></h2>
+<p>Existen algunos protocolos, habitualmente propietarios, que permiten descubrir o hacerte una idea de los equipos existentes en la red. Esto también puede dar información a los atacantes, además de que muchas veces  estos protocolos no tienen ningún uso por parte de los administradores. En el caso de Mikrotik es “Neighbor Discovery”, en el caso de Cisco existe CDP (Cisco Discovery Protocol).</p>
+<figure>
+  <img src="imagenes/anexo/15.png" width="600">
+</figure>
+
+<h2 id="desactivar-las-interfaces-que-no-vayan-a-usarse">Desactivar las interfaces que no vayan a usarse.<a class="headerlink" href="#desactivar-las-interfaces-que-no-vayan-a-usarse" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/anexo/16.png" width="600">
+</figure>
+
+<h2 id="reglas-de-firewall-para-el-plano-de-control-chain-input">Reglas de Firewall para el plano de control (chain: input).<a class="headerlink" href="#reglas-de-firewall-para-el-plano-de-control-chain-input" title="Permanent link">¶</a></h2>
+<p><mark class="critic">Permitir pasar las conexiones ya establecidas/relacionada</mark>. Es decir, cada vez que una conexión con el router se establece sí se compara con las reglas de tu firewall, pero una vez la conexión ya esté establecida (TCP) ya no contrastamos con ninguna regla. Esta decisión alivia la carga del firewall. Es importante que la regla esté situada arriba del todo para que no mire el resto de normas.</p>
+<p>Una conexión relacionada es un tráfico relacionado a una configuración ya establecida, por ejemplo el tráfico FTP relacionado con la sesión FTP establecida.</p>
+<div class="highlight"><pre><span></span><code>add action=accept chain=input connection-state=established,related
+</code></pre></div>
+<p>Permitir que solo tráfico originado desde la red de mantenimiento vaya a ser atendida por el router. Para ello es recomendable crear un <ins class="critic">Address-list</ins> con los rangos de mantenimiento.</p>
+<figure>
+  <img src="imagenes/anexo/17.png" width="600">
+  <figcaption>add action=accept chain=input src-address-list=Mantenimiento</figcaption>
+</figure>
+
+<div class="admonition warning bloquear resto de tráfico">
+<p class="admonition-title">Warning</p>
+<p>Es importante al final bloquear el resto de tráfico. En ciertos frabricantes esta regla viene implícita, pero no es una mala práctica.</p>
+<p></p><center><ins class="critic">add action=drop chain=input</ins></center>
+</div>
+<h2 id="reglas-de-firewall-para-el-plano-de-datos-chain-forward">Reglas de Firewall para el plano de datos (chain: forward).<a class="headerlink" href="#reglas-de-firewall-para-el-plano-de-datos-chain-forward" title="Permanent link">¶</a></h2>
+<p>Al igual que hacíamos, la primera regla con el fin de aliviar la carga del firewall es permitir pasar las conexiones ya establecidas. La acción “fasttrack-connection” es una opción especial de Mikrotik para detectar de forma rápida que tráfico procede de una conexión ya establecida correctamente.</p>
+<div class="highlight"><pre><span></span><code>add action=fasttrack-connection chain=forward connection-state=established,related
+add action=accept chain=forward connection-state=established,related
+</code></pre></div>
+<p>Por otro lado bloqueamos las conexiones TCP inválidas (ataque TCP), estas conexiones son aquellas donde se intenta enviar tráfico sin haber establecido previamente una conexión. Como una conexión inválida es posible que se deba a un ataque, le habilitamos el log=yes para que lo deje registrado, además lo marcamos con la etiqueta “invalid”. </p>
+<div class="highlight"><pre><span></span><code>add action=drop chain=forward connection-state=invalid log=yes log-prefix=invalid
+</code></pre></div>
+<p>Bloquear tráfico que salga de nuestra LAN hacia la WAN cuya IP de destino sea una IP no válida en Internet (por ejemplo una IP privada).</p>
+<div class="highlight"><pre><span></span><code>add action=drop chain=forward dst-address-list=not_in_internet in-interface=bridge1 outinterface=ether1 log=yes log-prefix=!public_from_LAN
+</code></pre></div>
+<div class="admonition tip address-list">
+<p class="admonition-title">Tip</p>
+<p>Para el ejemplo anterior se hace uso de un address-list llamada "not_in_internet" que acoge todas las redes privadas y reservadas.
+<figure>
+  <img src="imagenes/anexo/18.png" width="400">
+</figure></p>
+</div>
+<p>Si nuestra LAN se encuentra tras un NAT, bloquearemos cualquier tráfico que tenga como destino las IPs sin NATEAR desde fuera de nuestra red (WAN).</p>
+<div class="highlight"><pre><span></span><code>add action=drop chain=forward connection-nat-state=!dstnat connection-state=new ininterface=ether1 log=yes log-prefix=!NAT
+</code></pre></div>
+<p>Bloquear todo el tráfico que venga desde nuestra WAN con IP origen una IP no válida en Internet.</p>
+<div class="highlight"><pre><span></span><code>add action=drop chain=forward in-interface=ether1 src-address-list=not_in_internet log=yes log-prefix=!public
+</code></pre></div>
+<p>Para limitar el efecto de IP spoofing, podemos crear un filtro donde solo permitamos tráfico desde nuestra LAN con IP origen de las redes que tenemos en ella asignadas.</p>
+<div class="highlight"><pre><span></span><code>add action=drop chain=forward in-interface=bridge1 src-address-list=LAN log=yes logprefix=LAN_!LAN
+</code></pre></div>
+<p>Si dentro de nuestra red no existe, o no debería existir ningún servicio DNS o web, podría ser una buena política cortar el tráfico entrante a nuestra red para los puertos 53 y 80. De esta forma evitamos que si por alguna casualidad alguien levanta un servicio DNS en nuestra red (sin nuestro conocimiento) éste pueda ser atacado.</p>
+<figure>
+  <img src="imagenes/anexo/19.png" width="600">
+</figure>
+
+<p>Hemos aplicado estas reglas en el apartado de RAW por motivos de eficiencia, ya que en este apartado podemos crear filtros prerouting, es decir se ejecutan antes de comparar la tabla de rutas y saber porque interfaz deben ir dirigidos.</p>
+<figure>
+  <img src="imagenes/anexo/20.png" width="600">
+</figure>
+
+<h2 id="anexo">Anexo.<a class="headerlink" href="#anexo" title="Permanent link">¶</a></h2>
+<p>Podéis crear los address-list o los filtros a través de ssh copiando y pegando:</p>
+<div class="highlight"><pre><span></span><code>/ip firewall address-list
+add address=0.0.0.0/8 comment=RFC6890 list=not_in_internet
+add address=172.16.0.0/12 comment=RFC6890 list=not_in_internet
+add address=192.168.0.0/16 comment=RFC6890 list=not_in_internet
+add address=10.0.0.0/8 comment=RFC6890 list=not_in_internet
+add address=169.254.0.0/16 comment=RFC6890 list=not_in_internet
+add address=127.0.0.0/8 comment=RFC6890 list=not_in_internet
+add address=224.0.0.0/4 comment=Multicast list=not_in_internet
+add address=198.18.0.0/15 comment=RFC6890 list=not_in_internet
+add address=192.0.0.0/24 comment=RFC6890 list=not_in_internet
+add address=192.0.2.0/24 comment=RFC6890 list=not_in_internet
+add address=198.51.100.0/24 comment=RFC6890 list=not_in_internet
+add address=203.0.113.0/24 comment=RFC6890 list=not_in_internet
+add address=100.64.0.0/10 comment=RFC6890 list=not_in_internet
+add address=240.0.0.0/4 comment=RFC6890 list=not_in_internet
+add address=192.88.99.0/24 comment="6to4 relay Anycast [RFC 3068]"
+list=not_in_internet
+</code></pre></div></div>
 
 
 

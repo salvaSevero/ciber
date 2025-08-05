@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_Usuarios.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_CiscoACL.html">
       
       
-        <link rel="prev" href="A_Configuraci%C3%B3nMikrotik.html">
+        <link rel="prev" href="A_ComandosNAT.html">
       
+      
+        <link rel="next" href="A_Configuraci%C3%B3nMikrotik.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Usuarios EVE-NG - CiberSeguridad Redes.</title>
+        <title>ACL - CiberSeguridad Redes.</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usuarios" class="md-skip">
+        <a href="#cisco-acl" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Usuarios EVE-NG
+              ACL
             
           </span>
         </div>
@@ -574,8 +576,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -591,11 +595,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -611,7 +615,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -691,10 +695,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="A_CiscoACL.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ACL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="A_CiscoACL.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -705,6 +731,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-acl-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración ACL Standard:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-basica-acl-extendida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración Básica ACL Extendida.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicar-el-filtro-en-los-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar el filtro en los puertos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modoficar-una-acl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modoficar una ACL.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -795,19 +877,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="A_Usuarios.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_Usuarios.html" class="md-nav__link">
         
   
   
@@ -818,7 +891,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -847,15 +919,123 @@
 
 
 
-<div><h1 id="usuarios">Usuarios.<a class="headerlink" href="#usuarios" title="Permanent link">¶</a></h1>
-<p>Sistema EVE-NG (root/eve).</p>
-<p>Servicio Web EVE-NG (admin/eve)</p>
-<p>Kali (usuario/usuario)</p>
-<p>Mikrotik (admin - sin contraseña)</p>
-<p>Juniper (lab/lab123)</p>
-<p>Windows Server (Administrador/Usuario1234)</p>
-<p>Sophos WEB: admin/Usuario1234#   LAN PortA - 192.168.66.1:4444</p>
-<p>Sophos CLI: admin</p></div>
+<div><h1 id="cisco-acl">Cisco ACL.<a class="headerlink" href="#cisco-acl" title="Permanent link">¶</a></h1>
+<p>El funcionamiento es exactamente igual en cualquier fabricante.</p>
+<p>Lo único a tener en cuenta es que en Cisco existen <ins class="critic">dos tipos de ACL</ins>:</p>
+<ul>
+<li>
+<p>ACL standard.</p>
+<p>💥   No llevan nombre, se pueden numerar del 1-99 o del 1300-1999.</p>
+<p>💥 Solo permite filtrar por IP origen.</p>
+</li>
+<li>
+<p>ACL extendidas.</p>
+<p>💥   Pueden llevar nombres o un número entre 100-199 o 2000-2699.</p>
+<p>💥   Puede filtrar por origen/destino.</p>
+<p>💥   Puede filtrar por protocolo / puerto de conexiones específicas.</p>
+<p>💥   Es más fácil editar las ACL extendidas.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">ACL STANDARD</p>
+<p>Por norma general no tiene mucho sentido usar ACL standard al no ser que sea algo extremadamente sencillo y que no vaya a cambiar en el tiempo.</p>
+</div>
+<h2 id="configuracion-acl-standard">Configuración ACL Standard:<a class="headerlink" href="#configuracion-acl-standard" title="Permanent link">¶</a></h2>
+<center><mark class="critic">access-list X [deny | permit | remark ] [ network | any | host ] [ log ]</mark></center>
+
+<ul>
+<li>
+<p><strong>X</strong>: Hace referencia al número identificativo de la ACL.</p>
+</li>
+<li>
+<p><strong>[ deny | permit |remark ]</strong>: Indica que hará si encuentra una ocurrencia (match), si lo permite o lo deniega. En el caso de remark es simplemente un comentario informativo, por ejemplo para indicar que hace la línea de la ACL.</p>
+</li>
+<li>
+<p><strong>[ network | any | host ]</strong>: A quién afecta dicha ACL, a una red de equipos, a cualquiera o a un host. </p>
+<p>💥 <strong>Network</strong> siempre va asociado de una <ins class="critic">wildcard</ins> (máscara inversa).</p>
+<p><figure>
+  <img src="imagenes/warmup/92.png" width="400">
+</figure></p>
+<p><figure>
+  <img src="imagenes/warmup/93.png" width="400">
+</figure></p>
+<p>💥 <strong>Any</strong>: Simplemente afecta a cualquiera.</p>
+<p><figure>
+  <img src="imagenes/warmup/94.png" width="300">
+</figure></p>
+<p>💥 <strong>Host</strong>: Afecta un equipo en concreto.</p>
+<p><figure>
+  <img src="imagenes/warmup/95.png" width="400">
+</figure></p>
+</li>
+<li>
+<p><strong>Log</strong>: Simplemente registra cada vez que hay un match debido a esa regla en concreto. No es muy recomendable al no ser que sea algo muy importante de lo que queramos visibilidad. El problema es que consume CPU y memoria.</p>
+</li>
+</ul>
+<h2 id="configuracion-basica-acl-extendida">Configuración Básica ACL Extendida.<a class="headerlink" href="#configuracion-basica-acl-extendida" title="Permanent link">¶</a></h2>
+<center><mark class="critic">ip access-list extended [ NOMBRE | NÚMERO ] [ permit | deny | remark ] protocol [ host | network | any ] [ host | network | any ] [ eq puerto ] </mark></center>
+
+<h3 id="ejemplo-1">Ejemplo 1.<a class="headerlink" href="#ejemplo-1" title="Permanent link">¶</a></h3>
+<figure>
+  <img src="imagenes/warmup/96.png" width="400">
+</figure>
+
+<h3 id="ejemplo-2">Ejemplo 2.<a class="headerlink" href="#ejemplo-2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>ip access-list extended ACL-PROTECT-OUT
+ deny   tcp any any fragments
+ deny   udp any any fragments
+ deny   icmp any any fragments
+ deny   ip any any fragments
+ deny   tcp any any eq www
+ deny   udp any any eq domain
+ deny   tcp any any eq domain
+ permit ip any any
+</code></pre></div>
+<h3 id="ejemplo-2_1">Ejemplo 2.<a class="headerlink" href="#ejemplo-2_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>ip access-list extended ACL_PROTECT
+ deny   tcp any any fragments
+ deny   udp any any fragments
+ deny   icmp any any fragments
+ deny   ip any any fragments
+ permit icmp 192.168.123.0 0.0.0.255 any echo
+ permit ip 192.168.123.0 0.0.0.255 any
+ permit ip 84.232.0.0 0.0.0.255 any
+ permit ip 77.123.0.0 0.0.0.255 any
+ deny   ip any any
+</code></pre></div>
+<h2 id="aplicar-el-filtro-en-los-puertos">Aplicar el filtro en los puertos.<a class="headerlink" href="#aplicar-el-filtro-en-los-puertos" title="Permanent link">¶</a></h2>
+<p>Una vez creado los filtros es necesarios aplicarlos en las interfaces.</p>
+<div class="admonition warning">
+<p class="admonition-title">IN/OUT</p>
+<p>Es muy importante ser consciente de que los filtros se pueden aplicar para el <ins class="critic">tráfico saliente o entrante</ins>.</p>
+</div>
+<div class="highlight"><pre><span></span><code>interface FastEthernet0/0
+ description LAN
+ip address 84.232.0.1 255.255.255.0
+ ip access-group ACL-PROTECT in
+ ip access-group ACL-PROTECT-OUT out
+</code></pre></div>
+<h2 id="modoficar-una-acl">Modoficar una ACL.<a class="headerlink" href="#modoficar-una-acl" title="Permanent link">¶</a></h2>
+<p>Podemos comprobar que se le asigna un número a cada línea del filtro ACL.</p>
+<figure>
+  <img src="imagenes/warmup/97.png" width="400">
+</figure>
+
+<p>Por tanto podemos añadir reglas entre dichos números.</p>
+<figure>
+  <img src="imagenes/warmup/98.png" width="400">
+</figure>
+
+<p>Para comprobar que se ha añadido la nueva regla dentro del filtro.</p>
+<figure>
+  <img src="imagenes/warmup/99.png" width="400">
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">MODIFICAR ACL</p>
+<p>También se puede modificar o susituir una regla ya creada.</p>
+<p>Para eliminar una línea basta con hacer "no X", donde X es la línea a elimninar.</p>
+</div></div>
 
 
 
