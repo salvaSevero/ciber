@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_ComandosCisco2.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/13_VPN.html">
       
       
-        <link rel="prev" href="2_ComandosCisco.html">
+        <link rel="prev" href="12_VRRP.html">
       
       
-        <link rel="next" href="A_ComandosNAT.html">
+        <link rel="next" href="A_ProblemasEVE.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Router - CiberSeguridad Redes.</title>
+        <title>Conceptos Básicos - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco-router" class="md-skip">
+        <a href="#vpn-virtual-private-network" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Router
+              Conceptos Básicos
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -520,11 +522,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -540,7 +542,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             DEFENSIVA
@@ -620,8 +622,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -631,11 +635,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -651,7 +655,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             VPN
@@ -662,10 +666,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="13_VPN.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="13_VPN.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -676,6 +702,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es una VPN?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-vpn-site-to-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es una VPN site-to-site?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-vpn-mobile-o-de-acceso-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es una VPN mobile o de acceso remoto?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolos-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocolos VPN:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-split-tunneling-dentro-de-una-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Split Tunneling dentro de una VPN?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-podemos-interconectar-un-servicio-radius-con-uno-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Para qué podemos interconectar un servicio RADIUS con uno VPN?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas Frecuentes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -700,10 +809,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -719,11 +826,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -739,7 +846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -773,10 +880,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -792,11 +897,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -812,7 +917,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -846,32 +951,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Router
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_ComandosCisco2.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -882,125 +965,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar en modo enable y posteriormente en configuración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambia-el-nombre-del-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambia el nombre del router.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#levantar-las-interfaces-que-vayamos-a-usar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Levantar las interfaces que vayamos a usar.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#darle-una-descripcion-a-la-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Darle una descripción a la interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hay-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Hay VLANS?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-ip-estatica-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la IP estática en una interfaz
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una IP dinámica por DHCP en una interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-subinterfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una subinterfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-rutas-estaticas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar rutas estáticas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-ruta-por-defecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar ruta por defecto.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ver-la-tabla-de-rutas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ver la tabla de rutas.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1179,64 +1143,123 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco-router">Comandos básicos Cisco Router.<a class="headerlink" href="#comandos-basicos-cisco-router" title="Permanent link">¶</a></h1>
-<h2 id="entrar-en-modo-enable-y-posteriormente-en-configuracion">Entrar en modo enable y posteriormente en configuración<a class="headerlink" href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" title="Permanent link">¶</a></h2>
+<div><h1 id="vpn-virtual-private-network">VPN (Virtual Private Network).<a class="headerlink" href="#vpn-virtual-private-network" title="Permanent link">¶</a></h1>
+<h2 id="que-es-una-vpn">¿Qué es una VPN?<a class="headerlink" href="#que-es-una-vpn" title="Permanent link">¶</a></h2>
+<p>Es una <ins class="critic">conexión cifrada</ins> entre dos extremos, generando por tanto una <ins class="critic">red virtual y privada</ins> entre ellos.</p>
+<p>Al crear una red virtual, todos los nodos dentro de dicha VPN tendrán asignada una <ins class="critic">IP y puerta de enlace virtual</ins>.</p>
+<p>Es importante comprender que la VPN cifra la conexión pero no evita que se transfieran malwares a través de ésta.</p>
+<p>Al encriptar los datos se produce una carga computacional y un aumento del tamaño de los paquetes (<ins class="critic">overhead</ins>). Normalmente a mayor seguridad, mayor es el coste computacional de encriptar y desencriptar los paquetes.</p>
+<h2 id="que-es-una-vpn-site-to-site">¿Qué es una VPN site-to-site?<a class="headerlink" href="#que-es-una-vpn-site-to-site" title="Permanent link">¶</a></h2>
+<p>Se usa para interconectar dos redes independientes, normalmente para interconectar dos oficinas para que trabajen de forma segura como si estuvieran ambas en la misma red local.</p>
+<p>Los equipos que se encargan de establecer esta conexión suele ser el router o firewall en cada oficina.</p>
+<p><mark class="critic">Las redes LAN físicas de cada extremo deben ser diferentes de la red virtual de la VPN que se creará.</mark></p>
+<center>
 <figure>
-  <img src="imagenes/warmup/50.png" width="400">
+  <img src="imagenes/defensiva/8.png" width="700">
 </figure>
+</center>
 
-<h2 id="cambia-el-nombre-del-router">Cambia el nombre del router.<a class="headerlink" href="#cambia-el-nombre-del-router" title="Permanent link">¶</a></h2>
+<h2 id="que-es-una-vpn-mobile-o-de-acceso-remoto">¿Qué es una VPN mobile o de acceso remoto?<a class="headerlink" href="#que-es-una-vpn-mobile-o-de-acceso-remoto" title="Permanent link">¶</a></h2>
+<p>Habitualmente se usa cuando uno de los extremos es el servidor VPN que se encarga de gestionar la interconexión (autentificación, cifrado, ...) y el otro extremo es un dispositivo (portátil, móvil, ...).</p>
+<p>La autentificación se realiza a través de usuario/contraseña o certificados digitales.</p>
+<p>La palabra mobile dentro de "VPN mobile" hace referencia a que el cliente puede estar en constante movimiento, independientemente de la red en la que esté conectada (calle, biblioteca, casa, ...) podría establecer la conexión con la VPN y trabajar como si estuviera dentro de la propia empresa.</p>
+<p>Se puede usar para navegar por Internet haciendo uso de una conexión cifrada.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/51.png" width="400">
+  <img src="imagenes/defensiva/9.png" width="500">
 </figure>
+</center>
 
-<h2 id="levantar-las-interfaces-que-vayamos-a-usar">Levantar las interfaces que vayamos a usar.<a class="headerlink" href="#levantar-las-interfaces-que-vayamos-a-usar" title="Permanent link">¶</a></h2>
+<p>Si el servidor lo tenemos en nuestra empresa también se puede usar para acceder a la LAN de la empresa desde casa, por ejemplo.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/52.png" width="400">
+  <img src="imagenes/defensiva/10.png" width="700">
 </figure>
+</center>
 
-<h2 id="darle-una-descripcion-a-la-interfaz">Darle una descripción a la interfaz.<a class="headerlink" href="#darle-una-descripcion-a-la-interfaz" title="Permanent link">¶</a></h2>
+<h2 id="protocolos-vpn">Protocolos VPN:<a class="headerlink" href="#protocolos-vpn" title="Permanent link">¶</a></h2>
+<p>Aunque más adelante entraremos en más detalle sobre las diferentes posibilidades de protocolos para implementar VPN vamos a ver un ligero resumen:</p>
+<ul>
+<li>
+<p><strong>PPTP</strong>: PPTP es un protocolo muy extendido y compatible con gran cantidad de dispositivos pero [++NO es seguro++].</p>
+</li>
+<li>
+<p><strong>L2TP/IPSec</strong>: Al igual que con PPTP es un protocolo bastante sencillo de configurar y ampliamente configurable. A diferencia de PPTP se puede configurar junto con IPSec para hacerlo seguro.</p>
+</li>
+<li>
+<p><strong>IPSec IKEv2</strong>: Conexión segura y rápida.</p>
+</li>
+<li>
+<p><strong>OpenVPN</strong>: Seguro, compatible con bastantes dispositivos y de código abierto.</p>
+</li>
+<li>
+<p><strong>WireGuard</strong>: Seguro, conexión rápida, código abierto, usa pocos recursos.</p>
+</li>
+</ul>
+<h2 id="que-es-split-tunneling-dentro-de-una-vpn">¿Qué es Split Tunneling dentro de una VPN?<a class="headerlink" href="#que-es-split-tunneling-dentro-de-una-vpn" title="Permanent link">¶</a></h2>
+<p>Por norma general cuando creamos una VPN, todo el tráfico sale por la VPN cifrada.</p>
+<p><mark class="critic">Con el Split Tunneling podemos indicar qué tráfico viajará a través de la VPN y cuál no.</mark></p>
+<p>En ciertas situaciones, especialmente en las site-to-site, no queremos que el tráfico viaje por la VPN, pues estaríamos ralentizando bastante la conexión.</p>
+<h3 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
+<p>Si estamos en el site A y queremos acceder a una página de Internet no tiene sentido viajar hasta el site B y desde ahí a la página deseada. </p>
+<p>Por tanto lo habitual en una VPN site-to-site es importante comprobar que solo viaja por dicha conexión el tráfico que vaya a acceder al la LAN del otro extremo.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/53.png" width="400">
+  <img src="imagenes/defensiva/11.png" width="700">
 </figure>
+</center>
 
-<h2 id="hay-vlans">¿Hay VLANS?<a class="headerlink" href="#hay-vlans" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>a. Sí --&gt; Necesito subinterfaces.
-
-b. No --&gt; Lo configuro todo en la interfaz.
-</code></pre></div>
-<h2 id="configurar-la-ip-estatica-en-una-interfaz">Configurar la IP estática en una interfaz<a class="headerlink" href="#configurar-la-ip-estatica-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/54.png" width="400">
-</figure>
-
-<h2 id="configurar-una-ip-dinamica-por-dhcp-en-una-interfaz">Configurar una IP dinámica por DHCP en una interfaz.<a class="headerlink" href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/55.png" width="400">
-</figure>
-
-<h2 id="configurar-una-subinterfaz">Configurar una subinterfaz.<a class="headerlink" href="#configurar-una-subinterfaz" title="Permanent link">¶</a></h2>
-<p>Habitualmente que el número de la subinterfaz coincida con la VLAN que representa. Se puede poner una descripción por subinterfaz</p>
-<figure>
-  <img src="imagenes/warmup/56.png" width="400">
-</figure>
-
-<h2 id="configurar-rutas-estaticas">Configurar rutas estáticas.<a class="headerlink" href="#configurar-rutas-estaticas" title="Permanent link">¶</a></h2>
-<p>El next-hop tiene que ser una IP que conozca de una red conectada directamente.</p>
-<p>Hay dos formas de establecer la ruta, indirecta o directa. Podéis escoger la que queráis.</p>
-<figure>
-  <img src="imagenes/warmup/57.png" width="400">
-</figure>
-
-<h2 id="configurar-ruta-por-defecto">Configurar ruta por defecto.<a class="headerlink" href="#configurar-ruta-por-defecto" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/58.png" width="400">
-</figure>
-
-<h2 id="ver-la-tabla-de-rutas">Ver la tabla de rutas.<a class="headerlink" href="#ver-la-tabla-de-rutas" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/59.png" width="600">
-</figure></div>
+<h2 id="para-que-podemos-interconectar-un-servicio-radius-con-uno-vpn">¿Para qué podemos interconectar un servicio RADIUS con uno VPN?<a class="headerlink" href="#para-que-podemos-interconectar-un-servicio-radius-con-uno-vpn" title="Permanent link">¶</a></h2>
+<h3 id="funcionalidades">Funcionalidades.<a class="headerlink" href="#funcionalidades" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>Autenticación</strong>:  Hace referencia a comprobar que el usuario es quien dice ser a través de una contraseña o un certificado digital.</p>
+</li>
+<li>
+<p><strong>Autorización</strong>: Puede gestionar a qué equipos puede acceder dicho usuario y qué comandos puede lanzar.</p>
+</li>
+<li>
+<p><strong>Contabilidad</strong>: Puede almacenar en sus registros toda actividad de cada usuario en cada equipo gestionado por el RADIUS.</p>
+</li>
+</ul>
+<h3 id="ventajas">Ventajas:<a class="headerlink" href="#ventajas" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>Centralización</strong>: En vez de gestionar X routers/firewalls, solo tendremos que gestionar un equipo para crear/modificar los usuarios y políticas de seguridad.</p>
+</li>
+<li>
+<p><strong>Seguridad</strong>: Se encarga de la seguridad en el inicio de sesión, de tal forma que si uno de nuestros firewalls es algo antiguo y no soporta ciertos protocolos de inicio de sesión más seguros no habría problema.</p>
+</li>
+<li>
+<p><strong>Auditoría</strong>: Permite guardar en los logs centralizados en el servidor cada usuario a qué equipos ha accedido y qué comandos ha lanzado. También se puede impedir que ciertos usuarios accedan a equipos o tengan permisos limitados. De otra forma tendríamos que hacerlo equipo a equipo (router/firewall).</p>
+</li>
+</ul>
+<h2 id="preguntas-frecuentes">Preguntas Frecuentes<a class="headerlink" href="#preguntas-frecuentes" title="Permanent link">¶</a></h2>
+<details class="note">
+<summary>¿Si el firewall VPN (servidor) se encuentra detrás de una red NAT qué debemos hacer?</summary>
+<p>Si el servidor VPN está detrás de un servicio NAT deberemos abrir los puertos (dependerán del protocolo de cifrado que seleccionemos).</p>
+<p>Dichos puertos abiertos obviamente deben ir redirigidos a la IP LAN física que tenga asignada el firewall.</p>
+</details>
+<details class="note">
+<summary>¿Un mismo cliente puede conectarse a la vez con dos dispositivos diferentes?</summary>
+<p>Podría, pero debemos tenerlo en cuenta en la configuración del servidor VPN. En algunos fabricantes por defecto se impide esta  casuística.</p>
+</details>
+<details class="note">
+<summary>¿Qué es VPN Passthrough?</summary>
+<p>Es una característica de los routers que normalmente viene activada por defecto, pero que si no está activada impide el paso del tráfico cifrado por VPN.</p>
+</details>
+<details class="note">
+<summary>¿Pueden varios dispositivos con varios usuarios diferentes, dentro de la misma red NAT (saliendo con la misma IP pública), conectarse a la misma conexión VPN?</summary>
+<p>Sí, no hay problema.</p>
+</details>
+<details class="note">
+<summary>¿Qué sucede si nuestro equipo está infectado y nos conectamos con una VPN a nuestro puesto de trabajo?</summary>
+<p>El virus podría transferirse a los equipos conectados a la red de la empresa.</p>
+</details>
+<details class="note">
+<summary>¿Qué sucede si la red LAN (física) desde donde nos conectamos, es la misma que la parte LAN de la red VPN (virtual) a dónde nos vamos a conectar?</summary>
+<p>Habría incompatibilidad y sería un problema. Por ello se sulene elegir redes poco comunes como parte de la red virtual de la VPN, es decir, se evitan los 192.168.0.0/24 o 192.168.1.0/24 que son habituales en lo hogares por ejemplo.</p>
+</details></div>
 
 
 
