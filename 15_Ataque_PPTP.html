@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/2_ComandosCisco.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/15_Ataque_PPTP.html">
       
       
-        <link rel="prev" href="A_ProblemasEVE.html">
+        <link rel="prev" href="9_EnrutamientoDinamico.html">
       
       
-        <link rel="next" href="A_ComandosCisco2.html">
+        <link rel="next" href="11_VLANs.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Básicos - CiberSeguridad Redes.</title>
+        <title>Ataque PPTP - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco" class="md-skip">
+        <a href="#atacar-servidor-vpn-pptp-mschapv2" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Básicos
+              Ataque PPTP
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -514,11 +516,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -534,7 +536,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -545,10 +547,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="15_Ataque_PPTP.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ataque PPTP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="15_Ataque_PPTP.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -559,6 +583,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fingerprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fingerprint.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionarios.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitm-man-in-the-middle" class="md-nav__link">
+    <span class="md-ellipsis">
+      MITM (Man In The Middle)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analizar-trafico-capturado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analizar tráfico capturado.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ataque-por-diccionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ataque por diccionario.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -797,10 +895,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -816,11 +912,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -836,7 +932,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -870,10 +966,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -889,11 +983,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -909,7 +1003,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -920,32 +1014,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Básicos
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="2_ComandosCisco.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="2_ComandosCisco.html" class="md-nav__link">
         
   
   
@@ -956,89 +1028,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#niveles-de-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Niveles de configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletado-y-autoayuda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autocompletado y Autoayuda
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Interfaces.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-acceso-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Acceso SSH.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mostrar-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mostrar Configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guardar-cambios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Guardar Cambios.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1265,169 +1254,127 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco">Comandos básicos Cisco.<a class="headerlink" href="#comandos-basicos-cisco" title="Permanent link">¶</a></h1>
-<h2 id="niveles-de-configuracion">Niveles de configuración.<a class="headerlink" href="#niveles-de-configuracion" title="Permanent link">¶</a></h2>
-<p>En Cisco existen varios niveles de configuración.</p>
+<div><h1 id="atacar-servidor-vpn-pptp-mschapv2">Atacar servidor VPN PPTP MSCHAPv2.<a class="headerlink" href="#atacar-servidor-vpn-pptp-mschapv2" title="Permanent link">¶</a></h1>
+<h2 id="fingerprint">Fingerprint.<a class="headerlink" href="#fingerprint" title="Permanent link">¶</a></h2>
+<p>En primer lugar vamos a recoger información del servidor (fingerprint).</p>
+<div class="highlight"><pre><span></span><code>nmap -Pn -sSV -p1723 [IP SERVIDOR]
+</code></pre></div>
+<p>Podemos ver el puerto que está abierto usando PPTP, además de que es un Mikrotik con firmware 1.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/1.png" width="700">
+</figure>
+</center>
+
+<h2 id="diccionarios">Diccionarios.<a class="headerlink" href="#diccionarios" title="Permanent link">¶</a></h2>
+<p>Durante el ataque habrá un momento que haremos un ataque por diccionario. </p>
+<p>Para ello tenemos <ins class="critic">varias opciones</ins>:</p>
+<p>En el directorio <mark class="critic">/usr/share/wordlists</mark> de nuestro Kali tenemos la lista de palabras de diccionario.</p>
+<ol>
+<li>
+<p><strong>“rockyou”</strong> es una de las más famosas, simplemente contiene palabras típicas que se suelen usar como contraseña. Se puede descomprimir con <ins class="critic">“gunzip rock….”</ins>.</p>
+<p></p><center>
+<figure>
+<img src="imagenes/ofensiva/2.png" width="700">
+</figure>
+</center>
+<p></p><center>
+<figure>
+<img src="imagenes/ofensiva/3.png" width="700">
+</figure>
+</center>
+</li>
+<li>
+<p>También podemos hacer uso de la lista <strong>“darkc0de”.</strong> u otros diccionarios de referencia.</p>
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/darkc0de.txt
+
+wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/openwall.net-all.txt
+
+wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Software/john-the-ripper.txt
+</code></pre></div>
+</li>
+<li>
+<p>En caso de no existir la ruta /usr/share/wordlists podemos hacer:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install wordlists –-reinstall
+</code></pre></div>
+</li>
+</ol>
+<h2 id="comandos">Comandos.<a class="headerlink" href="#comandos" title="Permanent link">¶</a></h2>
+<p>Vamos a trabajar con 3 comandos:</p>
+<p><strong>genkeys</strong>: Para generar e indexar claves hash a partir de una lista de palabras, que luego nos permitirá comparar con las claves hash que capturemos.</p>
+<p><strong>asleap</strong>: Permite, a partir de los códigos “challenge” y “response” del protocolo MSCHAP compararlos con los diferentes hash de nuestro índice, generados por genkeys a partir de las palabras de diccionario. También te permite pasarle una captura de paquetes, por ejemplo de wireshark, y que él te sustraiga los elementos necesarios.</p>
+<p><strong>thc-pptp-bruter</strong>: Permite, a partir de la IP del firewall y del nombre de usuario, romper la clave por fuerza bruta en caso de que el ataque por diccionario no funcione, aunque también se le puede pasar una lista de palabras al comando.</p>
+<center>
+<figure>
+<img src="imagenes/ofensiva/4.png" width="900">
+</figure>
+</center>
+
+<center>
+<figure>
+<img src="imagenes/ofensiva/5.png" width="900">
+</figure>
+</center>
+
+<h2 id="mitm-man-in-the-middle">MITM (Man In The Middle)<a class="headerlink" href="#mitm-man-in-the-middle" title="Permanent link">¶</a></h2>
 <ul>
 <li>
-<p>Modo Usuario.</p>
-<p>💥 Modo lectura que nos permite consultar información o estado del equipo.</p>
+<p>Para realizar el ataque MITM (Man In The Middle) ARP Poisoning haremos uso de la aplicación <mark class="critic">“Ettercap” (ver manual Ettercap)</mark>. </p>
+</li>
+<li>
+<p>El ARP Poisoning nos permitirá hacernos pasar por el servidor VPN y a su vez hacernos pasar por la víctima, interceptando así todo el tráfico entre ellos. </p>
+</li>
+<li>
+<p>Una vez capturado, el tráfico se reenviará al destinatario (servidor/cliente) correcto para que siga habiendo comunicación entre ellos y podamos seguir capturando el resto de la conversación.</p>
 </li>
 </ul>
+<h2 id="analizar-trafico-capturado">Analizar tráfico capturado.<a class="headerlink" href="#analizar-trafico-capturado" title="Permanent link">¶</a></h2>
+<p>Una vez realizado el MITM analizaremos con <mark class="critic">Wireshark</mark> el tráfico capturado.</p>
+<h3 id="nombre-de-usuario">Nombre de usuario.<a class="headerlink" href="#nombre-de-usuario" title="Permanent link">¶</a></h3>
+<p>Primero filtraremos por el protocolo <ins class="critic">“chap”</ins>, que es el protocolo de seguridad que usa PPTP.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/24.png" width="100">
+<img src="imagenes/ofensiva/6.png" width="900">
 </figure>
+</center>
 
-<ul>
-<li>
-<p>Modo Privilegiado. </p>
-<p>💥 Es un modo que permite ver la configuración del equipo y acceder al modo configuración.</p>
-<p>💥 Se accede a este modo mediante el comando <mark class="critic">“enable”.</mark></p>
-</li>
-</ul>
+<p>Como se puede comprobar en la captura anterior, <ins class="critic">el nombre de usuario viaja en texto plano</ins>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ataque Fuerza Bruta</p>
+<p>A partir de aquí podemos intentar solventarlo sabiendo el usuario y la IP del servidor por fuerza bruta, pero es un <mark class="critic">proceso mucho más lento</mark>.</p>
+<div class="highlight"><pre><span></span><code>cat darkc0de.txt | thc-pptp-bruter –u [Nombre_Usuario] [IP_Servidor]
+</code></pre></div>
+<p></p><center>
 <figure>
-  <img src="imagenes/warmup/25.png" width="100">
+<img src="imagenes/ofensiva/7.png" width="900">
 </figure>
-
-<ul>
-<li>
-<p>*Modo configuración. </p>
-<p>💥   Es el modo que nos permite realizar cambios. </p>
-<p>💥 Es importante tener en cuenta que en Cisco los cambios se aplican al instante.</p>
-<p>💥 Se accede desde  el modo enable, mediante el comando <mark class="critic">“configure terminal”</mark></p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/26.png" width="150">
-</figure>
-
-<h2 id="autocompletado-y-autoayuda">Autocompletado y Autoayuda<a class="headerlink" href="#autocompletado-y-autoayuda" title="Permanent link">¶</a></h2>
-<ul>
-<li>En el terminal podemos hacer uso del <mark class="critic">“?”</mark> para ver que parámetros u opciones tiene cada comando.</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/27.png" width="500">
-</figure>
-
-<ul>
-<li>
-<p>Podemos hacer uso del <mark class="critic">“tabulador”</mark> para autocompletar un comando.</p>
-</li>
-<li>
-<p>No es necesario completar el comando para que se ejecute. Por ejemplo en vez de enable podemos ejecutar  “en”, en vez de configure terminal “conf t”, en vez de write usar “wr”.</p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/28.png" width="300">
-</figure>
-
-<h2 id="configurar-interfaces">Configurar Interfaces.<a class="headerlink" href="#configurar-interfaces" title="Permanent link">¶</a></h2>
-<p>Cada fabricante nombra sus interfaces de diferente forma. En el caso de Cisco los más habituales son los siguientes:</p>
-<ul>
-<li>
-<p>Fa: FastEthernet (100Mbps)</p>
-</li>
-<li>
-<p>Gi: GigaEthernet (1Gbps).</p>
-</li>
-<li>
-<p>Te: TenGigabitEthernet (10Gbps).</p>
-</li>
-</ul>
-<p>Muchos equipos de red son ampliables por módulos, es decir, que podemos tener un switch de 12 puertos y un hueco para insertarle otro módulo de 12 puertos. Otros equipos son stackables, se pueden unir entre si y funciona como un mismo equipo. </p>
-<p>Pues bien, las interfaces nos dan información de donde se encuentra el puerto dentro del equipo. </p>
-<p><ins class="critic">Por ejemplo:</ins></p>
-<p>💥 Gi0/0  --&gt; Indica que la interfaz es la primera del primer módulo.</p>
-<p>💥 Gi1/0/3 --&gt; Puede indicar el tercer puerto, del primer módulo, del segundo switch en stack.</p>
-<p><ins class="critic">Configuración.</ins></p>
-<p>Dentro de la configuración se pueden acceder a diferentes subapartados, habitualmente protocolos o interfaces. </p>
-<p>En la siguiente captura nos metemos en la interfaz Gi0/0 (GigaEthernet 0/0), le estamos poniendo un nombre (descripción), lo estamos levantando administrativamente (no shutdown) y configurandola para que pase todas las vlans (switchport trunk + switchport mode trunk).</p>
-<figure>
-  <img src="imagenes/warmup/29.png" width="500">
-</figure>
-
-<p>Dentro de una interfaz nos podemos mover a otra, simplemente volviendo a hacer uso del comando <mark class="critic">“interface Gi0/X”=}.</mark></p>
-<p>Se pueden configurar muchas interfaces a la vez haciendo uso de {==“interface range Gi0/0-3”. Con este estamos configurando 4 interfaces a la vez: Gi0/0, Gi0/1, Gi0/2, Gi0/3.</p>
-<figure>
-  <img src="imagenes/warmup/30.png" width="400">
-</figure>
-
-<h2 id="configurar-acceso-ssh">Configurar Acceso SSH.<a class="headerlink" href="#configurar-acceso-ssh" title="Permanent link">¶</a></h2>
-<p>Telnet no es un protocolo seguro, por lo que configuraremos SSH siempre.</p>
-<p><strong>1.</strong>  Generar un hostname.</p>
-<figure>
-  <img src="imagenes/warmup/31.png" width="400">
-</figure>
-
-<p><strong>2.</strong>  Generamos un nombre de dominio.</p>
-<figure>
-  <img src="imagenes/warmup/32.png" width="400">
-</figure>
-
-<p><strong>3.</strong>  Los pasos anteriores son necesarios para generamos el par de claves RSA. Las claves deben ser como mínimo de 2048 bits. </p>
-<figure>
-  <img src="imagenes/warmup/33.png" width="400">
-</figure>
-
-<p><strong>4.</strong>  Una vez tengamos las claves ya podemos activar el protocolo SSH para la gestión remota de nuestros equipos de forma segura.</p>
-<figure>
-  <img src="imagenes/warmup/34.png" width="400">
-</figure>
-
-<p><strong>5.</strong>  En el caso de los equipos cisco, y es similar en otros equipos existe un número limitado de sesiones simultáneas que se pueden abrir sobre un mismo equipo. En el caso del ejemplo existen 16 terminales virtuales (vty). Vamos a indicarle al equipo que la forma de acceder a estos terminales virtuales es mediante el uso del protocolo SSH.</p>
-<figure>
-  <img src="imagenes/warmup/35.png" width="400">
-</figure>
-
-<p><strong>6.</strong>  Finalmente debemos crear los usuarios. </p>
-<div class="admonition note">
-<p class="admonition-title"><strong>AVISO</strong></p>
-<p>Con <mark class="critic">privilege</mark> indica qué acciones podrá realizar este usuario, es decir, modificar configuración, solo lectura, entrar en modo enable, etc... </p>
-<p>Con <mark class="critic">secret</mark> se establece la contraseña del usuario. Si en vez de secret usáis la palabra password, no se cifran las contraseñas.</p>
+</center>
+<p>No obstante vamos, primero a probar un ataque por diccionario, para que en caso de que sea una contraseña “sencilla” podamos romperla de forma rápida.</p>
 </div>
+<h3 id="challenge-y-response">Challenge y Response.<a class="headerlink" href="#challenge-y-response" title="Permanent link">¶</a></h3>
+<p>A parte del usuario, podemos sacar información del código hash del “Challenge” y del “Response” del protocolo MSCHAPv2.</p>
+<p><mark class="critic">Para copiar datos dentro de wireshark es preferible darle a botón derecho – Copiar – Hex Stream.</mark></p>
+<center>
 <figure>
-  <img src="imagenes/warmup/36.png" width="500">
+<img src="imagenes/ofensiva/8.png" width="900">
 </figure>
+</center>
 
-<p>Ahora un ejemplo usando password en vez de secret.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/37.png" width="500">
+<img src="imagenes/ofensiva/9.png" width="900">
 </figure>
+</center>
 
-<p>Tras hacer un “show running-config” o “sh run”.</p>
-<figure>
-  <img src="imagenes/warmup/38.png" width="500">
-</figure>
-
-<p><strong>7.</strong>  Por seguridad vamos a crear una contraseña de “enable” esto es una contraseña para cuando quiera acceder a dicho modo, el cual nos sirve para ver y modificar la configuración.</p>
-<figure>
-  <img src="imagenes/warmup/39.png" width="400">
-</figure>
-
-<p>Recordad, de forma habitual, <mark class="critic">guardar los cambios.</mark></p>
-<figure>
-  <img src="imagenes/warmup/40.png" width="200">
-</figure>
-
-<h2 id="mostrar-configuracion">Mostrar Configuración.<a class="headerlink" href="#mostrar-configuracion" title="Permanent link">¶</a></h2>
-<p>Los equipos Cisco tienen dos memorias, una volátil (NVRAM) y otra no volátil (memoria flash).</p>
-<p>Cuando realizamos un cambio en la configuración, este se aplica y dicha configuración se almacena en la NVRAM. Es decir, en caso de reiniciar el equipo perderíamos esos cambios realizados. A  esta configuración se le llama <mark class="critic">“Running Configuration”.</mark></p>
-<figure>
-  <img src="imagenes/warmup/41.png" width="500">
-</figure>
-
-<p>Cuando el equipo Cisco arranca coge la información de la memoria flash (no volátil). A esta configuración se le conoce como <mark class="critic">“Startup Configuration”. </mark></p>
-<figure>
-  <img src="imagenes/warmup/42.png" width="500">
-</figure>
-
-<h2 id="guardar-cambios">Guardar Cambios.<a class="headerlink" href="#guardar-cambios" title="Permanent link">¶</a></h2>
-<p>Si queremos que unos cambios persistan a un reinicio debemos copiar la “Running Config” a la “Startup Config”, es decir, pasarlo de la NVRAM a la memoria flash. Para ello usamos el comando <mark class="critic">“write” o “wr”</mark>.</p>
-<figure>
-  <img src="imagenes/warmup/43.png" width="500">
-</figure>
-
-<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h2>
+<h2 id="ataque-por-diccionario">Ataque por diccionario.<a class="headerlink" href="#ataque-por-diccionario" title="Permanent link">¶</a></h2>
+<p>A continuación nos bajamos el script "chap2asleap" que hará uso de los comandos <ins class="critic">“asleap” y “genkeys”</ins> para romper la seguridad.</p>
+<div class="admonition tip">
+<p class="admonition-title">chap2asleap</p>
+<p>Se debería de encontrar en el <mark class="critic">Escritorio del Kali</mark> o se puede descargar.</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/xiao106347/chap2asleap.git
+</code></pre></div>
+</div>
+<p>Ejecutamos el script  de python con la siguiente información:</p>
 <div class="center-table">
 <table>
 <thead>
@@ -1438,27 +1385,45 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><code>enable</code></td>
-<td style="text-align: center;">Acceder al modo administrador.</td>
+<td style="text-align: center;"><code>–u</code></td>
+<td style="text-align: center;">Usuario</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>configura terminal</code></td>
-<td style="text-align: center;">Entrar al CLI para modificar configuración.</td>
+<td style="text-align: center;"><code>–c Challenge</code></td>
+<td style="text-align: center;">Sacado del wireshark en hexadecimal.</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>show running-config</code></td>
-<td style="text-align: center;">Ver la configuración actual.</td>
+<td style="text-align: center;"><code>–r Response</code></td>
+<td style="text-align: center;">Sacado del wireshark en hexadecimal.</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>show interfaces description</code></td>
-<td style="text-align: center;">Información de las interfaces.</td>
+<td style="text-align: center;"><code>-x</code></td>
+<td style="text-align: center;">Para que ejecute todo el proceso.</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>wr</code></td>
-<td style="text-align: center;">Guardar cambios.</td>
+<td style="text-align: center;"><code>–p</code></td>
+<td style="text-align: center;">La ruta donde se encuentra el comando asleap.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-d</code></td>
+<td style="text-align: center;">La ruta donde se encuentra la lista de diccionario. El propio script se ocupa de indexarlo en claves hash mediante genkeys.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-v</code></td>
+<td style="text-align: center;">Para que te vaya sacando información del proceso que va realizando.</td>
 </tr>
 </tbody>
 </table>
+</div>
+<center>
+<figure>
+<img src="imagenes/ofensiva/10.png" width="900">
+</figure>
+</center>
+
+<div class="admonition warning">
+<p class="admonition-title">Contraseña Robusta</p>
+<p>En el caso de que la contraseña fuese más compleja, por ejemplo, “A#i4-…”, el ataque por diccionario no funcionaría y deberíamos usar el ataque por fuerza bruta.</p>
 </div></div>
 
 
