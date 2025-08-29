@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/2_ComandosCisco.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/17_IPSec.html">
       
       
-        <link rel="prev" href="A_ProblemasEVE.html">
+        <link rel="prev" href="14_PPTP.html">
       
       
-        <link rel="next" href="A_ComandosCisco2.html">
+        <link rel="next" href="16_OpenVPN.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Básicos - CiberSeguridad Redes.</title>
+        <title>IPSec - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco" class="md-skip">
+        <a href="#l2tpipsec" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Básicos
+              IPSec
             
           </span>
         </div>
@@ -575,8 +575,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -592,11 +594,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -612,7 +614,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             DEFENSIVA
@@ -692,8 +694,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -709,11 +713,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -729,7 +733,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             VPN
@@ -786,10 +790,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="17_IPSec.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    IPSec
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="17_IPSec.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -800,6 +826,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l2tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      L2TP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPSec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ikev1-vs-ikev2" class="md-nav__link">
+    <span class="md-ellipsis">
+      IKEv1 vs IKEv2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -847,10 +920,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -866,11 +937,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -886,7 +957,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -920,10 +991,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -939,11 +1008,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -959,7 +1028,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -970,32 +1039,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Básicos
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="2_ComandosCisco.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="2_ComandosCisco.html" class="md-nav__link">
         
   
   
@@ -1006,89 +1053,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#niveles-de-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Niveles de configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletado-y-autoayuda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autocompletado y Autoayuda
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Interfaces.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-acceso-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Acceso SSH.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mostrar-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mostrar Configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guardar-cambios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Guardar Cambios.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1315,200 +1279,225 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco">Comandos básicos Cisco.<a class="headerlink" href="#comandos-basicos-cisco" title="Permanent link">¶</a></h1>
-<h2 id="niveles-de-configuracion">Niveles de configuración.<a class="headerlink" href="#niveles-de-configuracion" title="Permanent link">¶</a></h2>
-<p>En Cisco existen varios niveles de configuración.</p>
+<div><h1 id="l2tpipsec">L2TP/IPSec.<a class="headerlink" href="#l2tpipsec" title="Permanent link">¶</a></h1>
+<h2 id="l2tp">L2TP<a class="headerlink" href="#l2tp" title="Permanent link">¶</a></h2>
+<p>El protocolo L2TP se encarga de crear un túnel entre los dos extremos (cliente – servidor), dentro del túnel viajarán los datos de la VPN. No obstante L2TP no encripta los datos, por lo que usar L2TP sin IPSec no tiene sentido, pues para ello ya podríamos optar por PPTP (el cual hemos visto que tampoco es seguro).</p>
+<p>L2TP es a grandes rasgos muy parecido a PPTP y sufre de los mismos problemas, solo lo vamos a usar para establecer la conexión.</p>
+<p>También cabría la posibilida de usar únicamente IPSec.</p>
+<h2 id="ipsec">IPSec<a class="headerlink" href="#ipsec" title="Permanent link">¶</a></h2>
+<p>El protocolo IPSec se ocupa de encriptar los datos que se transfieren en el túnel L2TP entre el cliente y el servidor VPN. </p>
+<p>Su finalidad es la de dotar a la comunicación de:</p>
 <ul>
 <li>
-<p>Modo Usuario.</p>
-<p>💥 Modo lectura que nos permite consultar información o estado del equipo.</p>
+<p><strong>Confidencialidad</strong>: Nadie pueda leer el contenido al estar cifrado.</p>
+</li>
+<li>
+<p><strong>Integridad</strong>: Nadie pueda modificar el contenido. Esto se consigue al comparar un hash del tráfico enviado.</p>
+</li>
+<li>
+<p><strong>Autenticación</strong>: A través de usuarios/contraseñas/contraseñas compartidas/certificados se garantiza la autenticidad de los extremos.</p>
+</li>
+<li>
+<p><strong>Evitar ataques Replay</strong>: A través del uso de números de secuencia IPSec no permite el reenvío de paquetes duplicados.</p>
 </li>
 </ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/24.png" width="100">
+  <img src="imagenes/defensiva/29.png" width="500">
 </figure>
+</center>
 
+<p>Dentro del proceso de IPSec se sigue el protocolo <ins class="critic">IKE (Internet Key Exchange) / ISAKMP (Internet Security Association and Key Management Protocol)</ins> para acordar entre el cliente y el servidor VPN en el tipo de algoritmos de cifrado que se van a implementar en las comunicaciones. </p>
+<p><strong>ISAKMP</strong> es un framework, establece el formato de los paquetes y el tipo de mensajes disponibles para establecer/modificar/romper una <ins class="critic">SA (Asociación de Seguridad)</ins>. Un SA es establecido entre dos extremos cuando han llegado a un acuerdo de qué tipo de seguridad (qué tipo de cifrado simétrico, qué algoritmos de hash, si usaran cifrado asimétrico, etc) van a usar para intercambiarse la información y permitir por tanto establecer una seguridad.</p>
+<p><strong>IKE</strong> es el protocolo que establece las comunicaciones seguras entre los extremos, para ello hace uso del framework ISAKMP para establecer los SA entre los extremos. Existen dos versiones del protocolo IKEv1 e IKEv2. <mark class="critic">Consta de 2 fases</mark>.</p>
+<h3 id="ike-fase-1">IKE Fase 1.<a class="headerlink" href="#ike-fase-1" title="Permanent link">¶</a></h3>
+<p>Se negocia los protocolos/algoritmos de encriptación, hashing, autenticación que se van a usar. Una vez decidido se establece una sesión (túnel IKE PHASE 1) entre ambos usando dichos protocolos/algoritmos, creando una SA (Security Association) y procediendo a la autenticación del usuario. </p>
+<p>El túnel de la fase 1 se puede establecer en <ins class="critic">modo agresivo o en modo normal</ins>. El modo agresivo envía menos mensajes y es más rápido de conectar, es más inseguro y por tanto no se recomienda, al no ser que en una vpn site-to-site tengan IPs dinámicas en algún extremo.</p>
+<h4 id="mensajes-en-fase-1">Mensajes en Fase 1:<a class="headerlink" href="#mensajes-en-fase-1" title="Permanent link">¶</a></h4>
+<p>Se envía una propuesta de los parámetros soportados para establecer una SA (<strong>ISAKMP</strong>):</p>
+<p>💥 Tipo de autentificación: PSK o Certificado Digital.</p>
+<p>💥 Algoritmos Hash: md5, shaX.</p>
+<p>💥 Algoritmo de Encriptación Simétrica: 3DES, AES…</p>
+<p>💥 Grupos DH soportado: Group 1, 2, 5, 14, 22 …</p>
+<p>💥 Lifetime, es decir, tiempo de vida que será válido este túnel de seguridad.</p>
+<h4 id="key-generation-information">Key Generation Information:<a class="headerlink" href="#key-generation-information" title="Permanent link">¶</a></h4>
 <ul>
 <li>
-<p>Modo Privilegiado. </p>
-<p>💥 Es un modo que permite ver la configuración del equipo y acceder al modo configuración.</p>
-<p>💥 Se accede a este modo mediante el comando <mark class="critic">“enable”.</mark></p>
+<p>En esta fase se usa DH para generar a partir de un valor público (número primo), un nonce y la clave PSK (Ver apuntes de SSH para repasar el concepto matemático del algoritmo DH):</p>
+<p>💥   Una <ins class="critic">clave que sirve para autentificar</ins>.</p>
+<p>💥   Una <ins class="critic">clave que sirve para cifrar</ins>.</p>
 </li>
 </ul>
+<h4 id="identify-and-authentication-info">Identify and Authentication Info.<a class="headerlink" href="#identify-and-authentication-info" title="Permanent link">¶</a></h4>
+<p>💥   Usando las claves del apartado anterior se autentifica al usuario viendo si tiene la clave precompartida correcta, o similar en el caso de usar certificados digitales.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/25.png" width="100">
+  <img src="imagenes/defensiva/30.png" width="700">
 </figure>
+</center>
 
+<h3 id="ike-fase-2">IKE Fase 2.<a class="headerlink" href="#ike-fase-2" title="Permanent link">¶</a></h3>
+<p>Una vez establecida la seguridad de la fase 1, se establece una segunda asociación (SA) por cada servicio, en nuestro caso dicho servicio será IPSec. Por tanto, se vuelve a negociar qué protocolos/algoritmos se va a utilizar para establecer la seguridad, en este caso del protocolo IPSec, una vez negociado se crea un segundo túnel que cifrará los datos del cliente.</p>
+<center>
+<figure>
+  <img src="imagenes/defensiva/31.png" width="600">
+</figure>
+</center>
+
+<p>Entre los parámetros que se negocian están los siguientes:</p>
 <ul>
 <li>
-<p>*Modo configuración. </p>
-<p>💥   Es el modo que nos permite realizar cambios. </p>
-<p>💥 Es importante tener en cuenta que en Cisco los cambios se aplican al instante.</p>
-<p>💥 Se accede desde  el modo enable, mediante el comando <mark class="critic">“configure terminal”</mark></p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/26.png" width="150">
-</figure>
-
-<h2 id="autocompletado-y-autoayuda">Autocompletado y Autoayuda<a class="headerlink" href="#autocompletado-y-autoayuda" title="Permanent link">¶</a></h2>
-<ul>
-<li>En el terminal podemos hacer uso del <mark class="critic">“?”</mark> para ver que parámetros u opciones tiene cada comando.</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/27.png" width="500">
-</figure>
-
-<ul>
-<li>
-<p>Podemos hacer uso del <mark class="critic">“tabulador”</mark> para autocompletar un comando.</p>
+<p><strong>IPsec Protocol</strong>: AH o ESP</p>
 </li>
 <li>
-<p>No es necesario completar el comando para que se ejecute. Por ejemplo en vez de enable podemos ejecutar  “en”, en vez de configure terminal “conf t”, en vez de write usar “wr”.</p>
+<p><strong>Modo de encapsulación</strong>: Modo transporte o túnel.</p>
+</li>
+<li>
+<p><strong>Encriptación</strong>: DES, 3DES o AES.</p>
+</li>
+<li>
+<p><strong>Autentificación</strong>: MD5 or SHA.</p>
+</li>
+<li>
+<p><strong>Lifetime</strong>: Durante cuánto tiempo es válido el túnel, pasado el tiempo se debe renegociar y recrear el túnel de nuevo. </p>
+</li>
+<li>
+<p><strong>DH</strong>: Grupo que se usará junto con la clave compartida PSK + “nonce” certificar  la autenticación y para intercambiar la clave simétrica.</p>
 </li>
 </ul>
-<figure>
-  <img src="imagenes/warmup/28.png" width="300">
-</figure>
-
-<h2 id="configurar-interfaces">Configurar Interfaces.<a class="headerlink" href="#configurar-interfaces" title="Permanent link">¶</a></h2>
-<p>Cada fabricante nombra sus interfaces de diferente forma. En el caso de Cisco los más habituales son los siguientes:</p>
+<h3 id="ah-o-esp">AH o ESP:<a class="headerlink" href="#ah-o-esp" title="Permanent link">¶</a></h3>
+<p>Son los protocolos que proporcionan seguridad utilizando las algoritmos de cifrado/hash/claves, etc.</p>
 <ul>
 <li>
-<p>Fa: FastEthernet (100Mbps)</p>
+<p><strong>AH (Authentication Header)</strong>: Proporciona Integridad y Autenticación.</p>
 </li>
 <li>
-<p>Gi: GigaEthernet (1Gbps).</p>
-</li>
-<li>
-<p>Te: TenGigabitEthernet (10Gbps).</p>
+<p><strong>ESP (Encapsulating Security Payload)</strong>: Proporciona Integridad, Autenticación y Confidencialidad.</p>
 </li>
 </ul>
-<p>Muchos equipos de red son ampliables por módulos, es decir, que podemos tener un switch de 12 puertos y un hueco para insertarle otro módulo de 12 puertos. Otros equipos son stackables, se pueden unir entre si y funciona como un mismo equipo. </p>
-<p>Pues bien, las interfaces nos dan información de donde se encuentra el puerto dentro del equipo. </p>
-<p><ins class="critic">Por ejemplo:</ins></p>
-<p>💥 Gi0/0  --&gt; Indica que la interfaz es la primera del primer módulo.</p>
-<p>💥 Gi1/0/3 --&gt; Puede indicar el tercer puerto, del primer módulo, del segundo switch en stack.</p>
-<p><ins class="critic">Configuración.</ins></p>
-<p>Dentro de la configuración se pueden acceder a diferentes subapartados, habitualmente protocolos o interfaces. </p>
-<p>En la siguiente captura nos metemos en la interfaz Gi0/0 (GigaEthernet 0/0), le estamos poniendo un nombre (descripción), lo estamos levantando administrativamente (no shutdown) y configurandola para que pase todas las vlans (switchport trunk + switchport mode trunk).</p>
-<figure>
-  <img src="imagenes/warmup/29.png" width="500">
-</figure>
-
-<p>Dentro de una interfaz nos podemos mover a otra, simplemente volviendo a hacer uso del comando <mark class="critic">“interface Gi0/X”=}.</mark></p>
-<p>Se pueden configurar muchas interfaces a la vez haciendo uso de {==“interface range Gi0/0-3”. Con este estamos configurando 4 interfaces a la vez: Gi0/0, Gi0/1, Gi0/2, Gi0/3.</p>
-<figure>
-  <img src="imagenes/warmup/30.png" width="400">
-</figure>
-
-<h2 id="configurar-acceso-ssh">Configurar Acceso SSH.<a class="headerlink" href="#configurar-acceso-ssh" title="Permanent link">¶</a></h2>
-<p>Telnet no es un protocolo seguro, por lo que configuraremos SSH siempre.</p>
-<p><strong>1.</strong>  Generar un hostname.</p>
-<figure>
-  <img src="imagenes/warmup/31.png" width="400">
-</figure>
-
-<p><strong>2.</strong>  Generamos un nombre de dominio.</p>
-<figure>
-  <img src="imagenes/warmup/32.png" width="400">
-</figure>
-
-<p><strong>3.</strong>  Los pasos anteriores son necesarios para generamos el par de claves RSA. Las claves deben ser como mínimo de 2048 bits. </p>
-<figure>
-  <img src="imagenes/warmup/33.png" width="400">
-</figure>
-
-<p><strong>4.</strong>  Una vez tengamos las claves ya podemos activar el protocolo SSH para la gestión remota de nuestros equipos de forma segura.</p>
-<figure>
-  <img src="imagenes/warmup/34.png" width="400">
-</figure>
-
-<p><strong>5.</strong>  En el caso de los equipos cisco, y es similar en otros equipos existe un número limitado de sesiones simultáneas que se pueden abrir sobre un mismo equipo. En el caso del ejemplo existen 16 terminales virtuales (vty). Vamos a indicarle al equipo que la forma de acceder a estos terminales virtuales es mediante el uso del protocolo SSH.</p>
-<figure>
-  <img src="imagenes/warmup/35.png" width="400">
-</figure>
-
-<p><strong>6.</strong>  Finalmente debemos crear los usuarios. </p>
-<div class="admonition note">
-<p class="admonition-title"><strong>AVISO</strong></p>
-<p>Con <mark class="critic">privilege</mark> indica qué acciones podrá realizar este usuario, es decir, modificar configuración, solo lectura, entrar en modo enable, etc... </p>
-<p>Con <mark class="critic">secret</mark> se establece la contraseña del usuario. Si en vez de secret usáis la palabra password, no se cifran las contraseñas.</p>
+<div class="admonition warning">
+<p class="admonition-title">AH</p>
+<p>Ambos soportan autentificación e integridad, pero <ins class="critic">solo ESP permite encriptación del paquete IP</ins>, por lo que suele ser el elegido de los dos.</p>
 </div>
+<p>Existen dos modos de configurar estos protocolos, en <ins class="critic">modo transporte o modo túnel</ins>. </p>
+<ul>
+<li><strong>Modo transporte</strong>: Se saben las IPs que establecen la conexión VPN. Se suele usar cuando queremos dotar de seguridad a un protocolo inseguro (telnet). Es más rápido y tiene menos overhead.</li>
+</ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/36.png" width="500">
+  <img src="imagenes/defensiva/32.png" width="600">
 </figure>
+</center>
 
-<p>Ahora un ejemplo usando password en vez de secret.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/37.png" width="500">
+  <img src="imagenes/defensiva/33.png" width="600">
 </figure>
+</center>
 
-<p>Tras hacer un “show running-config” o “sh run”.</p>
+<ul>
+<li><strong>Modo túnel</strong>: Se enmascara las direcciones que realmente establecen el túnel. Es el modo que se suele usar, aunque al tener que añadir el encabezado para el túnel estamos agregando overhead a nuestros paquetes.</li>
+</ul>
+<h4 id="ejemplo-ah">Ejemplo AH:<a class="headerlink" href="#ejemplo-ah" title="Permanent link">¶</a></h4>
+<center>
 <figure>
-  <img src="imagenes/warmup/38.png" width="500">
+  <img src="imagenes/defensiva/34.png" width="600">
 </figure>
+</center>
 
-<p><strong>7.</strong>  Por seguridad vamos a crear una contraseña de “enable” esto es una contraseña para cuando quiera acceder a dicho modo, el cual nos sirve para ver y modificar la configuración.</p>
+<h4 id="ejemplo-esp">Ejemplo ESP:<a class="headerlink" href="#ejemplo-esp" title="Permanent link">¶</a></h4>
+<center>
 <figure>
-  <img src="imagenes/warmup/39.png" width="400">
+  <img src="imagenes/defensiva/35.png" width="700">
 </figure>
+</center>
 
-<p>Recordad, de forma habitual, <mark class="critic">guardar los cambios.</mark></p>
+<center>
 <figure>
-  <img src="imagenes/warmup/40.png" width="200">
+  <img src="imagenes/defensiva/36.png" width="700">
 </figure>
+</center>
 
-<h2 id="mostrar-configuracion">Mostrar Configuración.<a class="headerlink" href="#mostrar-configuracion" title="Permanent link">¶</a></h2>
-<p>Los equipos Cisco tienen dos memorias, una volátil (NVRAM) y otra no volátil (memoria flash).</p>
-<p>Cuando realizamos un cambio en la configuración, este se aplica y dicha configuración se almacena en la NVRAM. Es decir, en caso de reiniciar el equipo perderíamos esos cambios realizados. A  esta configuración se le llama <mark class="critic">“Running Configuration”.</mark></p>
-<figure>
-  <img src="imagenes/warmup/41.png" width="500">
-</figure>
-
-<p>Cuando el equipo Cisco arranca coge la información de la memoria flash (no volátil). A esta configuración se le conoce como <mark class="critic">“Startup Configuration”. </mark></p>
-<figure>
-  <img src="imagenes/warmup/42.png" width="500">
-</figure>
-
-<h2 id="guardar-cambios">Guardar Cambios.<a class="headerlink" href="#guardar-cambios" title="Permanent link">¶</a></h2>
-<p>Si queremos que unos cambios persistan a un reinicio debemos copiar la “Running Config” a la “Startup Config”, es decir, pasarlo de la NVRAM a la memoria flash. Para ello usamos el comando <mark class="critic">“write” o “wr”</mark>.</p>
-<figure>
-  <img src="imagenes/warmup/43.png" width="500">
-</figure>
-
-<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h2>
-<div class="center-table">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Comando</th>
-<th style="text-align: center;"><center> Función </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>enable</code></td>
-<td style="text-align: center;">Acceder al modo administrador.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>configura terminal</code></td>
-<td style="text-align: center;">Entrar al CLI para modificar configuración.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>show running-config</code></td>
-<td style="text-align: center;">Ver la configuración actual.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>show interfaces description</code></td>
-<td style="text-align: center;">Información de las interfaces.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>wr</code></td>
-<td style="text-align: center;">Guardar cambios.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="dh-exchange-key-cifrado-asimetrico">DH Exchange Key (Cifrado Asimétrico):<a class="headerlink" href="#dh-exchange-key-cifrado-asimetrico" title="Permanent link">¶</a></h3>
+<p>Permite, a través de cifrado asimétrico, transmitir información de modo seguro, como podría ser la clave simétrica (3DES/AES) que posteriormente cifrará los datos del usuario. </p>
+<p>Mediante las claves públicas/privadas de cada extremo, la clave precompartida (PSK) y un “nonce” se genera una clave hash que permite autentificar a los usuarios.</p>
+<p>Una vez realizado este último paso ya se tendrá un túnel en el cual se podrá usar de forma segura un cifrado simétrico y además se ha comprobado que el otro extremo es parte del sistema al tener la clave precompartida. Por lo que el tráfico ya va correctamente cifrado y podemos autentificar al usuario/contraseña mediante L2TP (mschap2/chap) pero con IPSeC por encima.</p>
+<p>Cuanto más alto el grupo que se use, mayor seguridad a costa de mayor tiempo de computación.</p>
+<div class="admonition warning">
+<p class="admonition-title">DH Key Group</p>
+<p>💥 No usar menos de DH 2048 bits.</p>
+<p>💥 Evitar grupos 1, 2, 22, 23 y 24.</p>
+</div>
+<p>En la fase 2 tenemos la opción de activar <ins class="critic">PFS (Perfect Forward Secrecy)</ins>. Esto obligará a volver a computar otras claves asimétricas de DH diferentes a la de la fase 1.</p>
+<h3 id="des-3des-o-aes">DES, 3DES o AES:<a class="headerlink" href="#des-3des-o-aes" title="Permanent link">¶</a></h3>
+<p>El principal problema de los cifrados simétricos es como compartir la clave simétrica. Para solventar este problema se ha usado criptografía asimétrica (DH). Una vez compartida la clave simétrica el resto de datos pueden ir cifrados con un algoritmo de cifrado simétrico, esto tiene menor coste computacional y permite un mayor rendimiento. </p>
+<div class="admonition warning">
+<p class="admonition-title">CIFRADO SIMÉTRICO</p>
+<p>💥 DES no es seguro.</p>
+<p>💥 Se recomienda el uso de AES 256 bits como mínimo.</p>
+</div>
+<h3 id="md5-o-sha">MD5 o SHA:<a class="headerlink" href="#md5-o-sha" title="Permanent link">¶</a></h3>
+<p>Se usan dichos algoritmos hash para verificar la integridad de los paquetes, confirmar que no hayan sido modificados por nadie. Se recomienda SHA256 como mínimo. </p>
+<p>Son algoritmos one-way.</p>
+<p>También es usado por AH o ESP para confirmar la autentificación de los usuarios. </p>
+<div class="admonition warning">
+<p class="admonition-title">MD5 o SHA1</p>
+<p>Tanto md5 o sha1 no son seguros.</p>
+</div>
+<h3 id="servidor-vpn-detras-de-un-nat">Servidor VPN detrás de un NAT.<a class="headerlink" href="#servidor-vpn-detras-de-un-nat" title="Permanent link">¶</a></h3>
+<p>Es importante tener en cuenta que este tipo de protocolos pueden tener problemas si el servidor VPN se encuentra detrás de un NAT. Para ello se tiene que:</p>
+<ul>
+<li>
+<p>Activar <ins class="critic">NAT-T (Traversal)</ins> en la parte del servidor.</p>
+</li>
+<li>
+<p>Permitir en el firewall el puerto UDP 4500 para el NAT-T</p>
+</li>
+<li>
+<p>El router del cliente debe tener activado <ins class="critic">VPN Passthrough</ins>, para que deje pasar el tráfico VPN del cliente. En los routers domésticos actuales ya suele venir activado por defecto.</p>
+</li>
+</ul>
+<h3 id="puertos">Puertos.<a class="headerlink" href="#puertos" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>1701: Tráfico L2TP.</p>
+</li>
+<li>
+<p>500: ISAKMP.</p>
+</li>
+<li>
+<p>4500 UDP: NAT-T.</p>
+</li>
+</ul>
+<h2 id="ikev1-vs-ikev2">IKEv1 vs IKEv2<a class="headerlink" href="#ikev1-vs-ikev2" title="Permanent link">¶</a></h2>
+<p>Recordemos que existen dos versiones del protocolo IKE.</p>
+<p>Entre las principales ventajas de IKEv2 se encuentran las siguientes:</p>
+<ul>
+<li>
+<p>Se elimina el modo agresivo.</p>
+</li>
+<li>
+<p>Mantiene los métodos de negociación mediante PSK como Certificados Digitales (RSA).</p>
+</li>
+<li>
+<p>Usa NAT Transversal por defecto, mientras que en el caso de IKEv1 era una extensión.</p>
+</li>
+<li>
+<p>Permite el uso de EAP.</p>
+</li>
+<li>
+<p>Mayor protección contra ataques de DDoS.</p>
+</li>
+<li>
+<p>Usa menos mensajes para establecer la SA.</p>
+</li>
+<li>
+<p>Mayor soporte a conexiones VPN móviles, que vayan cambiando de lugar sin desconectarse.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">COMPATIBILIDAD</p>
+<p><ins class="critic">IKEv2 e IKEv1 no son compatibles</ins>, si configuramos un servidor VPN deberá ser eligiendo una de las dos y nuestros clientes deberán soportar dicha elección.</p>
 </div></div>
 
 

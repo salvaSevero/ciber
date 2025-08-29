@@ -2,98 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://salvasevero.github.io/ciber/index.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/0_Modelo_Capas.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/10_LACP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/11_VLANs.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/12_VRRP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/13_VPN.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/14_PPTP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/15_Ataque_PPTP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
+    </url>
+    <url>
+         <loc>https://salvasevero.github.io/ciber/16_OpenVPN.html</loc>
+         <lastmod>2025-08-29</lastmod>
+    </url>
+    <url>
+         <loc>https://salvasevero.github.io/ciber/17_IPSec.html</loc>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/1_ConocimientosBasicos.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/2_ComandosCisco.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/3_CAM_Overflow.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/4_ConocimientosL3.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/5_TeoriaVLAN.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/6_DHCP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/7_ConceptosL4.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/8_NAT.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/9_EnrutamientoDinamico.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_CiscoACL.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_ComandosCisco2.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_ComandosNAT.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_Configuraci%C3%B3nMikrotik.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_Configurar_PPTP.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_ProblemasEVE.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
     <url>
          <loc>https://salvasevero.github.io/ciber/A_Usuarios.html</loc>
-         <lastmod>2025-08-27</lastmod>
+         <lastmod>2025-08-29</lastmod>
     </url>
 </urlset>
