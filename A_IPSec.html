@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/2_ComandosCisco.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_IPSec.html">
       
       
-        <link rel="prev" href="A_ProblemasEVE.html">
+        <link rel="prev" href="A_Configurar_PPTP.html">
       
       
-        <link rel="next" href="A_ComandosCisco2.html">
+        <link rel="next" href="A_Usuarios.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Básicos - CiberSeguridad Redes.</title>
+        <title>L2TP/IPSec - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco" class="md-skip">
+        <a href="#configuracion-client-to-site-vpn-l2tpipsec" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Básicos
+              L2TP/IPSec
             
           </span>
         </div>
@@ -920,10 +920,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -939,11 +937,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -959,7 +957,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -970,32 +968,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Básicos
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="2_ComandosCisco.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="2_ComandosCisco.html" class="md-nav__link">
         
   
   
@@ -1006,89 +982,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#niveles-de-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Niveles de configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletado-y-autoayuda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autocompletado y Autoayuda
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-interfaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Interfaces.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-acceso-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Acceso SSH.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mostrar-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mostrar Configuración.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guardar-cambios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Guardar Cambios.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1175,8 +1068,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1190,11 +1085,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -1210,7 +1105,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Configuraciones Mikrotik
@@ -1267,10 +1162,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="A_IPSec.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    L2TP/IPSec
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="A_IPSec.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1281,6 +1198,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pool-y-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      POOL y PROFILE.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activar-servicio-l2tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activar servicio L2TP.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizar-las-propuestas-de-ipsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalizar las propuestas de IPSec.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear Usuarios.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectividad-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectividad LAN.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1340,201 +1331,149 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco">Comandos básicos Cisco.<a class="headerlink" href="#comandos-basicos-cisco" title="Permanent link">¶</a></h1>
-<h2 id="niveles-de-configuracion">Niveles de configuración.<a class="headerlink" href="#niveles-de-configuracion" title="Permanent link">¶</a></h2>
-<p>En Cisco existen varios niveles de configuración.</p>
+<div><h1 id="configuracion-client-to-site-vpn-l2tpipsec">Configuración Client-to-Site VPN L2TP/IPsec.<a class="headerlink" href="#configuracion-client-to-site-vpn-l2tpipsec" title="Permanent link">¶</a></h1>
+<h2 id="pool-y-profile">POOL y PROFILE.<a class="headerlink" href="#pool-y-profile" title="Permanent link">¶</a></h2>
+<p>Al igual que en la práctica de PPTP vamos a crear un <ins class="critic">POOL</ins> y un <ins class="critic">PROFILE</ins>. </p>
 <ul>
 <li>
-<p>Modo Usuario.</p>
-<p>💥 Modo lectura que nos permite consultar información o estado del equipo.</p>
+<p><strong>POOL</strong> ➡️ Es un rango de IPs que serán asignados a los clientes que se vayan conectando a la VPN. Si no se crea se debe asignar una IP de forma manual cliente por cliente.</p>
+</li>
+<li>
+<p><strong>PROFILE</strong> ➡️ La configuración de red que va a tener cada cliente que se conecte (puerta de enlace, limitaciones de anchos de banda, reglas que se le pueden aplicar, etc).</p>
+</li>
+<li>
+<p><strong>Local Address</strong> ➡️ Es la IP que hará de puerta de enlace dentreo de la LAN. Normalmente es la IP configurada en la parte LAN del router de la empresa (Site), en este ejemplo del propio Mikrotik. </p>
+</li>
+<li>
+<p><strong>Remote Address</strong> ➡️ Apunta al pool, el cual es una sección de IPs libres de la LAN.</p>
 </li>
 </ul>
-<figure>
-  <img src="imagenes/warmup/24.png" width="100">
-</figure>
-
-<ul>
-<li>
-<p>Modo Privilegiado. </p>
-<p>💥 Es un modo que permite ver la configuración del equipo y acceder al modo configuración.</p>
-<p>💥 Se accede a este modo mediante el comando <mark class="critic">“enable”.</mark></p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/25.png" width="100">
-</figure>
-
-<ul>
-<li>
-<p>*Modo configuración. </p>
-<p>💥   Es el modo que nos permite realizar cambios. </p>
-<p>💥 Es importante tener en cuenta que en Cisco los cambios se aplican al instante.</p>
-<p>💥 Se accede desde  el modo enable, mediante el comando <mark class="critic">“configure terminal”</mark></p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/26.png" width="150">
-</figure>
-
-<h2 id="autocompletado-y-autoayuda">Autocompletado y Autoayuda<a class="headerlink" href="#autocompletado-y-autoayuda" title="Permanent link">¶</a></h2>
-<ul>
-<li>En el terminal podemos hacer uso del <mark class="critic">“?”</mark> para ver que parámetros u opciones tiene cada comando.</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/27.png" width="500">
-</figure>
-
-<ul>
-<li>
-<p>Podemos hacer uso del <mark class="critic">“tabulador”</mark> para autocompletar un comando.</p>
-</li>
-<li>
-<p>No es necesario completar el comando para que se ejecute. Por ejemplo en vez de enable podemos ejecutar  “en”, en vez de configure terminal “conf t”, en vez de write usar “wr”.</p>
-</li>
-</ul>
-<figure>
-  <img src="imagenes/warmup/28.png" width="300">
-</figure>
-
-<h2 id="configurar-interfaces">Configurar Interfaces.<a class="headerlink" href="#configurar-interfaces" title="Permanent link">¶</a></h2>
-<p>Cada fabricante nombra sus interfaces de diferente forma. En el caso de Cisco los más habituales son los siguientes:</p>
-<ul>
-<li>
-<p>Fa: FastEthernet (100Mbps)</p>
-</li>
-<li>
-<p>Gi: GigaEthernet (1Gbps).</p>
-</li>
-<li>
-<p>Te: TenGigabitEthernet (10Gbps).</p>
-</li>
-</ul>
-<p>Muchos equipos de red son ampliables por módulos, es decir, que podemos tener un switch de 12 puertos y un hueco para insertarle otro módulo de 12 puertos. Otros equipos son stackables, se pueden unir entre si y funciona como un mismo equipo. </p>
-<p>Pues bien, las interfaces nos dan información de donde se encuentra el puerto dentro del equipo. </p>
-<p><ins class="critic">Por ejemplo:</ins></p>
-<p>💥 Gi0/0  --&gt; Indica que la interfaz es la primera del primer módulo.</p>
-<p>💥 Gi1/0/3 --&gt; Puede indicar el tercer puerto, del primer módulo, del segundo switch en stack.</p>
-<p><ins class="critic">Configuración.</ins></p>
-<p>Dentro de la configuración se pueden acceder a diferentes subapartados, habitualmente protocolos o interfaces. </p>
-<p>En la siguiente captura nos metemos en la interfaz Gi0/0 (GigaEthernet 0/0), le estamos poniendo un nombre (descripción), lo estamos levantando administrativamente (no shutdown) y configurandola para que pase todas las vlans (switchport trunk + switchport mode trunk).</p>
-<figure>
-  <img src="imagenes/warmup/29.png" width="500">
-</figure>
-
-<p>Dentro de una interfaz nos podemos mover a otra, simplemente volviendo a hacer uso del comando <mark class="critic">“interface Gi0/X”=}.</mark></p>
-<p>Se pueden configurar muchas interfaces a la vez haciendo uso de {==“interface range Gi0/0-3”. Con este estamos configurando 4 interfaces a la vez: Gi0/0, Gi0/1, Gi0/2, Gi0/3.</p>
-<figure>
-  <img src="imagenes/warmup/30.png" width="400">
-</figure>
-
-<h2 id="configurar-acceso-ssh">Configurar Acceso SSH.<a class="headerlink" href="#configurar-acceso-ssh" title="Permanent link">¶</a></h2>
-<p>Telnet no es un protocolo seguro, por lo que configuraremos SSH siempre.</p>
-<p><strong>1.</strong>  Generar un hostname.</p>
-<figure>
-  <img src="imagenes/warmup/31.png" width="400">
-</figure>
-
-<p><strong>2.</strong>  Generamos un nombre de dominio.</p>
-<figure>
-  <img src="imagenes/warmup/32.png" width="400">
-</figure>
-
-<p><strong>3.</strong>  Los pasos anteriores son necesarios para generamos el par de claves RSA. Las claves deben ser como mínimo de 2048 bits. </p>
-<figure>
-  <img src="imagenes/warmup/33.png" width="400">
-</figure>
-
-<p><strong>4.</strong>  Una vez tengamos las claves ya podemos activar el protocolo SSH para la gestión remota de nuestros equipos de forma segura.</p>
-<figure>
-  <img src="imagenes/warmup/34.png" width="400">
-</figure>
-
-<p><strong>5.</strong>  En el caso de los equipos cisco, y es similar en otros equipos existe un número limitado de sesiones simultáneas que se pueden abrir sobre un mismo equipo. En el caso del ejemplo existen 16 terminales virtuales (vty). Vamos a indicarle al equipo que la forma de acceder a estos terminales virtuales es mediante el uso del protocolo SSH.</p>
-<figure>
-  <img src="imagenes/warmup/35.png" width="400">
-</figure>
-
-<p><strong>6.</strong>  Finalmente debemos crear los usuarios. </p>
-<div class="admonition note">
-<p class="admonition-title"><strong>AVISO</strong></p>
-<p>Con <mark class="critic">privilege</mark> indica qué acciones podrá realizar este usuario, es decir, modificar configuración, solo lectura, entrar en modo enable, etc... </p>
-<p>Con <mark class="critic">secret</mark> se establece la contraseña del usuario. Si en vez de secret usáis la palabra password, no se cifran las contraseñas.</p>
+<div class="admonition warning">
+<p class="admonition-title">AVISO</p>
+<p><strong>Importante que el pool no se solape con el pool para el DHCP.</strong></p>
 </div>
+<center>
 <figure>
-  <img src="imagenes/warmup/36.png" width="500">
+  <img src="imagenes/anexo/21.png" width="400">
 </figure>
+</center>
 
-<p>Ahora un ejemplo usando password en vez de secret.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/37.png" width="500">
+  <img src="imagenes/anexo/22.png" width="700">
 </figure>
+</center>
 
-<p>Tras hacer un “show running-config” o “sh run”.</p>
+<h2 id="activar-servicio-l2tp">Activar servicio L2TP.<a class="headerlink" href="#activar-servicio-l2tp" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong>Secret</strong> ➡️ Es la contraseña compartida (PSK).</p>
+</li>
+<li>
+<p><strong>Default Profile</strong> ➡️ El perfil que hemos creado en el punto anterior.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">SERVICIO</p>
+<p>En caso de tener otro servicio activo como puede ser PPTP, lo podemos desactivar.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">AUTENTIFICACIÓN</p>
+<p>La autentificación dejamos sólo la mschap2 que ya vimos que no era segura, aunque <strong>realmente la seguridad la aportará IPSec</strong>.</p>
+</div>
+<center>
 <figure>
-  <img src="imagenes/warmup/38.png" width="500">
+  <img src="imagenes/anexo/23.png" width="400">
 </figure>
+</center>
 
-<p><strong>7.</strong>  Por seguridad vamos a crear una contraseña de “enable” esto es una contraseña para cuando quiera acceder a dicho modo, el cual nos sirve para ver y modificar la configuración.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/39.png" width="400">
+  <img src="imagenes/anexo/24.png" width="700">
 </figure>
+</center>
 
-<p>Recordad, de forma habitual, <mark class="critic">guardar los cambios.</mark></p>
+<h2 id="personalizar-las-propuestas-de-ipsec">Personalizar las propuestas de IPSec.<a class="headerlink" href="#personalizar-las-propuestas-de-ipsec" title="Permanent link">¶</a></h2>
+<p>Al activar el servicio L2TP con IPSec requerido se configura automáticamente un perfil IPSec, se puede ver en el apartado <strong>IP ➡️ IPSec</strong>. </p>
+<p>Dentro de la subsección <ins class="critic">Profile</ins> podemos ver que algoritmos de encriptación se eligen para la <strong>Fase 1 de IPSec</strong>.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/40.png" width="200">
+  <img src="imagenes/anexo/31.png" width="500">
 </figure>
+</center>
 
-<h2 id="mostrar-configuracion">Mostrar Configuración.<a class="headerlink" href="#mostrar-configuracion" title="Permanent link">¶</a></h2>
-<p>Los equipos Cisco tienen dos memorias, una volátil (NVRAM) y otra no volátil (memoria flash).</p>
-<p>Cuando realizamos un cambio en la configuración, este se aplica y dicha configuración se almacena en la NVRAM. Es decir, en caso de reiniciar el equipo perderíamos esos cambios realizados. A  esta configuración se le llama <mark class="critic">“Running Configuration”.</mark></p>
+<p>Dentro de la pestaña <ins class="critic">Proposals</ins> vemos los algoritmos de autenticación que se permitirán durante la <strong>Fase 2 de IPSec</strong>.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/41.png" width="500">
+  <img src="imagenes/anexo/30.png" width="600">
 </figure>
+</center>
 
-<p>Cuando el equipo Cisco arranca coge la información de la memoria flash (no volátil). A esta configuración se le conoce como <mark class="critic">“Startup Configuration”. </mark></p>
+<div class="admonition note">
+<p class="admonition-title">PROPUESTAS</p>
+<p>En ambos casos de Fase 1 y Fase 2 se refiere a todos los protocolos de seguridad que se van a permitir, es decir, cuando un cliente conecte con el servidor VPN éste le informará de todos los protocolos de seguridad que soporta.</p>
+</div>
+<h2 id="crear-usuarios">Crear Usuarios.<a class="headerlink" href="#crear-usuarios" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong>Password</strong> ➡️ No confundir con la contraseña compartida (PSK), debería ser diferente.</p>
+</li>
+<li>
+<p><strong>Profile</strong> ➡️ Es el perfil L2TP que le vamos a poner, en este caso el del primer punto en el manual de configuración. Al haber establecido un "Default Profile" en el punto anterior en caso de dejarlo vacío se asignaría éste.</p>
+</li>
+<li>
+<p><strong>Service</strong> ➡️ Indica en qué tipos de servicios va a estar disponible este usuario.</p>
+</li>
+</ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/42.png" width="500">
+  <img src="imagenes/anexo/25.png" width="600">
 </figure>
+</center>
 
-<h2 id="guardar-cambios">Guardar Cambios.<a class="headerlink" href="#guardar-cambios" title="Permanent link">¶</a></h2>
-<p>Si queremos que unos cambios persistan a un reinicio debemos copiar la “Running Config” a la “Startup Config”, es decir, pasarlo de la NVRAM a la memoria flash. Para ello usamos el comando <mark class="critic">“write” o “wr”</mark>.</p>
+<h2 id="conectividad-lan">Conectividad LAN.<a class="headerlink" href="#conectividad-lan" title="Permanent link">¶</a></h2>
+<p>En caso de que no haya conectividad entre equipos de la misma LAN a través de la VPN deberemos configurar el "<strong>proxy-arp</strong>" en la parte LAN de la red, siguiente el ejemplo la parte LAN sería el "Bridge" del router, que no es más que un conjunto de interfaces que actúan como un switch dentro de una red. </p>
+<div class="admonition warning proxy-arp">
+<p class="admonition-title">Warning</p>
+<p>Si no fuese necesario que hubiese conectividad entre equipos de la misma red desde un cliente VPN es  mejor dejarlo desactivado pues puede dar pie a cierto tipo de ataques.</p>
+</div>
+<center>
 <figure>
-  <img src="imagenes/warmup/43.png" width="500">
+  <img src="imagenes/anexo/26.png" width="800">
 </figure>
+</center>
 
-<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h2>
-<div class="center-table">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Comando</th>
-<th style="text-align: center;"><center> Función </center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>enable</code></td>
-<td style="text-align: center;">Acceder al modo administrador.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>configura terminal</code></td>
-<td style="text-align: center;">Entrar al CLI para modificar configuración.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>show running-config</code></td>
-<td style="text-align: center;">Ver la configuración actual.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>show interfaces description</code></td>
-<td style="text-align: center;">Información de las interfaces.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>wr</code></td>
-<td style="text-align: center;">Guardar cambios.</td>
-</tr>
-</tbody>
-</table>
-</div></div>
+<h2 id="firewall">Firewall.<a class="headerlink" href="#firewall" title="Permanent link">¶</a></h2>
+<p>Es importante permitir en el firewall las peticiones L2TP/IPsec.</p>
+<center>
+<figure>
+  <img src="imagenes/anexo/27.png" width="300">
+</figure>
+</center>
+
+<h3 id="permitir-la-conexion-con-el-servidor-vpn">Permitir la conexión con el servidor VPN.<a class="headerlink" href="#permitir-la-conexion-con-el-servidor-vpn" title="Permanent link">¶</a></h3>
+<p>Vamos a permitir las conexiones desde el exterior con el router que tengan que ver con el servicio L2TP + IPSec mediante UDP.</p>
+<ul>
+<li>
+<p><strong>Input</strong> ➡️ Permitimos el tráfico entrante que va dirigido al propio firewall.</p>
+</li>
+<li>
+<p><strong>Puertos</strong> ➡️ Permitimos el tráfico de entrada que vaya dirigido a los puertos 1701 (L2TP), 500 (ISAKMP) y 4500 (NAT-Transversal).</p>
+</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/anexo/28.png" width="800">
+</figure>
+</center>
+
+<h3 id="permitir-ipsec">Permitir IPSec<a class="headerlink" href="#permitir-ipsec" title="Permanent link">¶</a></h3>
+<p>La segunda regla permitirá el protocolo IPSec con ESP.</p>
+<center>
+<figure>
+  <img src="imagenes/anexo/29.png" width="800">
+</figure>
+</center></div>
 
 
 
