@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/11_VLANs.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/20_NGFW.html">
       
       
-        <link rel="prev" href="15_Ataque_PPTP.html">
+        <link rel="prev" href="18_DMVPN.html">
       
       
-        <link rel="next" href="10_LACP.html">
+        <link rel="next" href="19_RADIUS.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>VLANs - CiberSeguridad Redes.</title>
+        <title>NGFW - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlans" class="md-skip">
+        <a href="#ngfw-next-generation-firewall" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VLANs
+              NGFW
             
           </span>
         </div>
@@ -729,32 +729,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    VLANs
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="11_VLANs.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="11_VLANs.html" class="md-nav__link">
         
   
   
@@ -765,44 +743,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas-de-usar-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ventajas de usar VLANs:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conceptos Básicos:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1031,10 +971,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="20_NGFW.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    NGFW
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="20_NGFW.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1045,6 +1007,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidades.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabricantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fabricantes.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-opnsense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Práctica OPNsense.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1493,50 +1502,176 @@
 
 
 
-<div><h1 id="vlans">VLANS.<a class="headerlink" href="#vlans" title="Permanent link">¶</a></h1>
-<h2 id="ventajas-de-usar-vlans">Ventajas de usar VLANs:<a class="headerlink" href="#ventajas-de-usar-vlans" title="Permanent link">¶</a></h2>
+<div><h1 id="ngfw-next-generation-firewall">NGFW (Next Generation Firewall).<a class="headerlink" href="#ngfw-next-generation-firewall" title="Permanent link">¶</a></h1>
+<p>Los firewall NGFW tienen funcionalidades de hasta <ins class="critic">capa 7</ins>, mientras que los firewall tradicionales solían tener limitaciones en la capa de transporte.</p>
+<div class="admonition tip">
+<p>Los NGFW pueden bloquear por ejemplo por aplicación mientras que los firewall tradicionales estaban limitados a bloquear por IP/Puerto/Protocolo.</p>
+</div>
+<h2 id="funcionalidades">Funcionalidades.<a class="headerlink" href="#funcionalidades" title="Permanent link">¶</a></h2>
 <ul>
 <li>
-<p>Al segmentar la red por vlans podemos aplicar reglas de seguridad por redes, pudiendo evitar que ciertos equipos asociados a ciertas vlans no tengan acceso a algunos recursos o servicios.</p>
+<p>Clasificación e inspección de protocolos de capa de aplicación.</p>
 </li>
 <li>
-<p>Al crear una vlan también <ins class="critic">segmentamos el dominio de broadcast</ins> por lo que muchos de los problemas solo afectará a la vlan en la que ocurran, lo que además nos permitirá acotar el problema antes.</p>
+<p>Filtrado basado en listas negras y categorías. </p>
 </li>
 <li>
-<p>Combinado con los protocolos de enrutamiento dinámico las vlans nos permiten <ins class="critic">crear rutas de backup</ins>.</p>
+<p>Detección y prevención de intrusos (IDS).</p>
 </li>
 <li>
-<p>Nos permite crear múltiples redes usando una única interfaz de router. En caso de crear redes físicas en vez de VLANs, necesitaríamos un puerto en el router por cada red.</p>
+<p>Inspección de tráfico cifrado https (HTTPS Inspection).</p>
 </li>
 <li>
-<p>Podemos aplciar <ins class="critic">QoS</ins> (políticas de calidad de servicio) por VLAN.</p>
+<p>Antivirus.</p>
+</li>
+<li>
+<p>Configuración automática de Proxy (WPAD).</p>
+</li>
+<li>
+<p>Control de acceso por MAC.</p>
+</li>
+<li>
+<p>...</p>
 </li>
 </ul>
-<h2 id="conceptos-basicos">Conceptos Básicos:<a class="headerlink" href="#conceptos-basicos" title="Permanent link">¶</a></h2>
+<h2 id="fabricantes">Fabricantes.<a class="headerlink" href="#fabricantes" title="Permanent link">¶</a></h2>
+<p>Existen varios fabricantes que tienen firewalls NGFW:</p>
 <ul>
 <li>
-<p>Las vlans se crean en los switches y se asocian a las interfaces de éstos.</p>
+<p>PaloAlto.</p>
 </li>
 <li>
-<p>Si una interfaz va a pasar una única vlan, como por ejemplo las interfaces que conectan con un PC, se pondrán en <ins class="critic">modo Access</ins>.</p>
+<p>Fortinet.</p>
 </li>
 <li>
-<p>Si las interfaces pasan más de una vlan se pondrá el puerto en <ins class="critic">modo trunk</ins>, dicho modo añade una etiqueta a la cabecera con el número de la vlan. </p>
+<p>Sophos.</p>
 </li>
 <li>
-<p>Existen dos tipos de cabecera (encapsulamiento) </p>
-<p>💥 <ins class="critic">dot1q o ISL</ins>. Habitualmente se usa dot1q, pero al menos en cisco, debemos especificarlo.</p>
+<p>CheckPoint.</p>
+</li>
+<li>
+<p>WatchGuard.</p>
+</li>
+<li>
+<p>OPNsense (libre).</p>
 </li>
 </ul>
+<h2 id="practica-opnsense">Práctica OPNsense.<a class="headerlink" href="#practica-opnsense" title="Permanent link">¶</a></h2>
+<h3 id="esquema-de-laboratorio">Esquema de Laboratorio.<a class="headerlink" href="#esquema-de-laboratorio" title="Permanent link">¶</a></h3>
 <center>
 <figure>
-  <img src="imagenes/defensiva/2.jpg" width="600">
+  <img src="imagenes/defensiva/45.png" width="150">
+</figure>
+</center>
+
+<div class="admonition warning">
+<p><strong>Importante que la vtnet0 sea la que esté conectada a la WAN y la vtnet1 a la LAN.</strong></p>
+</div>
+<h3 id="acceso">Acceso.<a class="headerlink" href="#acceso" title="Permanent link">¶</a></h3>
+<p>Se puede acceder desde la LAN (KALI Linux) a la <mark class="critic">IP 192.168.200.1</mark> a través de un navegador con las credenciales <mark class="critic">root / opnsense</mark></p>
+<div class="admonition tip">
+<p><strong>Es recomendable cambiar la resolución del KALI a la misma que la máquina anfitriona.</strong></p>
+</div>
+<div class="admonition warning">
+<p><strong>Antes de empezar asegúrate que eres capaz de navegar desde el KALI Linux</strong></p>
+</div>
+<h3 id="cortar-acceso-a-web-httphttps-por-ip">Cortar acceso a web (HTTP/HTTPS) por IP.<a class="headerlink" href="#cortar-acceso-a-web-httphttps-por-ip" title="Permanent link">¶</a></h3>
+<p>Ahora vamos a ver cómo crear una regla que deniegue el acceso a un servicio de Internet, como por ejemplo el acceso http y https a www.leagueoflegends.com.</p>
+<div class="admonition question">
+<p class="admonition-title">Pregunta 1</p>
+<p><strong>Realiza una consulta dns (con nslookup desde Windows o host/dig desde Linux) desde la máquina cliente para consultar la IP o direcciones IP de www.leagueoflegends.com. Adjunta una captura con las direcciones IP que devuelve el comando de búsqueda dns.</strong></p>
+</div>
+<ul>
+<li>Una vez hemos obtenido las direcciones IP, crearemos un <mark class="critic">alias</mark> con el nombre LOL_COM, de forma que podamos referenciarlo desde las reglas sin tener que repetir las direcciones IP cada vez en varias reglas. </li>
+</ul>
+<p>Para ello vamos a <ins class="critic">Cortafuegos ➡️ Aliases ➡️ ➕</ins> y configuramos los siguientes parámetros:</p>
+<div class="admonition warning">
+<p><strong>Nombre</strong>: LOL_COM (por ejemplo, es descriptivo)</p>
+<p><strong>Escribir</strong>: Host(s)</p>
+<p><strong>Contenido</strong>: (escribimos las IP, pulsando tabulador después de cada una)</p>
+<p><strong>Descripción</strong>: Direcciones IP de www.leagueoflegends.com</p>
+</div>
+<center>
+<figure>
+  <img src="imagenes/defensiva/46.png" width="600">
 </figure>
 </center>
 
 <ul>
-<li>De forma opcional en la interfaces trunk se puede indicar una única <ins class="critic">vlan nativa</ins>. Esto asociará todo el tráfico que venga sin taggear/etiquetar a dicha vlan. Principalmente es usa para equipos que pueden pasar datos en trunk por el plano de datos, pero que para su gestión solo entienden tráfico sin etiquetar (ejemplo: puntos de acceso).</li>
-</ul></div>
+<li>Ahora creamos un <mark class="critic">alias</mark> para los servicios HTTP y HTTPS.</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/defensiva/47.png" width="600">
+</figure>
+</center>
+
+<div class="admonition warning">
+<p class="admonition-title">AVISO</p>
+<p><strong>Los cambios no se aplican automáticamente debemos pulsar sobre el botón rojo <mark class="critic">Aplicar</mark>.</strong></p>
+</div>
+<ul>
+<li>A continuación vamos <ins class="critic">Cortafuegos ➡️ Reglas ➡️ LAN</ins> y creamos una nueva regla para cortar el acceso HTTP y HTTPS a las IPs de www.leagueoflegends.com.:</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/defensiva/48.png" width="600">
+</figure>
+</center>
+
+<div class="admonition question">
+<p class="admonition-title">Pregunta 2</p>
+<p><strong>¿Por qué sigues pudiendo acceder a la web desde el cliente? PISTA: El orden importa.</strong></p>
+<p><strong>Solventa el problema y comprueba que efectivamente la página está bloqueada para el cliente.</strong></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Pregunta 3</p>
+<p><strong>Intenta realizar un ping a la IP del dominio. ¿Funciona? ¿Por qué?</strong></p>
+</div>
+<h3 id="cortar-servicios">Cortar servicios.<a class="headerlink" href="#cortar-servicios" title="Permanent link">¶</a></h3>
+<p>A continuación vamos a aplicar una política restrictiva de seguridad a los clientes de la LAN, en la que sólo se va a permitir que se pueda navegar por Internet (http y https) y lanzar pings. El resto de servicios se van a denegar (ftp, ssh, pop3, smtp, etc.).</p>
+<div class="admonition question">
+<p class="admonition-title">Pregunta 4</p>
+<p><strong>A partir de las explicaciones anteriores, crea una regla para permitir el tráfico HTTP y HTTPS hacia cualquier destino desde la LAN y otra que permita el ICMP (ping y traceroute) hacia cualquier destino. Ambas reglas debes crearlas detrás de la regla que deniega navegar por www.leagueoflegends.com. Adjunta pantallazo de todas las reglas.</strong></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Pregunta 5</p>
+<p><strong>Crea otra regla para el servicio DNS (UDP y TCP) pero únicamente que cuyo destino sea el propio firewall.</strong></p>
+<p><strong>Recuerda que el firewall se asigna asimismo como servidor DNS a los clientes mediante DHCP.</strong></p>
+<p><strong>Así evitamos que puedan usar DNS externos a la organización o que alguien se instale un servicio DNS dentro de nuestra LAN.</strong></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Pregunta 6</p>
+<p><strong>Deshabilitaa la regla que permite todo el tráfico desde la LAN hacia cualquier destino. Para ello, edítala y marca Deshabilitar esta regla.</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">RECUERDA APLICAR LOS CAMBIOS!!!!</p>
+</div>
+<p>Para comprobar que no funcionan otros servicios como el ftp  puedes probar a lanzar el comando <strong>ftp ftp.rediris.es</strong> en un terminal y ver si te deja conectar.</p>
+<h3 id="bloquear-acceso-a-la-web-por-dominio">Bloquear acceso a la web por dominio.<a class="headerlink" href="#bloquear-acceso-a-la-web-por-dominio" title="Permanent link">¶</a></h3>
+<p>Denegar el servicio de un dominio bloqueando la IP tiene mayormente dos desventajas:</p>
+<ul>
+<li>
+<p>En una misma IP pueden alojarse varios dominios (<a href="https://viewdns.info/reverseip">ViewDNS</a>).</p>
+</li>
+<li>
+<p>Si el día de mañana por cualquier motivo el dominio cambia de IP nuestro bloqueo dejaría de ser efectivo.</p>
+</li>
+</ul>
+<p>Por tanto en esta sección vamos a bloquear el dominio sobreescribiendo la petición DNS.</p>
+<div class="admonition note">
+<p class="admonition-title">Servicio ➡️ Unbound DNS ➡️ Sobrescribir</p>
+</div>
+<center>
+<figure>
+  <img src="imagenes/defensiva/49.png" width="500">
+</figure>
+</center>
+
+<h3 id="https-inspection">HTTP/S Inspection.<a class="headerlink" href="#https-inspection" title="Permanent link">¶</a></h3>
+<p>OPNproxy plugin.</p>
+<p>https://docs.opnsense.org/manual/how-tos/proxytransparent.html</p>
+<p>Si cualquiera se hace con la clave privada del proxy puede descifrar todo.</p></div>
 
 
 

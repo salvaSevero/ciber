@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/11_VLANs.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/22_Spoofing.html">
       
       
-        <link rel="prev" href="15_Ataque_PPTP.html">
+        <link rel="prev" href="21_ARP.html">
       
       
-        <link rel="next" href="10_LACP.html">
+        <link rel="next" href="15_Ataque_PPTP.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>VLANs - CiberSeguridad Redes.</title>
+        <title>ARP Spoofing - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlans" class="md-skip">
+        <a href="#arp-spoofing" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VLANs
+              ARP Spoofing
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -516,11 +518,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -536,7 +538,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -547,8 +549,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -560,11 +564,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -580,7 +584,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             ARP
@@ -614,10 +618,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="22_Spoofing.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ARP Spoofing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="22_Spoofing.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -628,6 +654,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBJETIVO.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrategia" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESTRATEGIA.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROCEDIMIENTO.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-explicativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vídeo Explicativos.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -675,10 +757,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -698,11 +778,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -718,7 +798,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             DEFENSIVA
@@ -729,32 +809,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    VLANs
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="11_VLANs.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="11_VLANs.html" class="md-nav__link">
         
   
   
@@ -765,44 +823,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas-de-usar-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ventajas de usar VLANs:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conceptos Básicos:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1493,50 +1513,62 @@
 
 
 
-<div><h1 id="vlans">VLANS.<a class="headerlink" href="#vlans" title="Permanent link">¶</a></h1>
-<h2 id="ventajas-de-usar-vlans">Ventajas de usar VLANs:<a class="headerlink" href="#ventajas-de-usar-vlans" title="Permanent link">¶</a></h2>
+<div><h1 id="arp-spoofing">ARP Spoofing.<a class="headerlink" href="#arp-spoofing" title="Permanent link">¶</a></h1>
+<h2 id="objetivo">OBJETIVO.<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
 <ul>
-<li>
-<p>Al segmentar la red por vlans podemos aplicar reglas de seguridad por redes, pudiendo evitar que ciertos equipos asociados a ciertas vlans no tengan acceso a algunos recursos o servicios.</p>
-</li>
-<li>
-<p>Al crear una vlan también <ins class="critic">segmentamos el dominio de broadcast</ins> por lo que muchos de los problemas solo afectará a la vlan en la que ocurran, lo que además nos permitirá acotar el problema antes.</p>
-</li>
-<li>
-<p>Combinado con los protocolos de enrutamiento dinámico las vlans nos permiten <ins class="critic">crear rutas de backup</ins>.</p>
-</li>
-<li>
-<p>Nos permite crear múltiples redes usando una única interfaz de router. En caso de crear redes físicas en vez de VLANs, necesitaríamos un puerto en el router por cada red.</p>
-</li>
-<li>
-<p>Podemos aplciar <ins class="critic">QoS</ins> (políticas de calidad de servicio) por VLAN.</p>
-</li>
+<li>Interceptar el tráfico de terceros ➡️ <strong>Ataque MITM</strong> (Man In The Middle). </li>
 </ul>
-<h2 id="conceptos-basicos">Conceptos Básicos:<a class="headerlink" href="#conceptos-basicos" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p>Las vlans se crean en los switches y se asocian a las interfaces de éstos.</p>
-</li>
-<li>
-<p>Si una interfaz va a pasar una única vlan, como por ejemplo las interfaces que conectan con un PC, se pondrán en <ins class="critic">modo Access</ins>.</p>
-</li>
-<li>
-<p>Si las interfaces pasan más de una vlan se pondrá el puerto en <ins class="critic">modo trunk</ins>, dicho modo añade una etiqueta a la cabecera con el número de la vlan. </p>
-</li>
-<li>
-<p>Existen dos tipos de cabecera (encapsulamiento) </p>
-<p>💥 <ins class="critic">dot1q o ISL</ins>. Habitualmente se usa dot1q, pero al menos en cisco, debemos especificarlo.</p>
-</li>
-</ul>
+<h2 id="estrategia">ESTRATEGIA.<a class="headerlink" href="#estrategia" title="Permanent link">¶</a></h2>
+<p>Enviaremos paquetes ARP reply, indicando que la IP de la víctima tiene asociada nuestra MAC, las máquinas que reciban este paquete actualizarán su tabla ARP con nuestra MAC, por lo que cuando vayan a mandar un paquete a la víctima nos lo enviarán a nosotros. </p>
+<p>Sólo funciona a nivel LAN, puesto que los routers no reenvían o retransmiten los paquetes de capa 2 del protocolo ARP. </p>
+<details class="question">
+<summary>¿Y si tuviéramos el Proxy ARP habilitado?</summary>
+<p><strong>En ese caso podríamos realizar este ataque entre redes diferentes</strong></p>
+</details>
+<h2 id="procedimiento">PROCEDIMIENTO.<a class="headerlink" href="#procedimiento" title="Permanent link">¶</a></h2>
+<p>1️⃣ Abrimos la aplicación ettercap de Kali Linux.</p>
 <center>
 <figure>
-  <img src="imagenes/defensiva/2.jpg" width="600">
+  <img src="imagenes/ofensiva/14.png" width="500">
 </figure>
 </center>
 
-<ul>
-<li>De forma opcional en la interfaces trunk se puede indicar una única <ins class="critic">vlan nativa</ins>. Esto asociará todo el tráfico que venga sin taggear/etiquetar a dicha vlan. Principalmente es usa para equipos que pueden pasar datos en trunk por el plano de datos, pero que para su gestión solo entienden tráfico sin etiquetar (ejemplo: puntos de acceso).</li>
-</ul></div>
+<p>2️⃣ Escaneamos en busca de víctimas.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/15.png" width="300">
+</figure>
+</center>
+
+<p>3️⃣ Seleccionamos la víctima por la que nos haremos pasar. Si no añadimos una segunda víctima recogeremos todo el tráfico que le vaya a llegar a la primera víctima, si añadimos una, recogeremos todo el tráfico que le llegue a la primera y la segunda (comunicación completa). Habitualmente la segunda víctima podría ser la puerta de enlace.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/16.png" width="500">
+</figure>
+</center>
+
+<p>4️⃣ Confirmamos el ataque:</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/17.png" width="500">
+</figure>
+</center>
+
+<p>5️⃣ Una vez realizado el ataque abre el wireshark en la máquina Kali y podrás ver que eres capaz de capturar el tráfico entre las víctimas.</p>
+<h2 id="video-explicativos">Vídeo Explicativos.<a class="headerlink" href="#video-explicativos" title="Permanent link">¶</a></h2>
+<h3 id="video-1">Vídeo 1.<a class="headerlink" href="#video-1" title="Permanent link">¶</a></h3>
+<center>
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/4hGhk7eP-4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center>
+
+<h3 id="video-2">Vídeo 2.<a class="headerlink" href="#video-2" title="Permanent link">¶</a></h3>
+<center>
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/IUmlqa-233U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center></div>
 
 
 

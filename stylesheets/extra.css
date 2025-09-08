@@ -62,7 +62,7 @@
   }
 
   h3 {
-    color: #c6eb34;
+    color: #eb6e34;
   }
 
   table {
@@ -77,4 +77,13 @@
   border-left-width: 4px;
   font-size: 15px;
 }
+
+.md-main__inner.md-grid {
+    max-width: initial;
+}
+
+.md-nav{
+  font-weight: bold;
+}
+
 

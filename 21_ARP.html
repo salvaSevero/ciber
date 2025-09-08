@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/11_VLANs.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/21_ARP.html">
       
       
-        <link rel="prev" href="15_Ataque_PPTP.html">
+        <link rel="prev" href="9_EnrutamientoDinamico.html">
       
       
-        <link rel="next" href="10_LACP.html">
+        <link rel="next" href="22_Spoofing.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>VLANs - CiberSeguridad Redes.</title>
+        <title>ARP - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlans" class="md-skip">
+        <a href="#arp" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VLANs
+              ARP
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -516,11 +518,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -536,7 +538,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -547,8 +549,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -560,11 +564,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -580,7 +584,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             ARP
@@ -591,10 +595,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="21_ARP.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ARP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="21_ARP.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -605,6 +631,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamiento.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -675,10 +739,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -698,11 +760,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -718,7 +780,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             DEFENSIVA
@@ -729,32 +791,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    VLANs
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="11_VLANs.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="11_VLANs.html" class="md-nav__link">
         
   
   
@@ -765,44 +805,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas-de-usar-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ventajas de usar VLANs:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conceptos-basicos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conceptos Básicos:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1493,50 +1495,80 @@
 
 
 
-<div><h1 id="vlans">VLANS.<a class="headerlink" href="#vlans" title="Permanent link">¶</a></h1>
-<h2 id="ventajas-de-usar-vlans">Ventajas de usar VLANs:<a class="headerlink" href="#ventajas-de-usar-vlans" title="Permanent link">¶</a></h2>
+<div><h1 id="arp">ARP.<a class="headerlink" href="#arp" title="Permanent link">¶</a></h1>
+<h2 id="caracteristicas">Características.<a class="headerlink" href="#caracteristicas" title="Permanent link">¶</a></h2>
 <ul>
 <li>
-<p>Al segmentar la red por vlans podemos aplicar reglas de seguridad por redes, pudiendo evitar que ciertos equipos asociados a ciertas vlans no tengan acceso a algunos recursos o servicios.</p>
+<p>La función del protocolo ARP es la de <mark class="critic"><strong>averiguar la MAC de un equipo dado su direccionamiento IP</strong></mark>.</p>
 </li>
 <li>
-<p>Al crear una vlan también <ins class="critic">segmentamos el dominio de broadcast</ins> por lo que muchos de los problemas solo afectará a la vlan en la que ocurran, lo que además nos permitirá acotar el problema antes.</p>
-</li>
-<li>
-<p>Combinado con los protocolos de enrutamiento dinámico las vlans nos permiten <ins class="critic">crear rutas de backup</ins>.</p>
-</li>
-<li>
-<p>Nos permite crear múltiples redes usando una única interfaz de router. En caso de crear redes físicas en vez de VLANs, necesitaríamos un puerto en el router por cada red.</p>
-</li>
-<li>
-<p>Podemos aplciar <ins class="critic">QoS</ins> (políticas de calidad de servicio) por VLAN.</p>
+<p><strong>Protocolo de capa 2:</strong> <mark class="critic"><strong>Los routers no retransmiten las tramas ARP a otras redes</strong></mark> ➡️ Un equipo, no puede averiguar a través de ARP la MAC de otro equipo en una red diferente.</p>
 </li>
 </ul>
-<h2 id="conceptos-basicos">Conceptos Básicos:<a class="headerlink" href="#conceptos-basicos" title="Permanent link">¶</a></h2>
+<details class="note">
+<summary>¿Por qué necesito la MAC de una IP?</summary>
+<p>💥 <mark class="critic"><strong>Los switches son equipos de capa 2, es decir, no entienden de IP</strong></mark>, por lo que para interconectar dos equipos necesita saber en qué puerto está asociado la MAC destino.</p>
+<p>💥 Para enviar un paquete (CAPA 3), se debe rellenar los campos de MAC origen y MAC destino de la capa 2 (trama).</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Proxy ARP</p>
+<p><strong>La funcionalidad Proxy ARP permite que el router transmita las tramas ARP entre redes diferentes</strong></p>
+<p><strong>No es aconsejable activarlo si no es necesario</strong></p>
+</div>
+<h2 id="funcionamiento">Funcionamiento.<a class="headerlink" href="#funcionamiento" title="Permanent link">¶</a></h2>
+<h3 id="si-quiero-enviar-un-paquete-a-un-equipo-de-mi-misma-red-que-procedimiento-sigo">¿Si quiero enviar un paquete a un equipo de mi misma red que procedimiento sigo?<a class="headerlink" href="#si-quiero-enviar-un-paquete-a-un-equipo-de-mi-misma-red-que-procedimiento-sigo" title="Permanent link">¶</a></h3>
+<p>1️⃣ Envío un <ins class="critic"><strong>ARP request</strong></ins> a todo el mundo, preguntando por la MAC de la IP destino (de mi red).</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/11.png" width="900">
+  <figcaption>Ejemplo, el 192.168.0.1 pregunta por la MAC del 192.168.0.11.</figcaption>
+</figure>
+</center>
+
+<p>2️⃣ El switch recibe dicho ARP request y:</p>
 <ul>
 <li>
-<p>Las vlans se crean en los switches y se asocian a las interfaces de éstos.</p>
+<p>Se apunta en su <ins class="critic"><strong>Tabla CAM</strong></ins> (MAC – Puerto) que en mi puerto se puede encontrar mi MAC (eficiencia en futuros reenvíos).</p>
 </li>
 <li>
-<p>Si una interfaz va a pasar una única vlan, como por ejemplo las interfaces que conectan con un PC, se pondrán en <ins class="critic">modo Access</ins>.</p>
-</li>
-<li>
-<p>Si las interfaces pasan más de una vlan se pondrá el puerto en <ins class="critic">modo trunk</ins>, dicho modo añade una etiqueta a la cabecera con el número de la vlan. </p>
-</li>
-<li>
-<p>Existen dos tipos de cabecera (encapsulamiento) </p>
-<p>💥 <ins class="critic">dot1q o ISL</ins>. Habitualmente se usa dot1q, pero al menos en cisco, debemos especificarlo.</p>
+<p>El switch reenvía el ARP request al resto de puertos (excepto al mío).</p>
 </li>
 </ul>
 <center>
 <figure>
-  <img src="imagenes/defensiva/2.jpg" width="600">
+  <img src="imagenes/ofensiva/1.jpg" width="500">
+  <figcaption>Ejemplo Tabla CAM de un switch.</figcaption>
 </figure>
 </center>
 
-<ul>
-<li>De forma opcional en la interfaces trunk se puede indicar una única <ins class="critic">vlan nativa</ins>. Esto asociará todo el tráfico que venga sin taggear/etiquetar a dicha vlan. Principalmente es usa para equipos que pueden pasar datos en trunk por el plano de datos, pero que para su gestión solo entienden tráfico sin etiquetar (ejemplo: puntos de acceso).</li>
-</ul></div>
+<p>3️⃣ Aquel que tenga esa IP configurada contesta con un <ins class="critic"><strong>ARP reply</strong></ins> indicando que dicha IP tiene la MAC X.</p>
+<p>4️⃣ El switch recibe ese ARP reply, aprovecha para apuntarse que en ese puerto existe esa MAC (eficiencia en futuros reenvíos) y reenvía el ARP reply.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/12.png" width="900">
+  <figcaption>Ejemplo, el 192.168.0.11 tiene la  MAC 90:2b:34:df:bc:41.</figcaption>
+</figure>
+</center>
+
+<p>5️⃣ Ahora mi equipo ya puede apuntarse en su tabla ARP que dicha IP tiene esa MAC y enviar mis paquetes. </p>
+<div class="admonition warning">
+<p class="admonition-title">IMPORTANTE</p>
+<p><strong>Para futuros envíos como ya tengo su MAC en mi tabla ARP ya no tengo que volver a realizar el protocolo ARP.</strong></p>
+</div>
+<h3 id="si-quiero-enviar-un-paquete-a-un-equipo-de-otra-red">¿Si quiero enviar un paquete a un equipo de otra red?<a class="headerlink" href="#si-quiero-enviar-un-paquete-a-un-equipo-de-otra-red" title="Permanent link">¶</a></h3>
+<p>En este caso, al ser un equipo de otra red, el procedimiento es exactamente igual pero la MAC que se intenta averiguar es el de mi <ins class="critic"><strong>puerta de enlace</strong></ins>.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/13.png" width="600">
+  <figcaption>Ejemplo tabla ARP de un host (ordenador).</figcaption>
+</figure>
+</center>
+
+<p>Una vez el paquete llega a la puerta de enlace él ya lo enruta por las redes que fuera necesario, haciendo ARP en cada red de forma independiente.</p>
+<div class="admonition warning">
+<p class="admonition-title">IMPORTANTE</p>
+<p><strong>Una vez pasa la puerta de enlace y entra en otra red, la MAC Origen cambia y dejaremos de ser nosotros, si no que será la puerta de enlace.</strong></p>
+</div></div>
 
 
 
