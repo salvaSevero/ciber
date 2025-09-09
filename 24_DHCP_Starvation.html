@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/5_TeoriaVLAN.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/24_DHCP_Starvation.html">
       
       
-        <link rel="prev" href="4_ConocimientosL3.html">
+        <link rel="prev" href="23_DHCP.html">
       
       
-        <link rel="next" href="6_DHCP.html">
+        <link rel="next" href="25_Bypass.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Teoría VLAN - CiberSeguridad Redes.</title>
+        <title>Starvation - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlan" class="md-skip">
+        <a href="#dhcp-starvation" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Teoría VLAN
+              Starvation
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -260,11 +258,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -280,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             WARM UP
@@ -383,32 +381,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Teoría VLAN
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="5_TeoriaVLAN.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="5_TeoriaVLAN.html" class="md-nav__link">
         
   
   
@@ -419,71 +395,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ventajas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-enlaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de enlaces.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de VLANs.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roas-router-on-a-stick" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROAS (Router On A Stick).
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-configuracion-de-vlans-en-un-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo de configuración de VLANs en un Switch.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -592,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -609,11 +522,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -629,7 +542,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -738,8 +651,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -751,11 +666,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -771,7 +686,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             DHCP
@@ -805,10 +720,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="24_DHCP_Starvation.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Starvation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="24_DHCP_Starvation.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -819,6 +756,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBJETIVO.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrategia" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESTRATEGIA.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1645,238 +1620,57 @@
 
 
 
-<div><h1 id="vlan"><strong>VLAN.</strong><a class="headerlink" href="#vlan" title="Permanent link">¶</a></h1>
-<p>Las VLAN o Virtual LAN permiten crear redes virtuales dentro una misma red física. Es decir, dentro de un mismo cableado, un mismo puerto y mismos equipos de red coexistirán diferentes redes.</p>
+<div><h1 id="dhcp-starvation">DHCP Starvation.<a class="headerlink" href="#dhcp-starvation" title="Permanent link">¶</a></h1>
+<h2 id="objetivo">OBJETIVO.<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Agotar el número de IPs (pool) que puede asignar el servidor DHCP. </p>
+<h2 id="estrategia">ESTRATEGIA.<a class="headerlink" href="#estrategia" title="Permanent link">¶</a></h2>
+<p>Lanzaremos múltiples peticiones <ins class="critic"><strong>DHCP DISCOVERY</strong></ins>, teniendo cada una de ellas una MAC origen diferente (<ins class="critic"><strong>MAC spoofing</strong></ins>), para que piense que cada DHCP DISCOVERY lo está mandando un cliente nuevo. </p>
 <center>
 <figure>
-  <img src="imagenes/warmup/60.png" width="700">
+  <img src="imagenes/ofensiva/20.png" width="700">
 </figure>
-  </center>
+</center>
 
-<h2 id="ventajas"><strong>Ventajas.</strong><a class="headerlink" href="#ventajas" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p>Segmentamos los dominios de broadcast, es decir, el broadcast de una red virtual no se propagará a la otra red virtual.</p>
-</li>
-<li>
-<p>Podemos aplicar filtros a redes virtuales de forma independiente, pudiendo darle diferentes tipos de permisos o accesos a cada una.</p>
-</li>
-<li>
-<p>Nos permite una mejor organización y administración.</p>
-</li>
-<li>
-<p>Es más fácil acotar los problemas dependiendo de a que VLAN esté afectando.</p>
-</li>
-<li>
-<p>Tiene un ahorro económico pues usando los mismos equipos podemos segmentar la red.</p>
-</li>
-</ul>
-<h2 id="tipos-de-enlaces"><strong>Tipos de enlaces.</strong><a class="headerlink" href="#tipos-de-enlaces" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p>Acceso: Solo pasa una única VLAN. Habitualmente conecta con hosts/clientes.</p>
-</li>
-<li>
-<p>Troncal: Pasan varias VLANs por el mismo enlace/interfaz. </p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>¿Si pasan varias VLANs por la misma interfaz como sabe el equipo cada trama a qué VLAN pertenece?</p>
-<p>El estándar 802.1Q se le asigna una etiqueta a la trama, que es básicamente un número. </p>
-<p>Por ejemplo si es la VLAN 47 y pasa por un enlace troncal se le añade una etiqueta con el número 47.</p>
-</div>
-<center>
-<figure>
-  <img src="imagenes/warmup/61.png" width="500">
-</figure>
-  </center>
-
-<h2 id="tipos-de-vlans"><strong>Tipos de VLANs.</strong><a class="headerlink" href="#tipos-de-vlans" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p><ins class="critic">Datos</ins>: Son las VLANs habituales.</p>
-</li>
-<li>
-<p><ins class="critic">Administración</ins>: Son VLANs donde solo debería ir tráfico de gestión de los equipos, si es posible debería ir por puertos independientes al de los datos, de tal forma que si hay un problema con el tráfico de clientes no perderemos el acceso a nuestros equipos.</p>
-</li>
-<li>
-<p><ins class="critic">Nativa</ins>: Se usa para diferencia una VLAN sin etiqueta dentro de un enlace troncal. Se usa mayormente para gestionar equipos que no soportan el estándar dot1q. Solo puede haber una vlan nativa por cada enlace troncal.</p>
-</li>
-</ul>
-<h3 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
-<p>💥   Tenemos 3 VLANs: 10,20 y 30.</p>
-<p>💥   Cada VLAN tiene una red diferente:</p>
-<div class="highlight"><pre><span></span><code>    VLAN 10 --&gt; 172.17.10.0/24.
-
-    VLAN 20 --&gt; 172.17.20.0/24.
-
-    VLAN 30 --&gt; 172.17.30.0/24.
+<p>1️⃣ En caso de no tenerlo, instalamos el paquete <mark class="critic"><strong>Yersinia</strong></mark>.</p>
+<div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>install<span class="w"> </span>yersinia
 </code></pre></div>
-<p>💥 Los puertos que conectan con PCs solo tienen que pasar una única VLAN, por lo que la interfaz se configura como access.</p>
-<p>💥   Los puertos que interconectan entre los switches deberán dejar pasar varias VLANs, por lo que irán en modo trunk o serán enlaces troncales.</p>
-<ul>
-<li>¿Pueden dos equipos dentro de la misma VLAN comunicarse?</li>
-</ul>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>Sí.</p>
-</details>
-<ul>
-<li>¿Pueden dos equipos de diferentes VLANs comunicarse? En caso negativo qué sería necesario.</li>
-</ul>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>No, necesitarían un router que enrutara el tráfico entre VLANs.</p>
-</details>
+<p>2️⃣ Ejecutar en modo gráfico:</p>
+<div class="highlight"><pre><span></span><code>yersinia<span class="w"> </span>–G
+</code></pre></div>
+<p>3️⃣ En el botón <strong>Edit Interfaces</strong> aseguraos de que está marcada la interfaz LAN de vuestro Kali.</p>
 <center>
 <figure>
-  <img src="imagenes/warmup/62.png" width="600">
+  <img src="imagenes/ofensiva/21.png" width="200">
 </figure>
-  </center>
+</center>
 
-<h2 id="roas-router-on-a-stick"><strong>ROAS (Router On A Stick).</strong><a class="headerlink" href="#roas-router-on-a-stick" title="Permanent link">¶</a></h2>
-<p>Para que dos equipos en VLANs diferentes puedan comunicarse deberá haber un router que sea capaz de entender el direccionamiento IP ¿Por qué?</p>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>Los switches solo entienden de MACs (capa 2), no leen la cabecera de IP origen/destino.</p>
-<p>¿Pero por qué no pueden aprender las MACs de los equipos en VLANs diferentes mediante ARP?</p>
-<p>Porque las VLANs segmentan el dominio de broadcast, es decir, un broadcast ARP para averiguar una MAC de una IP que se encuentra en otra VLAN nunca alcanzará su destino.</p>
-</details>
-<div class="admonition warning">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>En la capa 2 (Layer 2) se añade una cabecera y una cola. Los equipos de capa 2 sólo se centran en esta cabecera y capa, por lo que no miran las cabeceras IP, TCP, aplicación, etc.</p>
-</div>
+<p>4️⃣ Ahora en el botón <strong>Launch Attack</strong> marcamos la opción de enviar paquetes DISCOVER.</p>
 <center>
 <figure>
-  <img src="imagenes/warmup/63.png" width="600">
+  <img src="imagenes/ofensiva/22.png" width="500">
 </figure>
-  </center>
+</center>
 
-<p>¿Qué hay dentro de esta cabecera de capa 2? Pues dicha cabecera puede ser diferente dependiendo del protocolo usado, por ejemplo en el 802.1Q se añade una etiqueta, pero la trama habitual suele seguir el protocolo Ethernet que es el siguiente.</p>
+<p>5️⃣ Cómo podéis ver se están creando múltiples paquetes de DHCP Discovery, cada uno con una MAC falsa distinta:</p>
 <center>
 <figure>
-  <img src="imagenes/warmup/64.jpg" width="600">
+  <img src="imagenes/ofensiva/24.png" width="700">
 </figure>
-  </center>
+</center>
 
-<p>Por tanto para que varias VLANs se vean entre si debemos utilizar un router. </p>
-<p>¿Necesitamos un puerto del router para cada VLAN? Podríamos hacerlo de dicha forma pero sería un gasto económico inútil, pues podemos hacer exactamente lo mismo a través de un único puerto, de ahí el concepto de ROAS (Router On A Stick).</p>
+<p>6️⃣ Podemos ver en el router Mikrotik como se han reservado todo el pool de IPs para DHCP y por tanto nuevos clientes no podrían conectarse.</p>
 <center>
 <figure>
-  <img src="imagenes/warmup/65.jpg" width="600">
+  <img src="imagenes/ofensiva/23.png" width="700">
 </figure>
-  </center>
+</center>
 
-<h2 id="ejemplo-de-configuracion-de-vlans-en-un-switch">Ejemplo de configuración de VLANs en un Switch.<a class="headerlink" href="#ejemplo-de-configuracion-de-vlans-en-un-switch" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>Recordad que para entrar en modo configuración, primero hay que entrar en modo enable:</p>
-<p></p><center>
-<figure>
-    <img src="imagenes/warmup/66.png" width="300">
-</figure>
-</center>
-</div>
-<ol>
-<li>Crear la VLAN.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/67.png" width="300">
-    </figure>
-</center>
-</details>
-<ol start="2">
-<li>Darle Nombre a la VLAN.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/68.png" width="300">
-    </figure>
-</center>
-</details>
-<ol start="3">
-<li>Comprobar que lo has creado bien.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/69.png" width="600">
-    </figure>
-</center>
-</details>
-<ol start="4">
-<li>Configurar un puerto en Access.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/70.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="5">
-<li>Configurar un puerto en trunk con ciertas vlans.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/71.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="6">
-<li>Añadir una vlan a un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/72.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="7">
-<li>Eliminar una vlan de un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/73.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="8">
-<li>Añadir una vlan nativa en un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/74.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="9">
-<li>Borrar una VLAN del sistema.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/75.png" width="300">
-    </figure>
-</center>
-</details></div>
+<h3 id="video-explicativo">Vídeo Explicativo.<a class="headerlink" href="#video-explicativo" title="Permanent link">¶</a></h3>
+<center>
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/yiqj2QbPtAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center></div>
 
 
 

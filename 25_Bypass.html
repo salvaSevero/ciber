@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/5_TeoriaVLAN.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/25_Bypass.html">
       
       
-        <link rel="prev" href="4_ConocimientosL3.html">
+        <link rel="prev" href="24_DHCP_Starvation.html">
       
       
-        <link rel="next" href="6_DHCP.html">
+        <link rel="next" href="15_Ataque_PPTP.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Teoría VLAN - CiberSeguridad Redes.</title>
+        <title>Bypass - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlan" class="md-skip">
+        <a href="#bypass" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Teoría VLAN
+              Bypass
             
           </span>
         </div>
@@ -231,10 +231,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -260,11 +258,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -280,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             WARM UP
@@ -383,32 +381,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Teoría VLAN
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="5_TeoriaVLAN.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="5_TeoriaVLAN.html" class="md-nav__link">
         
   
   
@@ -419,71 +395,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ventajas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ventajas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-enlaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de enlaces.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipos de VLANs.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roas-router-on-a-stick" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROAS (Router On A Stick).
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-configuracion-de-vlans-en-un-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo de configuración de VLANs en un Switch.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -592,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -609,11 +522,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -629,7 +542,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -836,10 +749,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="25_Bypass.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bypass
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="25_Bypass.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -850,6 +785,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escenario.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrategia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrategia.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuraciones-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuraciones Iniciales.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realizacion-del-bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realización del Bypass.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigación.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-y-dns-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPS y DNS Inspection.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-explicativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vídeo Explicativo.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1645,238 +1672,253 @@
 
 
 
-<div><h1 id="vlan"><strong>VLAN.</strong><a class="headerlink" href="#vlan" title="Permanent link">¶</a></h1>
-<p>Las VLAN o Virtual LAN permiten crear redes virtuales dentro una misma red física. Es decir, dentro de un mismo cableado, un mismo puerto y mismos equipos de red coexistirán diferentes redes.</p>
+<div><h1 id="bypass">Bypass.<a class="headerlink" href="#bypass" title="Permanent link">¶</a></h1>
+<h2 id="escenario">Escenario.<a class="headerlink" href="#escenario" title="Permanent link">¶</a></h2>
 <center>
 <figure>
-  <img src="imagenes/warmup/60.png" width="700">
+  <img src="imagenes/ofensiva/25.png" width="900">
 </figure>
-  </center>
+</center>
 
-<h2 id="ventajas"><strong>Ventajas.</strong><a class="headerlink" href="#ventajas" title="Permanent link">¶</a></h2>
+<h3 id="empresa">Empresa<a class="headerlink" href="#empresa" title="Permanent link">¶</a></h3>
 <ul>
 <li>
-<p>Segmentamos los dominios de broadcast, es decir, el broadcast de una red virtual no se propagará a la otra red virtual.</p>
+<p>Tenemos una red Interna 192.168.0.X/24 que está <ins class="critic"><strong>detrás de un NAT y además el router corta las conexiones SSH</strong></ins>, por lo que no se puede conectar a servidores ssh. </p>
 </li>
 <li>
-<p>Podemos aplicar filtros a redes virtuales de forma independiente, pudiendo darle diferentes tipos de permisos o accesos a cada una.</p>
-</li>
-<li>
-<p>Nos permite una mejor organización y administración.</p>
-</li>
-<li>
-<p>Es más fácil acotar los problemas dependiendo de a que VLAN esté afectando.</p>
-</li>
-<li>
-<p>Tiene un ahorro económico pues usando los mismos equipos podemos segmentar la red.</p>
+<p>No tenemos control del router, únicamente del ordenador.</p>
 </li>
 </ul>
-<h2 id="tipos-de-enlaces"><strong>Tipos de enlaces.</strong><a class="headerlink" href="#tipos-de-enlaces" title="Permanent link">¶</a></h2>
+<h3 id="casa">Casa<a class="headerlink" href="#casa" title="Permanent link">¶</a></h3>
 <ul>
 <li>
-<p>Acceso: Solo pasa una única VLAN. Habitualmente conecta con hosts/clientes.</p>
+<p>Por otro lado tenemos otra red interna 192.168.100.100/24 que también está detrás de una NAT.</p>
 </li>
 <li>
-<p>Troncal: Pasan varias VLANs por el mismo enlace/interfaz. </p>
+<p>En este caso sí tenemos control del router.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>¿Si pasan varias VLANs por la misma interfaz como sabe el equipo cada trama a qué VLAN pertenece?</p>
-<p>El estándar 802.1Q se le asigna una etiqueta a la trama, que es básicamente un número. </p>
-<p>Por ejemplo si es la VLAN 47 y pasa por un enlace troncal se le añade una etiqueta con el número 47.</p>
-</div>
+<h2 id="objetivo">Objetivo.<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Establecer una conexión SSH desde el equipo de la izquierda con el de la derecha. Teniendo en cuenta que el router Mikrotik1 tendrá unas reglas que cortan las conexiones SSH.</p>
+<h2 id="estrategia">Estrategia.<a class="headerlink" href="#estrategia" title="Permanent link">¶</a></h2>
+<p>Dado que hay otros protocolos que no están cortados, como por ejemplo DNS, HTTP, HTTPS o ICMP se pueden aprovechar para establecer un <mark class="critic"><strong>túnel</strong></mark> entre los extremos usando estos protocolos. Posteriormente, <ins class="critic">dentro del túnel establecemos la conexión SSH</ins>. Es decir, que el firewall va a ver que hay una conexión ICMP, pero realmente dentro de esa conexión ICMP hay una sesión SSH.</p>
+<p>Una cabecera ICMP tiene la siguiente forma, donde podemos ver que tiene un campo de ICMP Data, que es donde nosotros vamos establecer el túnel.</p>
 <center>
 <figure>
-  <img src="imagenes/warmup/61.png" width="500">
+  <img src="imagenes/ofensiva/26.png" width="500">
 </figure>
-  </center>
+</center>
 
-<h2 id="tipos-de-vlans"><strong>Tipos de VLANs.</strong><a class="headerlink" href="#tipos-de-vlans" title="Permanent link">¶</a></h2>
+<p><strong>¿Qué quiere decir establecer un túnel?</strong></p>
+<p>Dentro de la cabecera ICMP Data vamos a insertar otra cabecera IP (Túnel) con otro direccionamiento (<strong>IPs del túnel</strong>) y lo que serían los datos (ICMP Data) va a ser todo el tráfico ssh que vamos a intercambiar.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/27.png" width="700">
+</figure>
+</center>
+
+<p>Es decir, nuestro router solo va a leer la cabecera IP verde y lo va a enrutar. El firewall va a ver que es tráfico ICMP pero no va a  ver más allá, si tuviera que analizar todos los datos de todos los paquetes no podría dar abasto.</p>
+<p>Cuando el paquete llegue al destino final, este equipo sí sabrá que tiene que desencapsular el tráfico ICMP Data para ver los datos reales, en este caso una conexión ssh.</p>
+<h2 id="configuraciones-iniciales">Configuraciones Iniciales.<a class="headerlink" href="#configuraciones-iniciales" title="Permanent link">¶</a></h2>
+<h3 id="configuracion-del-direccionamiento-y-del-nat">Configuración del direccionamiento y del NAT.<a class="headerlink" href="#configuracion-del-direccionamiento-y-del-nat" title="Permanent link">¶</a></h3>
+<p>Antes de nada fíjate bien en los direccionamientos de cada equipo.</p>
+<ul>
+<li>Configuramos las interfaces y activamos un source NAT.</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/28.png" width="900">
+</figure>
+</center>
+
+<ul>
+<li>Para configurar el otro router sería exactamente igual, únicamente variarían las direcciones IP.</li>
+</ul>
+<h3 id="configurar-los-equipos-cliente-y-servidor">Configurar los equipos Cliente y Servidor.<a class="headerlink" href="#configurar-los-equipos-cliente-y-servidor" title="Permanent link">¶</a></h3>
 <ul>
 <li>
-<p><ins class="critic">Datos</ins>: Son las VLANs habituales.</p>
+<p>Establecer una IP estática en ambos equipos.</p>
 </li>
 <li>
-<p><ins class="critic">Administración</ins>: Son VLANs donde solo debería ir tráfico de gestión de los equipos, si es posible debería ir por puertos independientes al de los datos, de tal forma que si hay un problema con el tráfico de clientes no perderemos el acceso a nuestros equipos.</p>
-</li>
-<li>
-<p><ins class="critic">Nativa</ins>: Se usa para diferencia una VLAN sin etiqueta dentro de un enlace troncal. Se usa mayormente para gestionar equipos que no soportan el estándar dot1q. Solo puede haber una vlan nativa por cada enlace troncal.</p>
+<p>Establecer un DNS estático, por ejemplo 8.8.8.8.</p>
 </li>
 </ul>
-<h3 id="ejemplo">Ejemplo:<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
-<p>💥   Tenemos 3 VLANs: 10,20 y 30.</p>
-<p>💥   Cada VLAN tiene una red diferente:</p>
-<div class="highlight"><pre><span></span><code>    VLAN 10 --&gt; 172.17.10.0/24.
+<h3 id="comprobacion-del-correcto-funcionamiento-del-nat">Comprobación del correcto funcionamiento del NAT.<a class="headerlink" href="#comprobacion-del-correcto-funcionamiento-del-nat" title="Permanent link">¶</a></h3>
+<ul>
+<li>Hacemos ping desde “Servidor”, el que está a la derecha, debemos ser capaces de llegar al router del otro extremo a través de la red “Internet”.</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/29.png" width="300">
+</figure>
+</center>
 
-    VLAN 20 --&gt; 172.17.20.0/24.
+<ul>
+<li>Una vez hecho el ping podemos comprobar en el router “Casa” (derecha) que ha realizado el NAT.</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/30.png" width="900">
+</figure>
+</center>
 
-    VLAN 30 --&gt; 172.17.30.0/24.
+<ul>
+<li>
+<p>Podemos realizar la misma operativa en el lado contrario, cambiando la IP del ping, para ver que también es correcta la configuración del NAT.</p>
+</li>
+<li>
+<p>Desde el “Servidor” no deberíamos ser capaces de llegar por ICMP a la red privada de “Cliente”, es decir, no llegamos la IP 192.168.0.100, pues es una red interna (LAN) ajena a la nuestra. Obviamente el cliente tampoco debe ser capaz de alcanzar la red privada del Servidor.</p>
+</li>
+</ul>
+<h3 id="configuracion-del-dmz-en-el-router-de-la-derecha-casa">Configuración del DMZ en el router de la derecha (Casa).<a class="headerlink" href="#configuracion-del-dmz-en-el-router-de-la-derecha-casa" title="Permanent link">¶</a></h3>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/31.png" width="900">
+</figure>
+</center>
+
+<ul>
+<li>Comprobar correcto funcionamiento estableciendo una sesión ssh desde “Cliente” hasta “Servidor”. </li>
+</ul>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>usuario@85.85.85.2<span class="w"> </span>
 </code></pre></div>
-<p>💥 Los puertos que conectan con PCs solo tienen que pasar una única VLAN, por lo que la interfaz se configura como access.</p>
-<p>💥   Los puertos que interconectan entre los switches deberán dejar pasar varias VLANs, por lo que irán en modo trunk o serán enlaces troncales.</p>
+<div class="admonition tip">
+<p>Hacemos el ssh a la IP pública porque el equipo está detrás de un NAT y no alcanzaríamos la IP pública ➡️ Al tener un DMZ reenvía todos el tráfico de los puertos conocidos a la IP interna.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">AVISO</p>
+<p><strong>Recuerda antes activar el servicio ssh que viene desactivado por defecto en Kali</strong></p>
+<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>start<span class="w"> </span>ssh
+</code></pre></div>
+</div>
+<h3 id="anadir-filtros-de-seguridad-en-el-router-de-la-izquierda-empresa">Añadir filtros de seguridad en el router de la izquierda (“Empresa”).<a class="headerlink" href="#anadir-filtros-de-seguridad-en-el-router-de-la-izquierda-empresa" title="Permanent link">¶</a></h3>
 <ul>
-<li>¿Pueden dos equipos dentro de la misma VLAN comunicarse?</li>
+<li>Vamos a cortar el tráfico SSH tanto externo como interno.</li>
 </ul>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>Sí.</p>
-</details>
-<ul>
-<li>¿Pueden dos equipos de diferentes VLANs comunicarse? En caso negativo qué sería necesario.</li>
-</ul>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>No, necesitarían un router que enrutara el tráfico entre VLANs.</p>
-</details>
 <center>
 <figure>
-  <img src="imagenes/warmup/62.png" width="600">
+  <img src="imagenes/ofensiva/32.png" width="900">
 </figure>
-  </center>
+</center>
 
-<h2 id="roas-router-on-a-stick"><strong>ROAS (Router On A Stick).</strong><a class="headerlink" href="#roas-router-on-a-stick" title="Permanent link">¶</a></h2>
-<p>Para que dos equipos en VLANs diferentes puedan comunicarse deberá haber un router que sea capaz de entender el direccionamiento IP ¿Por qué?</p>
-<details class="note">
-<summary><strong>RESPUESTA</strong></summary>
-<p>Los switches solo entienden de MACs (capa 2), no leen la cabecera de IP origen/destino.</p>
-<p>¿Pero por qué no pueden aprender las MACs de los equipos en VLANs diferentes mediante ARP?</p>
-<p>Porque las VLANs segmentan el dominio de broadcast, es decir, un broadcast ARP para averiguar una MAC de una IP que se encuentra en otra VLAN nunca alcanzará su destino.</p>
-</details>
-<div class="admonition warning">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>En la capa 2 (Layer 2) se añade una cabecera y una cola. Los equipos de capa 2 sólo se centran en esta cabecera y capa, por lo que no miran las cabeceras IP, TCP, aplicación, etc.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/33.png" width="900">
+</figure>
+</center>
+
+<ul>
+<li>Realizamos la comprobación y vemos que ya no establece conexión.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Hacer la prueba desde el cliente de nuevo...</span>
+ssh<span class="w"> </span>usuario@85.85.85.2<span class="w"> </span>
+</code></pre></div>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/34.png" width="300">
+</figure>
+</center>
+
+<h2 id="realizacion-del-bypass">Realización del Bypass.<a class="headerlink" href="#realizacion-del-bypass" title="Permanent link">¶</a></h2>
+<h3 id="configurar-el-tunelizador">Configurar el tunelizador.<a class="headerlink" href="#configurar-el-tunelizador" title="Permanent link">¶</a></h3>
+<p>Primeramente tenemos que tener descargado el siguiente programa en ambas máquinas:</p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://sourceforge.net/projects/hanstunnel/files/source/hans-1.1.tar.gz/download
+</code></pre></div>
+<p>Descomprimimos y compilamos el Makefile.</p>
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xf<span class="w"> </span>hans-1.1.tar.gz
+<span class="nb">cd</span><span class="w"> </span>hans1-1
+make
+</code></pre></div>
+<h3 id="servidor">Servidor.<a class="headerlink" href="#servidor" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>-s</strong>: Para indicar que va a ser el servidor y la red que se establece en el túnel.</p>
+</li>
+<li>
+<p><strong>-p</strong>: Contraseña para establecer el túnel.</p>
+</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/35.png" width="600">
+</figure>
+</center>
+
+<h3 id="cliente">Cliente.<a class="headerlink" href="#cliente" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>-c</strong>: La IP del servidor, usaremos la IP pública del router que tiene configurada a su vez un DMZ.</p>
+</li>
+<li>
+<p><strong>-p</strong>: La contraseña del túnel.</p>
+</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/36.png" width="700">
+</figure>
+</center>
+
+<p><strong>Comprobamos que hay conectividad a través del túnel.</strong></p>
+<div class="highlight"><pre><span></span><code>ping<span class="w"> </span><span class="m">10</span>.0.0.1
+</code></pre></div>
+<p><strong>Establecer conexión SSH a través del túnel.</strong></p>
+<div class="admonition tip">
+<p>Obviamente la conexión la hacemos desde el cliente hasta el servidor.</p>
 </div>
 <center>
 <figure>
-  <img src="imagenes/warmup/63.png" width="600">
-</figure>
-  </center>
-
-<p>¿Qué hay dentro de esta cabecera de capa 2? Pues dicha cabecera puede ser diferente dependiendo del protocolo usado, por ejemplo en el 802.1Q se añade una etiqueta, pero la trama habitual suele seguir el protocolo Ethernet que es el siguiente.</p>
-<center>
-<figure>
-  <img src="imagenes/warmup/64.jpg" width="600">
-</figure>
-  </center>
-
-<p>Por tanto para que varias VLANs se vean entre si debemos utilizar un router. </p>
-<p>¿Necesitamos un puerto del router para cada VLAN? Podríamos hacerlo de dicha forma pero sería un gasto económico inútil, pues podemos hacer exactamente lo mismo a través de un único puerto, de ahí el concepto de ROAS (Router On A Stick).</p>
-<center>
-<figure>
-  <img src="imagenes/warmup/65.jpg" width="600">
-</figure>
-  </center>
-
-<h2 id="ejemplo-de-configuracion-de-vlans-en-un-switch">Ejemplo de configuración de VLANs en un Switch.<a class="headerlink" href="#ejemplo-de-configuracion-de-vlans-en-un-switch" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title"><strong>INFO</strong></p>
-<p>Recordad que para entrar en modo configuración, primero hay que entrar en modo enable:</p>
-<p></p><center>
-<figure>
-    <img src="imagenes/warmup/66.png" width="300">
+  <img src="imagenes/ofensiva/37.png" width="600">
 </figure>
 </center>
+
+<h2 id="mitigacion">Mitigación.<a class="headerlink" href="#mitigacion" title="Permanent link">¶</a></h2>
+<p>Hemos visto que estamos estableciendo un túnel a través de ICMP, por tanto vamos a probar a cortar el ICMP en el router de la empresa.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/38.png" width="700">
+</figure>
+</center>
+
+<p>Comprobamos desde “Cliente” que ya no contestan a ping:</p>
+<div class="highlight"><pre><span></span><code>ping<span class="w"> </span><span class="m">85</span>.85.85.2
+</code></pre></div>
+<p>Ahora intentamos establecer el túnel.</p>
+<ul>
+<li>Primero ejecutamos hans en el “Servidor”</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./hans<span class="w"> </span>-s<span class="w"> </span><span class="m">10</span>.0.0.0<span class="w"> </span>-p<span class="w"> </span>mipassword
+</code></pre></div>
+<ul>
+<li>A continuación en el “Cliente”</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./hans<span class="w"> </span>-c<span class="w"> </span><span class="m">85</span>.85.85.2<span class="w"> </span>-p<span class="w"> </span>mipassword
+</code></pre></div>
+<ul>
+<li>Comprobamos que en el lado de “Cliente” no se ha podido establecer el túnel.</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/39.png" width="600">
+</figure>
+</center>
+
+<div class="admonition danger">
+<p class="admonition-title">AVISO</p>
+<p>No obstante, al igual que hemos hecho un “SSH over ICMP” también podemos hacerlo sobre “DNS” por ejemplo, protocolo que es más difícil de cortar.</p>
 </div>
-<ol>
-<li>Crear la VLAN.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/67.png" width="300">
-    </figure>
-</center>
-</details>
-<ol start="2">
-<li>Darle Nombre a la VLAN.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/68.png" width="300">
-    </figure>
-</center>
-</details>
-<ol start="3">
-<li>Comprobar que lo has creado bien.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/69.png" width="600">
-    </figure>
-</center>
-</details>
-<ol start="4">
-<li>Configurar un puerto en Access.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/70.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="5">
-<li>Configurar un puerto en trunk con ciertas vlans.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/71.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="6">
-<li>Añadir una vlan a un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/72.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="7">
-<li>Eliminar una vlan de un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/73.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="8">
-<li>Añadir una vlan nativa en un puerto en trunk.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/74.png" width="500">
-    </figure>
-</center>
-</details>
-<ol start="9">
-<li>Borrar una VLAN del sistema.</li>
-</ol>
-<details class="warning">
-<summary><strong>COMANDO</strong></summary>
-<p></p><center>
-    <figure>
-        <img src="imagenes/warmup/75.png" width="300">
-    </figure>
-</center>
-</details></div>
+<h2 id="https-y-dns-inspection">HTTPS y DNS Inspection.<a class="headerlink" href="#https-y-dns-inspection" title="Permanent link">¶</a></h2>
+<p>Por tanto la única solución sería tener un firewall que fuera capaz de investigar todos los datos, pero eso es algo complicado con la gran cantidad de tráfico, además no sería ético y mucho tráfico vendría cifrado, por lo que tendrías que ser capaz de descifrarlo y volverlo a cifrar antes de salir a Internet (<strong>HTTPS INSPECTION</strong>).</p>
+<p>Aquí tienes información sobre <strong>HTTPS Inspection</strong> y <strong>DNS Inspection</strong>.</p>
+<p><a href="https://www.cloudflare.com/es-es/learning/security/what-is-https-inspection/">Información sobre HTTPS Inspection.</a></p>
+<p><a href="https://campus.barracuda.com/product/websecuritygateway/doc/30573250/how-to-configure-ssl-inspection-for-google-chrome-browser/">Información sobre configuración en clientes.</a></p>
+<p><a href="https://blogs.infoblox.com/ipv6-coe/improved-security-through-dns-inspection-part-1/">Información sobre DNS Inspection.</a></p>
+<h2 id="video-explicativo">Vídeo Explicativo.<a class="headerlink" href="#video-explicativo" title="Permanent link">¶</a></h2>
+<center>
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/MhZSJ0qmaec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center></div>
 
 
 
