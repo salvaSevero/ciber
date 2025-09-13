@@ -1,0 +1,2010 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/26_UDP.html">
+      
+      
+        <link rel="prev" href="24_DHCP_Starvation.html">
+      
+      
+        <link rel="next" href="27_HPing.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>UDP Flooding - CiberSeguridad Redes.</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ddos-with-udp-flooding" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="CiberSeguridad Redes." class="md-header__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CiberSeguridad Redes.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UDP Flooding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="CiberSeguridad Redes." class="md-nav__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    CiberSeguridad Redes.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WARM UP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            WARM UP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="0_Modelo_Capas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo Capas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1_ConocimientosBasicos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conocimientos Básicos L2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3_CAM_Overflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PoC CAM Overflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4_ConocimientosL3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conocimientos Básicos L3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5_TeoriaVLAN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teoría VLAN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="6_DHCP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DHCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="7_ConceptosL4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos L4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="8_NAT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NAT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="9_EnrutamientoDinamico.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enrutamiento Dinámico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    OFENSIVA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            OFENSIVA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ARP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ARP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="21_ARP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22_Spoofing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARP Spoofing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DHCP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            DHCP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="23_DHCP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DHCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="24_DHCP_Starvation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Starvation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DDoS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            DDoS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    UDP Flooding
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="26_UDP.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    UDP Flooding
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características del ataque.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigacion-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigación del ataque:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prueba-de-concepto-poc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prueba de Concepto (PoC).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigación.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anexo.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="27_HPing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HPing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="28_Smurf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Smurf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="25_Bypass.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bypass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15_Ataque_PPTP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ataque PPTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DEFENSIVA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            DEFENSIVA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11_VLANs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VLANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10_LACP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    STACK & LACP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12_VRRP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VRRP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VPN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13_VPN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14_PPTP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PPTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="17_IPSec.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IPSec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="16_OpenVPN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenVPN & Wireguard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="18_DMVPN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DMVPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20_NGFW.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGFW
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="19_RADIUS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RADIUS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ANEXO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ANEXO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_ProblemasEVE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problemas Simulador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comandos Cisco
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Comandos Cisco
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2_ComandosCisco.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comandos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comandos Router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_ComandosNAT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comandos NAT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_CiscoACL.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ACL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuraciones Mikrotik
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuraciones Mikrotik
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_Configuraci%C3%B3nMikrotik.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuración Básica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_Configurar_PPTP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PPTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_IPSec.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    L2TP/IPSec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_Site_Site_IPSec_RSA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IPSec Site-to-Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="A_Usuarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usuarios EVE-NG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="ddos-with-udp-flooding">DDoS with UDP flooding.<a class="headerlink" href="#ddos-with-udp-flooding" title="Permanent link">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">UDP</p>
+<p>Uno de los ataques más básicos es aprovecharse del protocolo UDP, el cual <ins class="critic"><strong>NO está orientado a conexión</strong></ins> como TCP, y por tanto no hay que esperar ningún acuse de recibo ACK para seguir mandando paquetes, no hace falta establecer una conexión previa, etc. Es decir, podemos enviar todo el tráfico que deseemos de golpe.</p>
+</div>
+<p>El ataque consistuiría en una <ins class="critic"><strong>red de bots</strong></ins> que lanzaran a la vez un ataque UDP flooding al objetivo. </p>
+<h2 id="caracteristicas-del-ataque">Características del ataque.<a class="headerlink" href="#caracteristicas-del-ataque" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Cada bot/PC infectado solo podrá enviar tanto tráfico como su línea  de Internet/interfaz de red le permita.</p>
+</li>
+<li>
+<p>Podemos hacer IP spoofing para intentar guardar la identidad de nuestros PCs infectados, no obstante, si hacemos esto hay muchas posibilidades de que estas IP spoofeadas sean cortadas por algún cortafuegos.</p>
+</li>
+<li>
+<p>El ataque con UDP se manda a un puerto aleatorio, además de consumir el ancho de banda de la víctima, esta al ver que en ese puerto no hay ninguna aplicación escuchando devolverá un <ins class="critic"><strong>ICMP Destination Unreachable</strong></ins>. Por lo que también saturaremos/deterioraremos su CPU.</p>
+</li>
+</ul>
+<h2 id="mitigacion-del-ataque">Mitigación del ataque:<a class="headerlink" href="#mitigacion-del-ataque" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Configura el servidor para que no conteste con el protocolo ICMP (uso de discard). </p>
+</li>
+<li>
+<p>Utilizar un cortafuegos que cuando detecte un patrón de tráfico UDP de este estilo con gran cantidad de tráfico lo corte automáticamente.</p>
+</li>
+</ul>
+<h2 id="prueba-de-concepto-poc">Prueba de Concepto (PoC).<a class="headerlink" href="#prueba-de-concepto-poc" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Escenario</p>
+<p><strong>Atacante (Windows) ➡️ WAN  MiKrotik LAN ➡️ Víctima (Windows/Linux).</strong></p>
+</div>
+<details class="note">
+<summary>PASO 1. Comprobar Conectividad</summary>
+<p>Comprobar que hay <strong>conectividad (ping)</strong> entre el atacante y la víctima. El ping no es necesario, simplemente lo hacemos para cerciorarnos que el laboratorio está bien conectado y no dar palos de ciego si luego falla algo. Es muy probable que tengamos que deshabilitar algún firewall de Windows/Linux para comprobar la conexión. Una vez comprobado se pueden volver a habilitar.</p>
+</details>
+<details class="note">
+<summary>PASO 2. Descargar Heramienta SkyData (Windows)</summary>
+</details>
+<details class="note">
+<summary>PASO 3. Personalizar el ataque</summary>
+<p>Configurar la IP de la víctima y cuánto tráfico vamos a enviar. En el ejemplo voy a enviar 50Mbps. La opción de tráfico UDP ya está habilitada por defecto.</p>
+<p></p><center>
+<figure>
+  <img src="imagenes/ofensiva/40.png" width="700">
+</figure>
+</center> 
+</details>
+<details class="note">
+<summary>PASO 4. Comprobar el ataque desde el atacante</summary>
+<p>Desde el punto de vista del atacante o de uno de los bots desde donde realizaríamos el ataque, podemos ver que salen 50Mbps:</p>
+<p></p><center>
+<figure>
+  <img src="imagenes/ofensiva/41.png" width="600">
+</figure>
+</center> 
+</details>
+<details class="note">
+<summary>PASO 5. Comprobar el ataque desde la víctima</summary>
+<p>Desde el punto de vista de la víctima podemos ver que recibe 50Mbps, si hubiera dos personas inyectando 50Mbps cada una, recibiría 100Mbs.</p>
+<p></p><center>
+<figure>
+  <img src="imagenes/ofensiva/42.png" width="600">
+</figure>
+</center> 
+</details>
+<h2 id="mitigacion">Mitigación.<a class="headerlink" href="#mitigacion" title="Permanent link">¶</a></h2>
+<p>En caso de que no dispongamos de un equipo firewall o antiDDoS configurado para cortar este tipo de ataques de forma automática podríamos hacer lo siguiente:</p>
+<ul>
+<li>
+<p>Disponer de un <strong>sistema de monitorización</strong> de alertas: Cacti, Nagios, Zabbix, Icinga, etc… que nos avise de que hay un tráfico anómalo.</p>
+</li>
+<li>
+<p>Usar algún tipo de <strong>sniffer</strong> dentro de los routers, por ejemplo la herramienta Torch dentro de Mikrotik.</p>
+<p></p><center>
+<figure>
+  <img src="imagenes/ofensiva/43.png" width="400">
+</figure>
+</center> 
+</li>
+</ul>
+<h3 id="herramienta-torch">Herramienta Torch.<a class="headerlink" href="#herramienta-torch" title="Permanent link">¶</a></h3>
+<p>Con la herramienta <strong>torch</strong> podemos seleccionar la interfaz en la que queremos escuchar, podemos filtrar por IPs (origen/destino), VLANs, protocolos etc. </p>
+<p>En el ejemplo he filtrado por UDP porque los ataques de denegación de servicio al 90% suelen ser UDP. Se puede ver que detecta un flujo de 50Mbps desde la IP 192.168.0.100, a un puerto aleatorio 5000.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/44.png" width="700">
+</figure>
+</center>
+
+<p>Como ya sabemos la IP atacante, podemos bloquearla en el firewall (IP  Firewall) añadiendo una regla:</p>
+<p>Para tráfico de entrada con IP origen 192.168.0.100 voy a realizar la <ins class="critic"><strong>acción drop</strong></ins>.</p>
+<ul>
+<li>
+<p><mark class="critic"><strong>Forward</strong></mark> hace referencia al tráfico que pasa por el router (plano de datos).</p>
+</li>
+<li>
+<p><mark class="critic"><strong>Input</strong></mark> hace referencia al tráfico que es para el propio router (plano de control).</p>
+</li>
+</ul>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/45.png" width="600">
+</figure>
+</center>
+
+<center>
+<figure>
+  <img src="imagenes/ofensiva/46.png" width="600">
+</figure>
+</center>
+
+<div class="admonition warning">
+<p class="admonition-title">AVISO</p>
+<p><strong>Es importante poner está regla arriba del resto de reglas, para que no se acepte en alguna norma más genérica, dejando pasar el tráfico.</strong></p>
+</div>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/47.png" width="1000">
+</figure>
+</center>
+
+<div class="admonition tip">
+<p class="admonition-title">CONTADOR DE MATCHES</p>
+<p><strong>Es recomendable saber que siempre vamos a tener un contador indicando si sigue recibiendo paquetes (ataques en este caso).</strong></p>
+</div>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/48.png" width="1000">
+</figure>
+</center>
+
+<h2 id="anexo">Anexo.<a class="headerlink" href="#anexo" title="Permanent link">¶</a></h2>
+<h3 id="ruta-estatica-en-windows">Ruta estática en Windows.<a class="headerlink" href="#ruta-estatica-en-windows" title="Permanent link">¶</a></h3>
+<p>Si necesitáis crear una ruta estática en vuestra máquina anfitriona para llegar a la LAN virtual:</p>
+<ul>
+<li>
+<p>192.168.88.0/24 es la red LAN a la que quiero llegar.</p>
+</li>
+<li>
+<p>192.168.1.140 es la IP de la WAN que le han asignado al Mikrotik.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">route</span> <span class="n">add</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">88</span><span class="p">.</span><span class="n">0</span> <span class="n">MASK</span> <span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">255</span><span class="p">.</span><span class="n">0</span> <span class="n">192</span><span class="p">.</span><span class="n">168</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">140</span>
+</code></pre></div>
+<h3 id="limitacion-mikrotik-virtual">Limitación Mikrotik Virtual.<a class="headerlink" href="#limitacion-mikrotik-virtual" title="Permanent link">¶</a></h3>
+<p>El mikrotik virtual tiene una <strong>licencia de prueba que limita a 1Mbps</strong> el tráfico que puede sacar. Por eso no vemos que por la interfaz LAN pueda sacar más de 1Mbps pese a que el ataque sea mayor.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/49.png" width="800">
+</figure>
+</center>
+
+<h3 id="destination-unreachable">Destination Unreachable.<a class="headerlink" href="#destination-unreachable" title="Permanent link">¶</a></h3>
+<p>Se puede filtrar por icmp para ver únicamente los Destination recibidos.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/50.png" width="900">
+</figure>
+</center>
+
+<h3 id="mikrotik-cpu">Mikrotik CPU.<a class="headerlink" href="#mikrotik-cpu" title="Permanent link">¶</a></h3>
+<p>También se puede revisar la carga de la propia CPU, ésta será muy diferente si el ataque va a un cliente (plano de datos) o contra el propio router (plano de control).</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/51.png" width="600">
+</figure>
+</center>
+
+<center>
+<figure>
+  <img src="imagenes/ofensiva/52.png" width="500">
+</figure>
+</center></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Salvador Serrano Pérez - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "toc.follow", "navigation.indexes", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.tracking"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
