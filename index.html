@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#modelo-de-capas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to MkDocs
+              Modelo de Capas.
             
           </span>
         </div>
@@ -514,6 +514,8 @@
       
         
       
+        
+      
     
     
     
@@ -846,6 +848,79 @@
   
   <span class="md-ellipsis">
     Smurf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            SSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="29_SSH.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSH
     
   </span>
   
@@ -1677,21 +1752,92 @@
 
 
 
-<div><h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">¶</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">¶</a></h2>
+<div><h1 id="modelo-de-capas"><strong>Modelo de Capas.</strong><a class="headerlink" href="#modelo-de-capas" title="Permanent link">¶</a></h1>
+<h2 id="por-que-el-modelo-de-capas"><strong>¿Por qué el modelo de capas?</strong><a class="headerlink" href="#por-que-el-modelo-de-capas" title="Permanent link">¶</a></h2>
+<p>La comunicación mediante las redes es posible gracias a los diferentes protocolos que han sido programados en los dispositivos. No obstante, si cada fabricante programara su propio protocolo (protocolo propietario), sin seguir ningún estándar universal, sería prácticamente imposible que dispositivos de diferentes fabricantes pudieran comunicarse entre si.</p>
+<p>Para solventar esta problemática se implementa/propone el modelo de capas, donde se especificaban diferentes niveles, cada nivel acogía múltiples protocolos, pero dichos protocolos tenían que cumplir unas normas básicas dependiendo a la capa a la que pertenecieran. </p>
+<h2 id="que-es-un-protocolo"><strong>¿Qué es un protocolo?</strong><a class="headerlink" href="#que-es-un-protocolo" title="Permanent link">¶</a></h2>
+<p>Un protocolo son una serie de <mark class="critic">normas/reglas</mark> que cada dispositivo debe cumplir para poder hacer cierta tarea (dependiendo del protocolo implementado).</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>
+<p>Podemos aprovechar mejor el hardware de la máquina anfitriona, ya que estamos ejecutando varios "ordenadores" en uno mismo, aprovechando recursos que de otra forma es posible que no se llegaran a usar.</p>
+</li>
+<li>
+<p>Permite ejecutar software que quizá sea incompatible con tu sistema operativo anfitrión, ya sea por un motivo de versiones o porque son sistemas operativos diferentes (Windows, Linux, MAC).</p>
+</li>
 </ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div></div>
+<p><ins class="critic">Ejemplos de protocolos:</ins></p>
+<p>💥 Protocolo ARP: Protocolo que permite a partir de una dirección IP encontrar su dirección física o MAC (capa 2~3).</p>
+<p>💥Protocolo IP: Sirve para llevar a cabo la comunicación a través de paquetes IP (capa 3).</p>
+<p>💥Protocolo TCP/UDP: Protocolos de comunicación mediante segmentos (capa 4).</p>
+<p>💥Protocolo HTTP: Protocolo de aplicación que permite a partir de un texto plano representar una página web a través de un navegador (capa 5)</p>
+<p>En el mundo de las redes cada protocolo va ligada a una capa o nivel. Es decir, que si hubiera un problema con el protocolo IP (capa 3), solo debemos de centrarnos en las tareas que se realizan en la capa 3, y la solución a dicho problema lo encontraremos con herramientas o conocimientos que afecten a ese nivel.ç</p>
+<p>Como hemos dicho cada capa se encarga de sus propios protocolos, aislándose de los protocolos del resto de capas. No obstante una capa siempre se comunicará con su capa inmediatamente superior o inferior, dependiendo de la dirección de la comunicación. Por ejemplo, la capa 4, únicamente podrá comunicarse con la capa 3 o con la capa 5.</p>
+<figure>
+  <img src="imagenes/warmup/01.png" width="700">
+</figure>
+
+<p><ins class="critic">Modelo de referencia OSI.</ins></p>
+<p>En un primer lugar se crea un modelo de 7 capas, totalmente teórico, que nunca llegó a ponerse en práctica, pero que sí sirvió de base a otros modelos.</p>
+<p><ins class="critic">Modelo de facto TCP/IP.</ins></p>
+<p>Este modelo es el que se usa actualmente en la práctica, se basa en el modelo OSI pero tiene 4 capas.</p>
+<figure>
+  <img src="imagenes/warmup/02.jpg" width="500">
+</figure>
+
+<p>En el modelo TCP/IP se agrupan en una misma capa el nivel  físico y de enlace de datos. No obstantes nosotros sí las dividiremos y hablaremos de capa 1 (capa física) y capa 2 (enlace de datos o acceso a la red).</p>
+<figure>
+  <img src="imagenes/warmup/03.png" width="250">
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p></p><center>
+A partir de ahora se hará referencia a este modelo (TCP/IP con 5 capas).
+</center>
+</div>
+<h2 id="encapsulamiento"><strong>Encapsulamiento.</strong><a class="headerlink" href="#encapsulamiento" title="Permanent link">¶</a></h2>
+<p>Hemos dicho que un protocolo pertenece a una capa, pero también se ha comentado que cada capa se comunica con su capa inmediatamente superior o inferior, dependiendo de si está recibiendo el mensaje o enviándolo.</p>
+<p><ins class="critic">Envío de información.</ins></p>
+<ul>
+<li>
+<p>Cuando enviamos información habitualmente se genera en una aplicación (capa 5), y dichos datos van bajando por la pila de red, es decir, pasa a la capa 4, luego la 3, luego la 2, etc…</p>
+</li>
+<li>
+<p>En cada capa habrá un protocolo encargado de hacer algo que permita la comunicación.</p>
+</li>
+<li>
+<p>Por ejemplo, alguna vez leeréis que HTTP (capa 5) es un protocolo que funciona mediante TCP (capa 4), haciendo uso de IP (capa 3) y a su vez de Ethernet (capa 2). </p>
+</li>
+<li>
+<p>Cada vez que se envía información, a medida que baja de capa en capa, se va añadiendo información de cada protocolo, por tanto se van encapsulando cabeceras.</p>
+</li>
+</ul>
+<p><ins class="critic">Recepción de información.</ins></p>
+<ul>
+<li>
+<p>Cuando recibimos información se produce el caso contrario, no lo recibe una aplicación, si no que dicha información primero llega a través de un medio (cable, fibra, aire) a nuestra tarjeta de red (capa 1), haciendo uso de ciertos protocolos como Ethernet (capa 2), IP (capa 3) y TCP (capa 4) llega finalmente al protocolo que sí puede comunicarse con la aplicación, en el caso de HTTP un navegador.</p>
+</li>
+<li>
+<p>En este caso de recibir información, en el paso de las capas, de la 1 a la 5, se va aligerando el tamaño de los datos, es decir, se van desencapsulando las cabeceras.</p>
+</li>
+</ul>
+<figure>
+  <img src="imagenes/warmup/04.png" width="600">
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title"><strong>NOTA</strong></p>
+<p></p><center>
+Obviamente dependiendo del protocolo usado, las cabeceras que se añaden a los datos son diferentes, pero siempre en cada nivel se añade o quita una cabecera. 
+</center>
+</div>
+<h2 id="pdu-protocol-data-unit"><strong>PDU (Protocol Data Unit).</strong><a class="headerlink" href="#pdu-protocol-data-unit" title="Permanent link">¶</a></h2>
+<p>A nivel de nomenclatura, cada vez que los datos pasan por una capa con sus susodichas cabeceras van recibiendo nombres diferentes.
+Es decir, cuando a los datos se le añade la cabecera IP en la capa 3, se le pasa a llamar paquete, en caso de que estar en la capa 4 será un segmento (TCP) o datagrama (UDP), etc.</p>
+<figure>
+  <img src="imagenes/warmup/05.png" width="600">
+</figure></div>
 
 
 

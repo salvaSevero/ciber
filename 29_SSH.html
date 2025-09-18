@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_ComandosCisco2.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/29_SSH.html">
       
       
-        <link rel="prev" href="2_ComandosCisco.html">
+        <link rel="prev" href="28_Smurf.html">
       
       
-        <link rel="next" href="A_ComandosNAT.html">
+        <link rel="next" href="25_Bypass.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Router - CiberSeguridad Redes.</title>
+        <title>SSH - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-basicos-cisco-router" class="md-skip">
+        <a href="#ssh-secure-shell-protocol" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Router
+              SSH
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -524,11 +526,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -544,7 +546,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -874,8 +876,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -885,11 +889,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -905,7 +909,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             SSH
@@ -916,10 +920,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="29_SSH.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="29_SSH.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -930,6 +956,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protocolos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocolos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fingerprint-huella-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fingerprint (Huella Digital).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-diffie-hellman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo Diffie-Hellman.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integridad-de-los-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integridad de los mensajes.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamiento-de-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionamiento de SSH.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anexo.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1347,10 +1447,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1366,11 +1464,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1386,7 +1484,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -1420,10 +1518,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1439,11 +1535,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1459,7 +1555,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -1493,32 +1589,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Comandos Router
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_ComandosCisco2.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -1529,125 +1603,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrar en modo enable y posteriormente en configuración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cambia-el-nombre-del-router" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cambia el nombre del router.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#levantar-las-interfaces-que-vayamos-a-usar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Levantar las interfaces que vayamos a usar.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#darle-una-descripcion-a-la-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Darle una descripción a la interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hay-vlans" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Hay VLANS?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-la-ip-estatica-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar la IP estática en una interfaz
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una IP dinámica por DHCP en una interfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-una-subinterfaz" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar una subinterfaz.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-rutas-estaticas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar rutas estáticas.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurar-ruta-por-defecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar ruta por defecto.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ver-la-tabla-de-rutas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ver la tabla de rutas.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1901,64 +1856,238 @@
 
 
 
-<div><h1 id="comandos-basicos-cisco-router">Comandos básicos Cisco Router.<a class="headerlink" href="#comandos-basicos-cisco-router" title="Permanent link">¶</a></h1>
-<h2 id="entrar-en-modo-enable-y-posteriormente-en-configuracion">Entrar en modo enable y posteriormente en configuración<a class="headerlink" href="#entrar-en-modo-enable-y-posteriormente-en-configuracion" title="Permanent link">¶</a></h2>
+<div><h1 id="ssh-secure-shell-protocol">SSH (Secure Shell Protocol).<a class="headerlink" href="#ssh-secure-shell-protocol" title="Permanent link">¶</a></h1>
+<ul>
+<li>Protocolo para el <mark class="critic"><strong>acceso remoto</strong></mark> y posterior gestión de equipos.</li>
+<li>Puerto usado por defecto <mark class="critic"><strong>22 TCP</strong></mark>.</li>
+<li>Versión actual 2.0.</li>
+</ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/50.png" width="400">
+  <img src="imagenes/ofensiva/65.png" width="400">
 </figure>
+</center>
 
-<h2 id="cambia-el-nombre-del-router">Cambia el nombre del router.<a class="headerlink" href="#cambia-el-nombre-del-router" title="Permanent link">¶</a></h2>
+<h2 id="protocolos">Protocolos.<a class="headerlink" href="#protocolos" title="Permanent link">¶</a></h2>
+<p><strong>Se basa en 3 tipos de protocolos.</strong></p>
+<h3 id="cifrado-asimetrico">Cifrado Asimétrico.<a class="headerlink" href="#cifrado-asimetrico" title="Permanent link">¶</a></h3>
+<ul>
+<li>Se usa un par de <mark class="critic"><strong>claves (pública/privada)</strong></mark>.</li>
+<li>Es <mark class="critic"><strong>computacionalmente muy costoso</strong></mark> para cifrar/descifrar todos los mensajes de las comunicaciones. Para aliviar este problema usamos el cifrado simétrico.</li>
+</ul>
+<h3 id="cifrado-simetrico">Cifrado Simétrico.<a class="headerlink" href="#cifrado-simetrico" title="Permanent link">¶</a></h3>
+<ul>
+<li>Se usa una <mark class="critic"><strong>clave compartida</strong></mark>.</li>
+<li>No están seguro como cifrado asimétrico.</li>
+<li>Es <mark class="critic"><strong>más rápido</strong></mark> computacionalmente que el cifrado asimétrico a la hora de cifrar/descifrar cada mensaje.</li>
+<li>Su <mark class="critic"><strong>punto débil</strong></mark> es a la hora de intercambiar la clave para cifrar/descifrar, para evitar esta debilidad usamos el cifrado asimétrico y un algoritmo de intercambio de claves.</li>
+</ul>
+<h3 id="hashing">Hashing.<a class="headerlink" href="#hashing" title="Permanent link">¶</a></h3>
+<ul>
+<li>Permite a partir de una entrada (mensaje, fichero, …) generar una cadena de caracteres.</li>
+<li>Es casi imposible volver atrás, es decir, de la cadena de caracteres volver a generar el mensaje/fichero, por eso se conocen como <mark class="critic"><strong>funciones One-Way</strong></mark>.</li>
+<li><mark class="critic"><strong>Si se usa la misma clave hash sobre el mismo fichero/mensaje se obtiene siempre la misma cadena de caracteres (cadena/código hash)</strong></mark>.
+Este tipo de estrategias, podemos verlas, con sus diferentes variantes al establecer sistemas de seguridad como VPNs o SSL/TLS.</li>
+</ul>
+<h2 id="fingerprint-huella-digital">Fingerprint (Huella Digital).<a class="headerlink" href="#fingerprint-huella-digital" title="Permanent link">¶</a></h2>
+<ul>
+<li>Cuando nos conectamos a un servidor por SSH lo primero que sucede es que nos transfiere su clave pública. </li>
+<li>El fingerprint se obtiene de la clave pública y obviamente es único para cada clave. </li>
+<li>Es lo primero que nos aparece cuando nos conectamos por primera vez a un servidor SSH.</li>
+</ul>
+<center>
 <figure>
-  <img src="imagenes/warmup/51.png" width="400">
+  <img src="imagenes/ofensiva/66.png" width="700">
 </figure>
+</center>
 
-<h2 id="levantar-las-interfaces-que-vayamos-a-usar">Levantar las interfaces que vayamos a usar.<a class="headerlink" href="#levantar-las-interfaces-que-vayamos-a-usar" title="Permanent link">¶</a></h2>
+<details class="note">
+<summary>¿Cuál es su función?</summary>
+<ul>
+<li>Nos informa de que nos estamos conectando a un servidor cuyo identificador viene dado por la clave hash indicada más arriba “Xpoy95…”.</li>
+<li>
+<p>Si la próxima vez que nos conectemos al mismo servidor nos vuelve a salir el aviso con un nuevo identificador quiere decir que algo ha cambiado:</p>
+<p>💥 Alguien se está haciendo pasar por nuestro servidor.</p>
+<p>💥 Ha habido algún problema en el servidor y por algún motivo se han borrado todas las claves generadas.</p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>¿Qué hacen los clientes con esta información?</summary>
+<p>Los clientes almacenan la clave pública para compararla en próximas conexiones, es decir, si en las siguientes conexiones al servidor 10.0.0.1 del ejemplo, el fingerprint es el mismo no nos saldrá ningún mensaje de aviso. Recordemos que el fingerprint se puede obtener de la clave pública.</p>
+</details>
+<h3 id="ejemplo-de-la-clave-publica">Ejemplo de la clave pública.<a class="headerlink" href="#ejemplo-de-la-clave-publica" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/warmup/52.png" width="400">
+  <img src="imagenes/ofensiva/67.png" width="800">
 </figure>
+</center>
 
-<h2 id="darle-una-descripcion-a-la-interfaz">Darle una descripción a la interfaz.<a class="headerlink" href="#darle-una-descripcion-a-la-interfaz" title="Permanent link">¶</a></h2>
+<h3 id="ejemplo-de-como-conseguir-el-fingerprint-a-partir-de-una-clave-publica">Ejemplo de cómo conseguir el fingerprint a partir de una clave pública.<a class="headerlink" href="#ejemplo-de-como-conseguir-el-fingerprint-a-partir-de-una-clave-publica" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/warmup/53.png" width="400">
+  <img src="imagenes/ofensiva/68.png" width="800">
 </figure>
+</center>
 
-<h2 id="hay-vlans">¿Hay VLANS?<a class="headerlink" href="#hay-vlans" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>a. Sí --&gt; Necesito subinterfaces.
+<h2 id="algoritmo-diffie-hellman">Algoritmo Diffie-Hellman.<a class="headerlink" href="#algoritmo-diffie-hellman" title="Permanent link">¶</a></h2>
+<p><strong>Diffie-Hellman sólo se usa para el intercambio de claves, NO se usa para autentificar</strong></p>
+<details class="warning">
+<summary>¿Por qué no usamos directamente RSA para toda la comunicación?</summary>
+<ul>
+<li>Es muchísimo más ineficiente y costos computacionalmente.</li>
+<li>RSA no permite PFS (Perfect Forward Secrecy). Básicamente va modificando la clave simétrica cada cierto tiempo, de forma que si se descubre dicha clave no pueden descifrar todos nuestros mensajes pasados. En caso de tener capturado nuestro tráfico con RSA y en algún momento perder o romper la clave tendrían acceso a cualquier comunicación en el tiempo que hubiese sido capturada.</li>
+<li>Necesita de padding (añadir texto aleatorio antes de encriptar para aumentar la aleatoriedad) para hacerlo seguro. </li>
+</ul>
+<p><strong>Definitiva, al ser mucho más costoso computacionalmente se utiliza la base del cifrado asimétrico para crear una clave simétrica compartida, con la cual vamos a cifrar los mensajes. Esta clave servirá para cifrar y descifrar (cifrado simétrico).</strong></p>
+</details>
+<p>El algoritmo que se encarga de crear una clave compartida (simétrica) sin que viaje por Internet se conoce como algoritmo de <mark class="critic"><strong>Diffie Hellman</strong></mark>.</p>
+<h3 id="funcionamiento">Funcionamiento<a class="headerlink" href="#funcionamiento" title="Permanent link">¶</a></h3>
+<h4 id="1-ambos-emisor-y-receptor-acuerdan-en-un-valor-semilla-que-no-es-mas-que-un-numero-primo-muy-largo">1. Ambos (emisor y receptor) acuerdan en un “valor semilla” que no es más que un número primo muy largo.<a class="headerlink" href="#1-ambos-emisor-y-receptor-acuerdan-en-un-valor-semilla-que-no-es-mas-que-un-numero-primo-muy-largo" title="Permanent link">¶</a></h4>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/69.png" width="600">
+</figure>
+</center>
 
-b. No --&gt; Lo configuro todo en la interfaz.
+<div class="highlight"><pre><span></span><code><span class="c1">#Ejemplo</span>
+<span class="n">A</span> <span class="n">y</span> <span class="n">B</span> <span class="n">acuerdan</span> <span class="n">un</span> <span class="n">número</span> <span class="p">(</span><span class="n">semilla</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="mi">17</span>
 </code></pre></div>
-<h2 id="configurar-la-ip-estatica-en-una-interfaz">Configurar la IP estática en una interfaz<a class="headerlink" href="#configurar-la-ip-estatica-en-una-interfaz" title="Permanent link">¶</a></h2>
+<h4 id="2-ambos-aplican-mecanismos-de-encriptacion-sobre-dicha-semilla-para-generar-un-nuevo-numero">2. Ambos aplican mecanismos de encriptación sobre dicha semilla para generar un nuevo número.<a class="headerlink" href="#2-ambos-aplican-mecanismos-de-encriptacion-sobre-dicha-semilla-para-generar-un-nuevo-numero" title="Permanent link">¶</a></h4>
+<details class="warning">
+<summary>¿Qué mecanismos de encriptación?</summary>
+<p>Unos acordados al principio de la conexión.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">#Ejemplo</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="mi">4</span>
+</code></pre></div>
+<h4 id="3-creacion-clave-privada">3. Creación clave privada.<a class="headerlink" href="#3-creacion-clave-privada" title="Permanent link">¶</a></h4>
+<p>De forma independiente, cada uno genera otro número primo aleatorio desconocido para el otro extremo (clave privada).</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Cada extremos genera un número primo aleatorio (clave privada).</span>
+<span class="n">A</span> <span class="o">--&gt;</span> <span class="mi">3</span>
+<span class="n">B</span> <span class="o">--&gt;</span> <span class="mi">5</span>
+</code></pre></div>
+<details class="question">
+<summary>¿Los extremos comparten dicha clave privada?</summary>
+<p><strong>No, nunca se debe compartir la clave privada.</strong></p>
+</details>
+<h4 id="4-creacion-de-la-clave-publica">4. Creación de la clave pública.<a class="headerlink" href="#4-creacion-de-la-clave-publica" title="Permanent link">¶</a></h4>
+<p>Cada host realiza una operación matemática combinando:</p>
+<ul>
+<li>
+<p>La semilla (número primo).</p>
+<p>💥 Ejemplo: A y B (17).</p>
+</li>
+<li>
+<p>Nuevo número generado en el apartado b.</p>
+<p>💥   Ejemplo: A y B (4)</p>
+</li>
+<li>
+<p>La clave privada generada (número primo aleatorio).</p>
+<p>💥   Ejemplo: A (3) y B (5).</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Ejemplo</span>
+<span class="n">A</span> <span class="o">--&gt;</span> <span class="mi">4</span><span class="o">^</span><span class="mi">3</span> <span class="n">mod</span> <span class="mi">17</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">B</span> <span class="o">--&gt;</span> <span class="mi">4</span><span class="o">^</span><span class="mi">5</span> <span class="n">mod</span> <span class="mi">17</span> <span class="o">=</span> <span class="mi">4</span>
+</code></pre></div>
+<p><mark class="critic"><strong>El resultado es otro número que será la clave pública de dicha comunicación y que se intercambiaran.</strong></mark></p>
+<h4 id="creacion-clave-simetrica">Creación clave simétrica.<a class="headerlink" href="#creacion-clave-simetrica" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>Cada extremo recibe la clave pública del punto anterior (A:13 y B:4). </p>
+</li>
+<li>
+<p>Aplicando una función matemática usando como operandos: </p>
+<p>💥 Las claves privadas ➡️ A (3) y B (5).</p>
+<p>💥 La clave pública ➡️ A (4) y B(13)</p>
+<p>💥 La semilla (número primo) ➡️ A y B (17)</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Ejemplo</span>
+<span class="n">A</span> <span class="o">--&gt;</span> <span class="mi">4</span><span class="o">^</span><span class="mi">3</span> <span class="n">mod</span> <span class="mi">17</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">B</span> <span class="o">--&gt;</span> <span class="mi">13</span><span class="o">^</span><span class="mi">5</span> <span class="n">mod</span> <span class="mi">17</span> <span class="o">=</span> <span class="mi">13</span>
+</code></pre></div>
+<p><mark class="critic"><strong>Esta función genera la misma clave simétrica (número) en ambos extremos, permitiendo ya cifrar y descifrar con ella todos los mensajes de dicha comunicación.</strong></mark></p>
+<h3 id="debilidades">¿Debilidades?<a class="headerlink" href="#debilidades" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>La debilidad de este algoritmo es que se pueden capturar partes de la comunicación, por ejemplo la semilla o la clave pública.</p>
+</li>
+<li>
+<p>Es muy importante que la semilla, a partir de la cual se genera todo lo demás sea muy grande, para que aunque se capturen el resto de partes que sí viajan por Internet, no sea factible resolver la ecuación en un espacio de tiempo significativo.</p>
+</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Funcionalidad</p>
+<p></p><center>
+<mark class="critic"><strong>Diffie-Hellman sólo se usa para el intercambio de claves, NO se usa para autentificar</strong></mark>. 
+<p>Lo único que hace es generar una clave simétrica de forma segura, de tal manera que sabemos que el mensaje entre estos dos extremos es seguro.</p>
+<p>La autentificación se realiza a través de certificados digitales (RSA) o en su defecto usuario/contraseña.
+</p></center>
+</div>
+<h2 id="integridad-de-los-mensajes">Integridad de los mensajes.<a class="headerlink" href="#integridad-de-los-mensajes" title="Permanent link">¶</a></h2>
+<p>SSH usa <strong>HMAC (Hash-based Message Authentication Codes)</strong> para comprobar la <ins class="critic">integridad de los mensajes</ins>, es decir, comprobar que nadie ha capturado el mensaje del emisor, modificado su contenido y reenviado al receptor.</p>
+<details class="note">
+<summary>¿Cómo funciona HMAC?</summary>
+<ol>
+<li>Se usa en cada mensaje enviado, tanto del emisor como del receptor.</li>
+<li>El emisor junta la clave simétrica usada, el número de secuencia del paquete (TCP) y el contenido del mensaje en una misma cadena de texto. </li>
+<li>Sobre dicha cadena de texto aplica una función hash, obteniendo un código hash que se adjunta en el paquete IP del mensaje que se envía. </li>
+<li>El receptor recibe el mensaje, junta la clave simétrica (que no viaja por Internet y fue obtenida mediante DH), el número de secuencia y el contenido del mensaje.</li>
+<li>Aplica la misma función hash que usó el emisor para generar el código hash.</li>
+<li>Compara su código hash con el recibido en el paquete del emisor. </li>
+<li>Si los códigos son iguales entonces el mensaje no ha sido alterado.</li>
+</ol>
+</details>
+<div class="admonition danger">
+<p class="admonition-title">CLAVE SIMÉTRICA</p>
+<p></p><center>
+<strong>Recordad que la clave simétrica ha sido generada mediante Diffie-Hellman por lo que no puede haber sido interceptada por los atacantes.</strong>
+</center>
+</div>
+<details class="note">
+<summary>¿Cómo sabe el receptor qué función hash usar?</summary>
+<p>Cuando se establece la comunicación inicial, al igual que se informan de qué cifrado simétrico van a usar o la clave criptográfica, también se establece que tipo de función HASH van a usar.</p>
+</details>
+<details class="note">
+<summary>¿Qué sucede si alguien intercepta el paquete del emisor antes de que llegue al receptor?</summary>
+<p>No podrá descifrar el mensaje al no tener la clave criptográfica.
+No puede modificar nada del mensaje, pues a la menor modificación la clave hash generada en el receptor no casaría con la enviada por el emisor.</p>
+</details>
+<details class="note">
+<summary>¿Y si el receptor modifica el mensaje, genera una hash con la misma función que están usando los extremos y adjunta este nuevo hash en vez del que había?</summary>
+<p>No serviría porque para generar este código hash el receptor va a usar la clave simétrica, que no tiene la persona que ha capturado los datos, por lo que el receptor se daría cuenta de que ha habido alguna modificación.</p>
+</details>
+<h2 id="funcionamiento-de-ssh">Funcionamiento de SSH.<a class="headerlink" href="#funcionamiento-de-ssh" title="Permanent link">¶</a></h2>
+<p><strong>1.</strong>  Cada extremo propone los cifrados simétricos y funciones hash que soportan y llegan a un acuerdo de qué métodos/algoritmos de cifrado y hashing usar.</p>
+<center>
 <figure>
-  <img src="imagenes/warmup/54.png" width="400">
+  <img src="imagenes/ofensiva/70.png" width="600">
+  <figcaption>Captura de Wireshark con un intercambio de los protocolos de cifrado/hashing soportados por cada extremos</figcaption>
 </figure>
+</center>
 
-<h2 id="configurar-una-ip-dinamica-por-dhcp-en-una-interfaz">Configurar una IP dinámica por DHCP en una interfaz.<a class="headerlink" href="#configurar-una-ip-dinamica-por-dhcp-en-una-interfaz" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/55.png" width="400">
-</figure>
-
-<h2 id="configurar-una-subinterfaz">Configurar una subinterfaz.<a class="headerlink" href="#configurar-una-subinterfaz" title="Permanent link">¶</a></h2>
-<p>Habitualmente que el número de la subinterfaz coincida con la VLAN que representa. Se puede poner una descripción por subinterfaz</p>
-<figure>
-  <img src="imagenes/warmup/56.png" width="400">
-</figure>
-
-<h2 id="configurar-rutas-estaticas">Configurar rutas estáticas.<a class="headerlink" href="#configurar-rutas-estaticas" title="Permanent link">¶</a></h2>
-<p>El next-hop tiene que ser una IP que conozca de una red conectada directamente.</p>
-<p>Hay dos formas de establecer la ruta, indirecta o directa. Podéis escoger la que queráis.</p>
-<figure>
-  <img src="imagenes/warmup/57.png" width="400">
-</figure>
-
-<h2 id="configurar-ruta-por-defecto">Configurar ruta por defecto.<a class="headerlink" href="#configurar-ruta-por-defecto" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/58.png" width="400">
-</figure>
-
-<h2 id="ver-la-tabla-de-rutas">Ver la tabla de rutas.<a class="headerlink" href="#ver-la-tabla-de-rutas" title="Permanent link">¶</a></h2>
-<figure>
-  <img src="imagenes/warmup/59.png" width="600">
-</figure></div>
+<p><strong>2.</strong>  El servidor debe “autentificarse” (verificar que es quien dice ser), para ello se transfiere la clave pública RSA del servidor y se compara el fingerprint con el almacenado anteriormente (de otras conexiones previas).</p>
+<p><strong>3.</strong>  Se usa el algoritmo Diffie-Hellman para el intercambio de claves del cifrado simétrico. El objetivo de ese algoritmo es generar la clave simétrica en ambos extremos sin la necesidad de que ésta viaje por Internet.</p>
+<p><strong>4.</strong>  Ahora se deja el cifrado asimétrico de lado y únicamente se cifra con cifrado simétrico (normalmente AES). </p>
+<p><strong>5.</strong>  Finalmente queda autentificar al cliente desde el lado del servidor. Esto se puede realizar mediante el uso de certificados digitales o usuario/contraseña.</p>
+<h2 id="anexo">Anexo.<a class="headerlink" href="#anexo" title="Permanent link">¶</a></h2>
+<h3 id="openssh">OpenSSH.<a class="headerlink" href="#openssh" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Conjunto de aplicaciones que permiten la administración remota de un equipo de forma segura empleando el protocolo SSH. </p>
+</li>
+<li>
+<p>Conjunto de aplicaciones de OpenSSH: </p>
+<p>💥 <strong>ssh</strong>: Usado para gestión remota segura de equipos (reemplaza a telnet).</p>
+<p>💥 <strong>scp</strong>: Transferencia segura de ficheros. </p>
+<p>💥 <strong>sftp</strong>: Transferencia segura de ficheros (reemplaza a ftp). </p>
+<p>💥 <strong>ssh-keygen</strong>: Herramienta para inspeccionar y generar claves RSA. </p>
+<p>💥 <strong>ssh-keyscan</strong>: Escanea una lista de clientes y recolecta sus claves públicas.</p>
+<p>💥 <strong>ssh-copy-id</strong>: Facilita la copia de los certificados de acceso en los servidores.</p>
+</li>
+</ul></div>
 
 
 
