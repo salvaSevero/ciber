@@ -376,15 +376,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trama-ethernet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trama Ethernet:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#hubs-o-concentradores" class="md-nav__link">
     <span class="md-ellipsis">
       HUBs o Concentradores.
@@ -1914,63 +1905,72 @@
 <p>Cada dirección MAC es única, es decir, dos dispositivos de mismo o diferente fabricante no pueden tener la misma dirección MAC.</p>
 </li>
 <li>
-<p>La dirección MAC de un adaptador de red no se puede modificar, aunque sí podemos enviar tramas modificando el campo que muestra nuestra dirección MAC. Es decir, que podemos enviar tramas modificando nuestra MAC, pero si alguien se hace físicamente con nuestro equipo podrá ver la MAC verdadera de nuestro adaptador.</p>
-</li>
-<li>
-<p>La MAC está representada por 48 bits, dispuestos mediante 12 dígitos hexadecimales. Por ejemplo 00:1e:c2:ff:78:ad.</p>
-</li>
-<li>
-<p>Los primeros 3 pares de hexadecimales hacen referencia al fabricante (OUI).</p>
-</li>
-<li>
-<p>Lo últimos 3 pares de hexadecimales hacen referencia al dispositivo.</p>
-</li>
-<li>
-<p>Existen páginas que nos indican una MAC a que empresa pertenece.</p>
-<p>💥https://www.wireshark.org/tools/oui-lookup.html</p>
+<p>La dirección MAC de un adaptador de red no se puede modificar, aunque sí podemos enviar tramas modificando el campo que muestra nuestra dirección MAC.</p>
 </li>
 </ul>
-<p><ins class="critic">Tipos de direcciones MAC.</ins></p>
-<p>💥 Unicast: Son direccionas MAC que van dirigidas a un dispositivo en concreto. </p>
+<div class="admonition warning">
+<p class="admonition-title">AVISO</p>
+<p>Podemos enviar tramas modificando nuestra MAC, pero si alguien se hace físicamente con nuestro equipo podrá ver la MAC verdadera de nuestro adaptador.</p>
+</div>
+<ul>
+<li>
+<p>La MAC está representada por 48 bits, dispuestos mediante 12 dígitos hexadecimales. Por ejemplo <ins class="critic"><strong>00:1e:c2:ff:78:ad</strong></ins>.</p>
+</li>
+<li>
+<p>Los primeros 3 pares de hexadecimales hacen referencia al <ins class="critic"><strong>fabricante (OUI)</strong></ins> y los 3 últimos al dispositvo.</p>
+<p>💥 Existen páginas que nos indican una MAC a que empresa pertenece ➡️ <a href="https://www.wireshark.org/tools/oui-lookup.html">Búsuqeda de OUIs</a></p>
+</li>
+</ul>
+<h3 id="tipos-de-direcciones-mac">Tipos de direcciones MAC.<a class="headerlink" href="#tipos-de-direcciones-mac" title="Permanent link">¶</a></h3>
+<p>💥 <strong>Unicast</strong>: Son direccionas MAC que van dirigidas a un dispositivo en concreto. </p>
 <figure>
   <img src="imagenes/warmup/07.png" width="700">
 </figure>
 
-<p>💥 Broadcast: Es una dirección MAC especial (ff:ff:ff:ff:ff:ff) que indica que se debe enviar a todos los dispositivos.</p>
+<p>💥 <strong>Broadcast</strong>: Es una dirección MAC especial (ff:ff:ff:ff:ff:ff) que indica que se debe enviar a todos los dispositivos.</p>
 <figure>
   <img src="imagenes/warmup/08.png" width="700">
 </figure>
 
-<p>💥 Multicast: La trama se envía a un grupo de dispositivos. Comienzan con el OUI 01:00:5e.</p>
+<p>💥 <strong>Multicast</strong>: La trama se envía a un grupo de dispositivos. Comienzan con el OUI 01:00:5e.</p>
 <figure>
   <img src="imagenes/warmup/09.png" width="700">
 </figure>
 
-<h2 id="trama-ethernet"><strong>Trama Ethernet:</strong><a class="headerlink" href="#trama-ethernet" title="Permanent link">¶</a></h2>
-<p>Ethernet es uno de los protocolos más habituales en la capa 2. El objetivo es hacer hincapié en que cada protocolo tiene sus cabeceras, cada uno con una razón de ser. Comprender en profundidad un protocolo nos puede ayudar a defendernos o a pensar en posibles ataques a realizar.</p>
+<h3 id="trama-ethernet">Trama Ethernet.<a class="headerlink" href="#trama-ethernet" title="Permanent link">¶</a></h3>
+<ul>
+<li>Ethernet es uno de los protocolos más habituales en la capa 2. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Comprender en profundidad un protocolo nos puede ayudar a defendernos o a pensar en posibles ataques a realizar.</p>
+</div>
 <figure>
   <img src="imagenes/warmup/10.jpg" width="700">
+  <figcaption>Cabeceras de la trama Ethernet</figcaption>
 </figure>
 
 <ul>
 <li>
-<p>Preámbulo: Sirve para saber cuándo empieza y acaba una trama. Si recibe la secuencia 10101010 quiere decir que comienza una trama, si recibe la secuencia 10101011 es que acaba la trama.</p>
+<p><strong>Preámbulo</strong>: Sirve para saber cuándo empieza y acaba una trama. Si recibe la secuencia 10101010 quiere decir que comienza una trama, si recibe la secuencia 10101011 es que acaba la trama.</p>
 </li>
 <li>
-<p>Dest.Addr/Source Addr: Son las direcciones MAC del destinatario y del origen. Se pone primero el destino porque algunos equipos de red al leer el destino envían directamente la trama para ser más rápidos.</p>
+<p><strong>Dest.Addr/Source Addr</strong>: Son las direcciones MAC del destinatario y del origen. Se pone primero el destino porque algunos equipos de red al leer el destino envían directamente la trama para ser más rápidos.</p>
 </li>
 <li>
-<p>Type: Tipo de protocolo de capa 3 encapsulado.</p>
+<p><strong>Type</strong>: Tipo de protocolo de capa 3 encapsulado.</p>
 </li>
 <li>
-<p>Data: Datos que transporta.</p>
+<p><strong>Data</strong>: Datos que transporta.</p>
 </li>
 <li>
-<p>FCS: Para la detección de errores durante el transporte.</p>
+<p><strong>FCS</strong>: Para la detección de errores durante el transporte.</p>
+</li>
+<li>
+<p><strong>InterFrame Gap</strong>: Tiempo entre envío de tramas.</p>
 </li>
 </ul>
 <h2 id="hubs-o-concentradores">HUBs o Concentradores.<a class="headerlink" href="#hubs-o-concentradores" title="Permanent link">¶</a></h2>
-<p>Son equipos obsoletos que debemos evitar.</p>
+<p><mark class="critic"><strong>Son equipos obsoletos que debemos evitar.</strong></mark></p>
 <figure>
   <img src="imagenes/warmup/11.jpg" width="300">
 </figure>
@@ -1980,7 +1980,7 @@
 <p>Físicamente son muy parecidos a los switches/conmutadores.</p>
 </li>
 <li>
-<p>Su principal problema es que cuando reciben una trama lo envían a todos los puertos excepto por aquel por donde ha recibido la trama. Por lo que se genera tráfico redundante y además todo el mundo sería capaz de recoger el tráfico de los demás poniendo las tarjetas de red en modo promiscuo.</p>
+<p>Su principal problema es que cuando reciben una trama lo envían a todos los puertos excepto por aquel por donde ha recibido la trama. Por lo que se genera tráfico redundante y además todo el mundo sería capaz de recoger el tráfico de los demás poniendo las tarjetas de red en <strong>modo promiscuo</strong>.</p>
 </li>
 <li>
 <p>El modo promiscuo no es más que decirle  a tu adaptador de red que capture también el tráfico cuya MAC de destino no sea la suya.</p>
@@ -1993,7 +1993,9 @@
   <img src="imagenes/warmup/12.png" width="700">
 </figure>
 
-<p>Por supuesto el <mark class="critic">dominio de broadcast</mark> es compartido, por lo que si un equipo envía una mensaje broadcast lo reciben todos.</p>
+<ul>
+<li>Por supuesto el <mark class="critic">dominio de broadcast</mark> es compartido, por lo que si un equipo envía una mensaje broadcast lo reciben todos.</li>
+</ul>
 <h2 id="switches"><strong>Switches</strong><a class="headerlink" href="#switches" title="Permanent link">¶</a></h2>
 <figure>
   <img src="imagenes/warmup/13.png" width="700">
@@ -2001,10 +2003,10 @@
 
 <ul>
 <li>
-<p>Un mensaje Unicast solo se envía al puerto donde se encuentre el destinatario. Es por tanto <mark class="critic">más seguro que un HUB.</mark></p>
+<p>Un <strong>mensaje Unicast</strong> solo se envía al puerto donde se encuentre el destinatario. Es por tanto <mark class="critic">más seguro que un HUB.</mark></p>
 </li>
 <li>
-<p>Un mensaje Broadcast se envía por todos los puertos, al no ser que haya sido segmentado mediante <mark class="critic">VLANs</mark>.</p>
+<p>Un <strong>mensaje Broadcast</strong> se envía por todos los puertos, al no ser que haya sido segmentado mediante <mark class="critic">VLANs</mark>.</p>
 </li>
 <li>
 <p>Existe un <mark class="critic">dominio de colisión por puerto</mark>, es decir, que si el PC A envía una trama y el PC B envía otra, al estar en puertos diferentes no se produce una colisión. Por lo tanto tiene muchísimo <mark class="critic">mejor rendimiento</mark> que un hub.</p>
@@ -2014,13 +2016,15 @@
 </li>
 <li>
 <p>Existen switches gestionables y no gestionables.</p>
-<p>💥 <mark class="critic">Para la ciberseguridad siempre es recomendable hacer uso de switches gestionables.</mark></p>
-</li>
-<li>
-<p>Existen switches L3, que tienen funcionalidades de router, aunque habitualmente no soportan tantos protocolos/funcionalidades como un router.</p>
 </li>
 </ul>
-<p><ins class="critic">¿Qué es la tabla CAM (Content Addressable Memory)?</ins></p>
+<div class="admonition warning">
+<p class="admonition-title">Para la ciberseguridad siempre es recomendable hacer uso de switches gestionables.</p>
+</div>
+<ul>
+<li>Existen switches L3, que tienen funcionalidades de router, aunque habitualmente no soportan tantos protocolos/funcionalidades como un router.</li>
+</ul>
+<h3 id="tabla-cam-content-addressable-memory">Tabla CAM (Content Addressable Memory).<a class="headerlink" href="#tabla-cam-content-addressable-memory" title="Permanent link">¶</a></h3>
 <p>La tabla CAM (el nombre puede cambiar dependiendo del fabricante), es una tabla donde el switch almacena las MAC que conoce y el puerto por donde las conoció.</p>
 <figure>
   <img src="imagenes/warmup/13.jpg" width="700">
@@ -2029,10 +2033,10 @@
 <p>El tipo de dirección es dinámica o estática. </p>
 <ul>
 <li>
-<p>Dinámica es aprendida por el switch al recibir una petición.</p>
+<p><strong>Dinámica</strong> es aprendida por el switch al recibir una petición.</p>
 </li>
 <li>
-<p>Estática es que ha sido configurada a mano por un administrador.</p>
+<p><strong>Estática</strong> es que ha sido configurada a mano por un administrador.</p>
 </li>
 </ul>
 <p><ins class="critic">¿Qué pasa si se llena la tabla CAM?</ins></p>
@@ -2040,7 +2044,7 @@
 <div class="admonition warning">
 <p class="admonition-title"><strong>CAM overflow attack</strong></p>
 <p></p><center>
-Es un ataque que llena la tabla CAM con MACs falsas constantemente, de esta forma el switch comienza a mandar el tráfico del resto de equipos reales como si fuera broadcast.
+<strong>Es un ataque que llena la tabla CAM con MACs falsas constantemente, de esta forma el switch comienza a mandar el tráfico del resto de equipos reales como si fuera broadcast.</strong>
 </center>
 </div>
 <p><ins class="critic">¿Qué pasa cuando un switch recibe una trama?</ins></p>
@@ -2049,30 +2053,33 @@ Es un ataque que llena la tabla CAM con MACs falsas constantemente, de esta form
 </figure>
 
 <h2 id="protocolo-arp-address-resolution-protocol"><strong>Protocolo ARP (Address Resolution Protocol).</strong><a class="headerlink" href="#protocolo-arp-address-resolution-protocol" title="Permanent link">¶</a></h2>
-<p><mark class="critic">Es un protocolo cuyo objetivo es averiguar la dirección MAC de una IP. </mark></p>
+<div class="admonition important">
+<p class="admonition-title">Es un protocolo cuyo objetivo es averiguar la dirección MAC de una IP.</p>
+</div>
 <p>Cualquier host (ordenador, tablet, móvil, servidor, …) necesita tanto de la MAC como de la IP para comunicarse con otros hosts. Para ello dispone de una tabla ARP donde tiene un listado de las IPs/MACs que conoce.</p>
-<p>Imaginemos que queremos llegar a una IP, pero no sabemos su MAC ¿qué rellenamos en el campo dirección destino de nuestra trama?</p>
-<p><strong>Ejemplo:</strong></p>
-<p><strong>1.</strong> El “PC A” quiere comunicarse con el equipo 192.168.5.14 (PC B) pero no sabe su MAC. 
-Utiliza el protocolo ARP para enviar un mensaje Broadcast (ARP Request) preguntando quien tiene asignada la IP 192.168.5.14.</p>
+<div class="admonition question">
+<p class="admonition-title">Imaginemos que queremos llegar a una IP, pero no sabemos su MAC ¿qué rellenamos en el campo dirección destino de nuestra trama?</p>
+</div>
+<h3 id="ejemplo">Ejemplo.<a class="headerlink" href="#ejemplo" title="Permanent link">¶</a></h3>
+<h4 id="paso-1">Paso 1.<a class="headerlink" href="#paso-1" title="Permanent link">¶</a></h4>
+<p>El “PC A” quiere comunicarse con el equipo 192.168.5.14 (PC B) pero no sabe su MAC. </p>
+<p>Utiliza el protocolo ARP para enviar un mensaje Broadcast (<mark class="critic"><strong>ARP Request</strong></mark>) preguntando quien tiene asignada la IP 192.168.5.14.</p>
 <figure>
   <img src="imagenes/warmup/16.png" width="700">
 </figure>
 
-<ol start="2">
-<li>
+<h4 id="paso-2">Paso 2.<a class="headerlink" href="#paso-2" title="Permanent link">¶</a></h4>
 <p>Aquel equipo que tenga asignada dicha IP hace dos cosas:</p>
-<p>a.  Se guarda en su tabla ARP la dirección y MAC del solicitante.</p>
-<p>b.  Envía un mensaje ARP reply al solicitante informándole de su MAC.</p>
-</li>
-</ol>
+<div class="highlight"><pre><span></span><code>1. Se guarda en su tabla ARP la dirección y MAC del solicitante.
+
+2. Envía un mensaje ARP reply al solicitante informándole de su MAC.
+</code></pre></div>
 <figure>
   <img src="imagenes/warmup/17.png" width="700">
 </figure>
 
-<ol start="3">
-<li>El PC A recibe el ARP reply y se anota en su tabla ARP la IP y la MAC del PC B. Ya pueden comunicarse con normalidad.</li>
-</ol>
+<h4 id="paso-3">Paso 3.<a class="headerlink" href="#paso-3" title="Permanent link">¶</a></h4>
+<p>El PC A recibe el <mark class="critic"><strong>ARP reply</strong></mark> y se anota en su tabla ARP la IP y la MAC del PC B. Ya pueden comunicarse con normalidad.</p>
 <figure>
   <img src="imagenes/warmup/18.png" width="700">
 </figure>
@@ -2083,25 +2090,14 @@ Utiliza el protocolo ARP para enviar un mensaje Broadcast (ARP Request) pregunta
   <figcaption>Ejemplo, el 192.168.0.1 pregunta por la MAC del 192.168.0.11.</figcaption>
 </figure>
 
-<div class="admonition tip">
-<p class="admonition-title"><strong>RARP</strong></p>
-<p></p><center>
-El protocolo RARP (Reverse Address Resolution Protocol) es un protocol que permite averiguar una IP a partir de una MAC.
-</center>
+<h3 id="ejemplo-switch">Ejemplo Switch.<a class="headerlink" href="#ejemplo-switch" title="Permanent link">¶</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Hemos visto lo que sucede en los hosts (PCs) cuando se produce el protocolo ARP, pero qué pasa con el switch.</p>
 </div>
-<p><ins class="critic">¿Hace falta un router para que dos PCs se vean entre sí?</ins></p>
-<p>No, no es necesario siempre y cuando estén en la misma red. </p>
-<p>Mediante el protocolo ARP podemos averiguar por dónde hay que enviar el paquete.</p>
 <figure>
   <img src="imagenes/warmup/20.png" width="400">
 </figure>
 
-<div class="admonition warning">
-<p class="admonition-title"><strong>Redes Diferentes</strong></p>
-<p></p><center>
-Cuando queramos acceder a otra red diferente sí será necesario un router.
-</center>
-</div>
 <p>Tras hacer un ping de uno de los equipos al otro extremo, podemos observar que el switch almacena las MACs de ambos (el que manda el arp-request y el que contesta con el arp-reply).</p>
 <figure>
   <img src="imagenes/warmup/21.png" width="400">
@@ -2112,44 +2108,70 @@ Cuando queramos acceder a otra red diferente sí será necesario un router.
   <img src="imagenes/warmup/22.png" width="400">
 </figure>
 
-<p>Como podemos ver, el switch que usamos en el laboratorio puede almacenar muchas MACs, no obstante no todos los switches son así.</p>
+<p>Como podemos ver, el switch que usamos en el laboratorio puede almacenar muchas MACs, no obstante no todos los switches son así, incluso pueden cambiar de plantillas que organizan la memoria de forma diferente, esto es habitual en los switches multicapa.</p>
 <figure>
   <img src="imagenes/warmup/23.png" width="700">
 </figure>
 
+<div class="admonition warning">
+<p class="admonition-title"><strong>RARP</strong></p>
+<p></p><center>
+El protocolo RARP (Reverse Address Resolution Protocol) es un protocol que permite averiguar una IP a partir de una MAC.
+</center>
+</div>
+<details class="question">
+<summary>¿Hace falta un router para que dos PCs se vean entre sí?</summary>
+<p>No, no es necesario <strong>siempre y cuando estén en la misma red</strong> ya que mediante el protocolo ARP podemos averiguar por dónde hay que enviar el paquete.</p>
+<p><strong>Cuando queramos acceder a otra red diferente sí será necesario un router.</strong></p>
+</details>
 <h2 id="tormenta-de-broadcast-bucles-de-red"><strong>Tormenta de Broadcast / Bucles de red.</strong><a class="headerlink" href="#tormenta-de-broadcast-bucles-de-red" title="Permanent link">¶</a></h2>
 <figure>
   <img src="imagenes/warmup/24.jpg" width="400">
 </figure>
 
-<p><ins class="critic">¿Qué pasa cuando un switch recibe una trama broadcast?</ins></p>
-<p>Que redirige esa trama por todos los puertos excepto por aquel por el que recibió la trama.</p>
-<p><strong>Ejemplo</strong></p>
+<details class="question">
+<summary>¿Qué pasa cuando un switch recibe una trama broadcast?</summary>
+<p>Que redirige esa trama por todos los puertos excepto por aquel por el que recibió la trama lo que inicia un bucle infinito.</p>
+<p>Esto provoca que en pocos segundos la red se inunda de mensajes broadcast, lo que colapsa de inmediato la red.</p>
+</details>
+<h3 id="ejemplo_1">Ejemplo.<a class="headerlink" href="#ejemplo_1" title="Permanent link">¶</a></h3>
 <p>Tenemos un switch con 3 puertos: A, B y C.</p>
 <p>El puerto A está conectado a un PC.</p>
 <p>El puerto B y C están interconectados entre sí.</p>
 <p><strong>1.</strong>  El equipo A envía un mensaje broadcast.</p>
-<p><strong>2.</strong>  El switch reenvía dicho mensaje por los puertos B y C.</p>
-<p><strong>3.</strong>  El switch recibe un broadcast del puerto B y lo reenvía por A y C.</p>
-<div class="highlight"><pre><span></span><code>i.  C reenvía el broadcast recibido a A y B.
+<p><strong>2.</strong>  El switch reenvía dicho mensaje por los puertos B y C. (Generando otras 2 tramas extra).</p>
+<p><strong>3.</strong>  El switch recibe un broadcast del puerto B y lo reenvía por A y C (Generando otras 2 tramas extra).</p>
+<div class="highlight"><pre><span></span><code>i.  C reenvía el broadcast recibido a A y B. (Generando otras 2 tramas extra).
 
-    ii. B reenvía el broadcast a A y C
+    ii. B reenvía el broadcast a A y C (Generando otras 2 tramas extra).
 
-        iii.C reenvía el broadcast a A y B
+        iii.C reenvía el broadcast a A y B (Generando otras 2 tramas extra).
 
             iv. ….
 </code></pre></div>
-<p><strong>4.</strong>  A la vez recibe del puerto C el mismo broadcast y lo reenvía a A y B.</p>
-<div class="highlight"><pre><span></span><code>i.  B reenvía el broadcast recibido a A y C.
+<p><strong>4.</strong>  A la vez recibe del puerto C el mismo broadcast y lo reenvía a A y B. (Generando otras 2 tramas extra).</p>
+<div class="highlight"><pre><span></span><code>i.  B reenvía el broadcast recibido a A y C. (Generando otras 2 tramas extra).
 
-    ii. C reenvía el broadcast a A y B
+    ii. C reenvía el broadcast a A y B (Generando otras 2 tramas extra).
 
-      iii.  B reenvía el broadcast a A y C.
+      iii.  B reenvía el broadcast a A y C. (Generando otras 2 tramas extra).
 
           iv.   ….
 </code></pre></div>
-<p>Lo que sucede es que en pocos segundos la red se inunda de mensajes broadcast, lo que colapsa de inmediato la red.</p>
-<p>Las tramas Ethernet de capa 2 no soportan ningún campo <mark class="critic">TTL (Time To Live)</mark>, por lo que no saben si una trama ha estado durante mucho tiempo en la red saltando de switch en switch. Lo que no permite crear una política que elimine tramas cuando hayan estado ya un tiempo en nuestra electrónica de capa 2. Es decir, el bucle de red no se arregla hasta que elimines el bucle.</p></div>
+<div class="admonition important">
+<p class="admonition-title">TTL</p>
+<p>Las tramas Ethernet de capa 2 no soportan el campo <mark class="critic">TTL (Time To Live)</mark>, por lo que las tramas nunca caducan y en caso de un bucle no se van a ir descartando solas.</p>
+<p>Los paquetes IP sí tienen un campo TTL.</p>
+</div>
+<h3 id="soluciones">Soluciones.<a class="headerlink" href="#soluciones" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Existe el protocolo <strong>STP (Spanning Tree Protocol)</strong> que nos puede apaliar un bucle de red, pero no obstante no nos librará de todos los males.</p>
+</li>
+<li>
+<p>Lo más importante es tener un buen diseño de red y seguir pautas básicas de seguridad, como por ejemplo tener tirados administrativamente los puertos no usados, un buen diseño de VLANs, buena documentación, etc.</p>
+</li>
+</ul></div>
 
 
 

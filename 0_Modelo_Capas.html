@@ -1890,20 +1890,12 @@
 <p>Para solventar esta problemática se implementa/propone el modelo de capas, donde se especificaban diferentes niveles, cada nivel acogía múltiples protocolos, pero dichos protocolos tenían que cumplir unas normas básicas dependiendo a la capa a la que pertenecieran. </p>
 <h2 id="que-es-un-protocolo"><strong>¿Qué es un protocolo?</strong><a class="headerlink" href="#que-es-un-protocolo" title="Permanent link">¶</a></h2>
 <p>Un protocolo son una serie de <mark class="critic">normas/reglas</mark> que cada dispositivo debe cumplir para poder hacer cierta tarea (dependiendo del protocolo implementado).</p>
-<ul>
-<li>
-<p>Podemos aprovechar mejor el hardware de la máquina anfitriona, ya que estamos ejecutando varios "ordenadores" en uno mismo, aprovechando recursos que de otra forma es posible que no se llegaran a usar.</p>
-</li>
-<li>
-<p>Permite ejecutar software que quizá sea incompatible con tu sistema operativo anfitrión, ya sea por un motivo de versiones o porque son sistemas operativos diferentes (Windows, Linux, MAC).</p>
-</li>
-</ul>
 <p><ins class="critic">Ejemplos de protocolos:</ins></p>
-<p>💥 Protocolo ARP: Protocolo que permite a partir de una dirección IP encontrar su dirección física o MAC (capa 2~3).</p>
-<p>💥Protocolo IP: Sirve para llevar a cabo la comunicación a través de paquetes IP (capa 3).</p>
-<p>💥Protocolo TCP/UDP: Protocolos de comunicación mediante segmentos (capa 4).</p>
-<p>💥Protocolo HTTP: Protocolo de aplicación que permite a partir de un texto plano representar una página web a través de un navegador (capa 5)</p>
-<p>En el mundo de las redes cada protocolo va ligada a una capa o nivel. Es decir, que si hubiera un problema con el protocolo IP (capa 3), solo debemos de centrarnos en las tareas que se realizan en la capa 3, y la solución a dicho problema lo encontraremos con herramientas o conocimientos que afecten a ese nivel.ç</p>
+<p>💥 Protocolo <strong>ARP</strong>: Protocolo que permite a partir de una dirección IP encontrar su dirección física o MAC (capa 2~3).</p>
+<p>💥Protocolo <strong>IP</strong>: Sirve para llevar a cabo la comunicación a través de paquetes IP (capa 3).</p>
+<p>💥Protocolo <strong>TCP/UDP</strong>: Protocolos de comunicación mediante segmentos (capa 4).</p>
+<p>💥Protocolo <strong>HTTP</strong>: Protocolo de aplicación que permite a partir de un texto plano representar una página web a través de un navegador (capa 5)</p>
+<p>En el mundo de las redes cada protocolo va ligada a una capa o nivel. Es decir, que si hubiera un problema con el protocolo IP (capa 3), solo debemos de centrarnos en las tareas que se realizan en la capa 3, y la solución a dicho problema lo encontraremos con herramientas o conocimientos que afecten a ese nivel.</p>
 <p>Como hemos dicho cada capa se encarga de sus propios protocolos, aislándose de los protocolos del resto de capas. No obstante una capa siempre se comunicará con su capa inmediatamente superior o inferior, dependiendo de la dirección de la comunicación. Por ejemplo, la capa 4, únicamente podrá comunicarse con la capa 3 o con la capa 5.</p>
 <figure>
   <img src="imagenes/warmup/01.png" width="700">
@@ -1925,7 +1917,7 @@
 <div class="admonition tip">
 <p class="admonition-title"><strong>NOTA</strong></p>
 <p></p><center>
-A partir de ahora se hará referencia a este modelo (TCP/IP con 5 capas).
+<strong>A partir de ahora se hará referencia a este modelo (TCP/IP con 5 capas).</strong>
 </center>
 </div>
 <h2 id="encapsulamiento"><strong>Encapsulamiento.</strong><a class="headerlink" href="#encapsulamiento" title="Permanent link">¶</a></h2>
@@ -1936,14 +1928,15 @@ A partir de ahora se hará referencia a este modelo (TCP/IP con 5 capas).
 <p>Cuando enviamos información habitualmente se genera en una aplicación (capa 5), y dichos datos van bajando por la pila de red, es decir, pasa a la capa 4, luego la 3, luego la 2, etc…</p>
 </li>
 <li>
-<p>En cada capa habrá un protocolo encargado de hacer algo que permita la comunicación.</p>
+<p>En cada capa siempre habrá un protocolo asociado.</p>
 </li>
-<li>
-<p>Por ejemplo, alguna vez leeréis que HTTP (capa 5) es un protocolo que funciona mediante TCP (capa 4), haciendo uso de IP (capa 3) y a su vez de Ethernet (capa 2). </p>
-</li>
-<li>
-<p>Cada vez que se envía información, a medida que baja de capa en capa, se va añadiendo información de cada protocolo, por tanto se van encapsulando cabeceras.</p>
-</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo</p>
+<p><strong>HTTP (capa 5) es un protocolo que funciona mediante TCP (capa 4), haciendo uso de IP (capa 3) y a su vez de Ethernet (capa 2).</strong></p>
+</div>
+<ul>
+<li>Cada vez que se envía información, a medida que baja de capa en capa, se va añadiendo información de cada protocolo, por tanto se van encapsulando cabeceras.</li>
 </ul>
 <p><ins class="critic">Recepción de información.</ins></p>
 <ul>
@@ -1955,13 +1948,13 @@ A partir de ahora se hará referencia a este modelo (TCP/IP con 5 capas).
 </li>
 </ul>
 <figure>
-  <img src="imagenes/warmup/04.png" width="600">
+  <img src="imagenes/warmup/04.png" width="700">
 </figure>
 
 <div class="admonition tip">
 <p class="admonition-title"><strong>NOTA</strong></p>
 <p></p><center>
-Obviamente dependiendo del protocolo usado, las cabeceras que se añaden a los datos son diferentes, pero siempre en cada nivel se añade o quita una cabecera. 
+<strong>Obviamente dependiendo del protocolo usado, las cabeceras que se añaden a los datos son diferentes, pero siempre en cada nivel se añade o quita una cabecera dependiendo del sentido (recepción o emisión del mensaje)</strong>
 </center>
 </div>
 <h2 id="pdu-protocol-data-unit"><strong>PDU (Protocol Data Unit).</strong><a class="headerlink" href="#pdu-protocol-data-unit" title="Permanent link">¶</a></h2>
