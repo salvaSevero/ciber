@@ -1602,15 +1602,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-acceso-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurar Acceso SSH.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mostrar-configuracion" class="md-nav__link">
     <span class="md-ellipsis">
       Mostrar Configuración.
@@ -2027,65 +2018,8 @@
   <img src="imagenes/warmup/30.png" width="400">
 </figure>
 
-<h2 id="configurar-acceso-ssh">Configurar Acceso SSH.<a class="headerlink" href="#configurar-acceso-ssh" title="Permanent link">¶</a></h2>
-<p>Telnet no es un protocolo seguro, por lo que configuraremos SSH siempre.</p>
-<p><strong>1.</strong>  Generar un hostname.</p>
-<figure>
-  <img src="imagenes/warmup/31.png" width="400">
-</figure>
-
-<p><strong>2.</strong>  Generamos un nombre de dominio.</p>
-<figure>
-  <img src="imagenes/warmup/32.png" width="400">
-</figure>
-
-<p><strong>3.</strong>  Los pasos anteriores son necesarios para generamos el par de claves RSA. Las claves deben ser como mínimo de 2048 bits. </p>
-<figure>
-  <img src="imagenes/warmup/33.png" width="400">
-</figure>
-
-<p><strong>4.</strong>  Una vez tengamos las claves ya podemos activar el protocolo SSH para la gestión remota de nuestros equipos de forma segura.</p>
-<figure>
-  <img src="imagenes/warmup/34.png" width="400">
-</figure>
-
-<p><strong>5.</strong>  En el caso de los equipos cisco, y es similar en otros equipos existe un número limitado de sesiones simultáneas que se pueden abrir sobre un mismo equipo. En el caso del ejemplo existen 16 terminales virtuales (vty). Vamos a indicarle al equipo que la forma de acceder a estos terminales virtuales es mediante el uso del protocolo SSH.</p>
-<figure>
-  <img src="imagenes/warmup/35.png" width="400">
-</figure>
-
-<p><strong>6.</strong>  Finalmente debemos crear los usuarios. </p>
-<div class="admonition note">
-<p class="admonition-title"><strong>AVISO</strong></p>
-<p>Con <mark class="critic">privilege</mark> indica qué acciones podrá realizar este usuario, es decir, modificar configuración, solo lectura, entrar en modo enable, etc... </p>
-<p>Con <mark class="critic">secret</mark> se establece la contraseña del usuario. Si en vez de secret usáis la palabra password, no se cifran las contraseñas.</p>
-</div>
-<figure>
-  <img src="imagenes/warmup/36.png" width="500">
-</figure>
-
-<p>Ahora un ejemplo usando password en vez de secret.</p>
-<figure>
-  <img src="imagenes/warmup/37.png" width="500">
-</figure>
-
-<p>Tras hacer un “show running-config” o “sh run”.</p>
-<figure>
-  <img src="imagenes/warmup/38.png" width="500">
-</figure>
-
-<p><strong>7.</strong>  Por seguridad vamos a crear una contraseña de “enable” esto es una contraseña para cuando quiera acceder a dicho modo, el cual nos sirve para ver y modificar la configuración.</p>
-<figure>
-  <img src="imagenes/warmup/39.png" width="400">
-</figure>
-
-<p>Recordad, de forma habitual, <mark class="critic">guardar los cambios.</mark></p>
-<figure>
-  <img src="imagenes/warmup/40.png" width="200">
-</figure>
-
 <h2 id="mostrar-configuracion">Mostrar Configuración.<a class="headerlink" href="#mostrar-configuracion" title="Permanent link">¶</a></h2>
-<p>Los equipos Cisco tienen dos memorias, una volátil (NVRAM) y otra no volátil (memoria flash).</p>
+<p>Los equipos Cisco tienen dos memorias, <strong>una volátil (NVRAM) y otra no volátil (memoria flash)</strong>.</p>
 <p>Cuando realizamos un cambio en la configuración, este se aplica y dicha configuración se almacena en la NVRAM. Es decir, en caso de reiniciar el equipo perderíamos esos cambios realizados. A  esta configuración se le llama <mark class="critic">“Running Configuration”.</mark></p>
 <figure>
   <img src="imagenes/warmup/41.png" width="500">
