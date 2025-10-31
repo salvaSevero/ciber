@@ -1939,7 +1939,7 @@ ip address 10.0.0.1 255.255.255.0
 <p>Deberemos decirle cuáles serán las IPs que vayan a traducirse (10.0.0.0/24) y por cuales se van a traducir (la configurada en nuestra WAN).</p>
 <p>Las IPs que van a ser traducidas normalmente se conocen como <mark class="critic">“Inside local” (10.0.0.0/24)</mark> y las IPs por las que van a ser traducidas y que van a ser visibles del exterior son <mark class="critic">“Global local” (WAN)</mark>.</p>
 <p>Recordemos que “source list 1” hace referencia a la lista de acceso creado en el paso anterior y la interfaz F0/0 es nuestra interfaz WAN.</p>
-<div class="highlight"><pre><span></span><code>ip nat inside source 1 interface Fa0/0 overload
+<div class="highlight"><pre><span></span><code>ip nat inside source list 1 interface Fa0/0 overload
 </code></pre></div>
 <p><ins class="critic">Configurar NAT dentro de las interfaces</ins></p>
 <p>Ahora vamos a especificar el papel de cada interfaz dentro del NAT. </p>
