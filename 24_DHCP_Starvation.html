@@ -1937,6 +1937,11 @@
 <p>2️⃣ Ejecutar en modo gráfico:</p>
 <div class="highlight"><pre><span></span><code>yersinia<span class="w"> </span>–G
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Problemas de Instalación.</p>
+<p>Tras la nueva actualización de Kali2025 hay problemas con ejecución, la cual se puede resolver siguiendo el siguiente enlace.</p>
+<p><a href="https://github.com/tomac/yersinia/issues/89#issuecomment-3038954531">Solución Ejecución Yersinia</a></p>
+</div>
 <p>3️⃣ En el botón <strong>Edit Interfaces</strong> aseguraos de que está marcada la interfaz LAN de vuestro Kali.</p>
 <center>
 <figure>
@@ -1965,6 +1970,16 @@
 </figure>
 </center>
 
+<h3 id="yoel-bassin-dhcp-starvation">Yoel Bassin DHCP Starvation<a class="headerlink" href="#yoel-bassin-dhcp-starvation" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/yoelbassin/DHCP-starvation.git">GiHub YoelBassin</a></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>python<span class="w"> </span>dhcpStarvation.py<span class="w"> </span>-p<span class="w"> </span>-t<span class="w"> </span>X.X.X.X
+
+<span class="c1">#-p: Para hacer el ataque persistente.</span>
+<span class="c1">#-t: Indicar la IP del servidor DHCP.</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Con este ataque la IP sí se confirma el DHCP OFFER y por tanto no caduca a los 30 segundos, aunque es más lento.</p>
+</div>
 <h3 id="video-explicativo">Vídeo Explicativo.<a class="headerlink" href="#video-explicativo" title="Permanent link">¶</a></h3>
 <center>
 
