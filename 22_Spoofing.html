@@ -1469,6 +1469,8 @@
       
         
       
+        
+      
     
     
     
@@ -1552,6 +1554,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="A_Kali.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problemas Kali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1573,10 +1598,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   
@@ -1589,8 +1614,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
           </label>
@@ -1744,10 +1769,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
   
   
@@ -1760,8 +1785,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Configuraciones Mikrotik
           </label>
@@ -1955,6 +1980,18 @@
 </center>
 
 <p>5️⃣ Una vez realizado el ataque abre el wireshark en la máquina Kali y podrás ver que eres capaz de capturar el tráfico entre las víctimas.</p>
+<center>
+<figure>
+  <img src="imagenes/ofensiva/82.png" width="800">
+  <figcaption>Tráfico DNS de la víctima accediendo al dominio as.com</figcaption>
+</figure>
+</center>
+
+<div class="admonition warning">
+<p class="admonition-title">IP FORWARD</p>
+<p>Por defecto los equipos no redirigen tráfico de terceros, es decir, cuando recibamos el tráfico de la víctima no se la redirigiremos a ella y no podrá navegar.</p>
+<p>Es por tanto recomendable activar dicha redirección con el comando: <mark class="critic"><strong>echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward</strong></mark></p>
+</div>
 <h2 id="video-explicativos">Vídeo Explicativos.<a class="headerlink" href="#video-explicativos" title="Permanent link">¶</a></h2>
 <h3 id="video-1">Vídeo 1.<a class="headerlink" href="#video-1" title="Permanent link">¶</a></h3>
 <center>
