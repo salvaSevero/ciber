@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/39_Reflexion_SNMP.html">
       
       
+        <link rel="prev" href="38_SNMP.html">
       
-      <link rel="icon" href="/ciber/assets/images/favicon.png">
+      
+        <link rel="next" href="29_SSH.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>CiberSeguridad Redes.</title>
+        <title>Ataque Reflexión - CiberSeguridad Redes.</title>
       
     
     
-      <link rel="stylesheet" href="/ciber/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/ciber/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/ciber/stylesheets/extra.css">
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/ciber/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ataque-de-reflexion-snmp" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/ciber/." title="CiberSeguridad Redes." class="md-header__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+    <a href="." title="CiberSeguridad Redes." class="md-header__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
       
-  <img src="/ciber/imagenes/logofp.png" alt="logo">
+  <img src="imagenes/logofp.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Ataque Reflexión
             
           </span>
         </div>
@@ -206,9 +217,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ciber/." title="CiberSeguridad Redes." class="md-nav__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
+    <a href="." title="CiberSeguridad Redes." class="md-nav__button md-logo" aria-label="CiberSeguridad Redes." data-md-component="logo">
       
-  <img src="/ciber/imagenes/logofp.png" alt="logo">
+  <img src="imagenes/logofp.png" alt="logo">
 
     </a>
     CiberSeguridad Redes.
@@ -281,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/0_Modelo_Capas.html" class="md-nav__link">
+      <a href="0_Modelo_Capas.html" class="md-nav__link">
         
   
   
@@ -304,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/1_ConocimientosBasicos.html" class="md-nav__link">
+      <a href="1_ConocimientosBasicos.html" class="md-nav__link">
         
   
   
@@ -327,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/3_CAM_Overflow.html" class="md-nav__link">
+      <a href="3_CAM_Overflow.html" class="md-nav__link">
         
   
   
@@ -350,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/4_ConocimientosL3.html" class="md-nav__link">
+      <a href="4_ConocimientosL3.html" class="md-nav__link">
         
   
   
@@ -373,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/5_TeoriaVLAN.html" class="md-nav__link">
+      <a href="5_TeoriaVLAN.html" class="md-nav__link">
         
   
   
@@ -396,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/6_DHCP.html" class="md-nav__link">
+      <a href="6_DHCP.html" class="md-nav__link">
         
   
   
@@ -419,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/7_ConceptosL4.html" class="md-nav__link">
+      <a href="7_ConceptosL4.html" class="md-nav__link">
         
   
   
@@ -442,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/8_NAT.html" class="md-nav__link">
+      <a href="8_NAT.html" class="md-nav__link">
         
   
   
@@ -465,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/9_EnrutamientoDinamico.html" class="md-nav__link">
+      <a href="9_EnrutamientoDinamico.html" class="md-nav__link">
         
   
   
@@ -492,8 +503,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -517,11 +530,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -537,7 +550,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -595,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/21_ARP.html" class="md-nav__link">
+      <a href="21_ARP.html" class="md-nav__link">
         
   
   
@@ -618,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/22_Spoofing.html" class="md-nav__link">
+      <a href="22_Spoofing.html" class="md-nav__link">
         
   
   
@@ -695,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/23_DHCP.html" class="md-nav__link">
+      <a href="23_DHCP.html" class="md-nav__link">
         
   
   
@@ -718,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/24_DHCP_Starvation.html" class="md-nav__link">
+      <a href="24_DHCP_Starvation.html" class="md-nav__link">
         
   
   
@@ -741,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/36_DHCP_Spoofing.html" class="md-nav__link">
+      <a href="36_DHCP_Spoofing.html" class="md-nav__link">
         
   
   
@@ -814,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/37_DNS_Spoofing.html" class="md-nav__link">
+      <a href="37_DNS_Spoofing.html" class="md-nav__link">
         
   
   
@@ -891,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/26_UDP.html" class="md-nav__link">
+      <a href="26_UDP.html" class="md-nav__link">
         
   
   
@@ -914,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/27_HPing.html" class="md-nav__link">
+      <a href="27_HPing.html" class="md-nav__link">
         
   
   
@@ -937,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/28_Smurf.html" class="md-nav__link">
+      <a href="28_Smurf.html" class="md-nav__link">
         
   
   
@@ -965,8 +978,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -978,11 +993,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -998,7 +1013,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             SNMP
@@ -1012,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/38_SNMP.html" class="md-nav__link">
+      <a href="38_SNMP.html" class="md-nav__link">
         
   
   
@@ -1032,10 +1047,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ciber/39_Reflexion_SNMP.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ataque Reflexión
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="39_Reflexion_SNMP.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1046,6 +1083,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-mikrotik" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración Mikrotik.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobacion-del-snmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación del SNMP.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descarga-del-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descarga del script.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lanzamiento-del-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lanzamiento del ataque.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigación.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1112,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/29_SSH.html" class="md-nav__link">
+      <a href="29_SSH.html" class="md-nav__link">
         
   
   
@@ -1135,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/30_Atque_SSH.html" class="md-nav__link">
+      <a href="30_Atque_SSH.html" class="md-nav__link">
         
   
   
@@ -1158,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/25_Bypass.html" class="md-nav__link">
+      <a href="25_Bypass.html" class="md-nav__link">
         
   
   
@@ -1189,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/15_Ataque_PPTP.html" class="md-nav__link">
+      <a href="15_Ataque_PPTP.html" class="md-nav__link">
         
   
   
@@ -1262,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/34_WiFi_Protocolos.html" class="md-nav__link">
+      <a href="34_WiFi_Protocolos.html" class="md-nav__link">
         
   
   
@@ -1285,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/33_WiFi_Ataques.html" class="md-nav__link">
+      <a href="33_WiFi_Ataques.html" class="md-nav__link">
         
   
   
@@ -1308,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/32_WiFi_Deauth.html" class="md-nav__link">
+      <a href="32_WiFi_Deauth.html" class="md-nav__link">
         
   
   
@@ -1331,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/35_EvilTwin.html" class="md-nav__link">
+      <a href="35_EvilTwin.html" class="md-nav__link">
         
   
   
@@ -1354,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/31_WiFi_WPA.html" class="md-nav__link">
+      <a href="31_WiFi_WPA.html" class="md-nav__link">
         
   
   
@@ -1444,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/11_VLANs.html" class="md-nav__link">
+      <a href="11_VLANs.html" class="md-nav__link">
         
   
   
@@ -1467,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/10_LACP.html" class="md-nav__link">
+      <a href="10_LACP.html" class="md-nav__link">
         
   
   
@@ -1490,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/12_VRRP.html" class="md-nav__link">
+      <a href="12_VRRP.html" class="md-nav__link">
         
   
   
@@ -1563,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/13_VPN.html" class="md-nav__link">
+      <a href="13_VPN.html" class="md-nav__link">
         
   
   
@@ -1586,7 +1697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/14_PPTP.html" class="md-nav__link">
+      <a href="14_PPTP.html" class="md-nav__link">
         
   
   
@@ -1609,7 +1720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/17_IPSec.html" class="md-nav__link">
+      <a href="17_IPSec.html" class="md-nav__link">
         
   
   
@@ -1632,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/16_OpenVPN.html" class="md-nav__link">
+      <a href="16_OpenVPN.html" class="md-nav__link">
         
   
   
@@ -1655,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/18_DMVPN.html" class="md-nav__link">
+      <a href="18_DMVPN.html" class="md-nav__link">
         
   
   
@@ -1686,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/20_NGFW.html" class="md-nav__link">
+      <a href="20_NGFW.html" class="md-nav__link">
         
   
   
@@ -1709,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/19_RADIUS.html" class="md-nav__link">
+      <a href="19_RADIUS.html" class="md-nav__link">
         
   
   
@@ -1791,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_ManualEVE.html" class="md-nav__link">
+      <a href="A_ManualEVE.html" class="md-nav__link">
         
   
   
@@ -1814,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_ProblemasEVE.html" class="md-nav__link">
+      <a href="A_ProblemasEVE.html" class="md-nav__link">
         
   
   
@@ -1837,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_Kali.html" class="md-nav__link">
+      <a href="A_Kali.html" class="md-nav__link">
         
   
   
@@ -1910,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/2_ComandosCisco.html" class="md-nav__link">
+      <a href="2_ComandosCisco.html" class="md-nav__link">
         
   
   
@@ -1933,7 +2044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_ComandosCisco2.html" class="md-nav__link">
+      <a href="A_ComandosCisco2.html" class="md-nav__link">
         
   
   
@@ -1956,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_ComandosNAT.html" class="md-nav__link">
+      <a href="A_ComandosNAT.html" class="md-nav__link">
         
   
   
@@ -1979,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_CiscoACL.html" class="md-nav__link">
+      <a href="A_CiscoACL.html" class="md-nav__link">
         
   
   
@@ -2002,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_CiscoSSH.html" class="md-nav__link">
+      <a href="A_CiscoSSH.html" class="md-nav__link">
         
   
   
@@ -2083,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_Configuraci%C3%B3nMikrotik.html" class="md-nav__link">
+      <a href="A_Configuraci%C3%B3nMikrotik.html" class="md-nav__link">
         
   
   
@@ -2106,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_MK_NAT.html" class="md-nav__link">
+      <a href="A_MK_NAT.html" class="md-nav__link">
         
   
   
@@ -2129,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_Configurar_PPTP.html" class="md-nav__link">
+      <a href="A_Configurar_PPTP.html" class="md-nav__link">
         
   
   
@@ -2152,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_IPSec.html" class="md-nav__link">
+      <a href="A_IPSec.html" class="md-nav__link">
         
   
   
@@ -2175,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_Site_Site_IPSec_RSA.html" class="md-nav__link">
+      <a href="A_Site_Site_IPSec_RSA.html" class="md-nav__link">
         
   
   
@@ -2206,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ciber/A_Usuarios.html" class="md-nav__link">
+      <a href="A_Usuarios.html" class="md-nav__link">
         
   
   
@@ -2241,8 +2352,109 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<div><h1 id="ataque-de-reflexion-snmp">Ataque de reflexión SNMP.<a class="headerlink" href="#ataque-de-reflexion-snmp" title="Permanent link">¶</a></h1>
+<ul>
+<li>
+<p>Un <ins class="critic"><strong>ataque de reflexión</strong></ins> es aquel donde hacemos múltiples solicitudes spoofeando la IP origen, de forma que las contestaciones a esas peticiones viajan hacia la IP spoofeada, es decir, la víctima.</p>
+</li>
+<li>
+<p>Un <ins class="critic"><strong>ataque de ampliación</strong></ins> se produce cuando a partir de una solicitud pequeña (bytes) la respuesta es mucho más grande, si además se puede hacer a través de protocolos sin conexión (UDP), mucho mejor.</p>
+</li>
+<li>
+<p>Si combinamos un ataque de reflexión con uno de ampliación podemos realizar un <strong>DDoS</strong>.</p>
+</li>
+</ul>
+<h2 id="objetivo">Objetivo.<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
+<p>Como hemos visto tanto con la versión 1, como con la versión 2 de SNMP la contraseña viaja en texto plano. Además ya sabemos que la community (contraseña) por defecto es “public”.</p>
+<p>En la primera práctica vamos a realizar un ataque de reflexión SNMP gracias a un servidor SNMP versión 2 con community por defecto (public). </p>
+<h2 id="configuracion-mikrotik">Configuración Mikrotik.<a class="headerlink" href="#configuracion-mikrotik" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/ofensiva/127.png" width="600">
+</figure>
+
+<h2 id="comprobacion-del-snmp">Comprobación del SNMP.<a class="headerlink" href="#comprobacion-del-snmp" title="Permanent link">¶</a></h2>
+<p>Ante una petición sencilla devuelve una respuesta bastante grande.</p>
+<figure>
+  <img src="imagenes/ofensiva/128.png" width="600">
+</figure>
+
+<div class="admonition warning">
+<p class="admonition-title">Esta salida si la metemos en un fichero son unos 24K. Hay que tener en cuenta que cuanto más grande sea el equipo mas probabilidades habrá de devolvernos más información.</p>
+</div>
+<ul>
+<li>Podemos comprobar que la versión 1 y 2 mandan la community en texto plano:</li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/133.png" width="800">
+</figure>
+
+<h2 id="descarga-del-script">Descarga del script.<a class="headerlink" href="#descarga-del-script" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jevalenciap/snmpddos.git
+pip<span class="w"> </span>install<span class="w"> </span>scapy
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">AVISO.</p>
+<p>Es posible que hubiera que cambiar dentro del script.py la línea “import urllib2” por “from urllib …”.
+<figure>
+    <img src="imagenes/ofensiva/129.png" width="400">
+</figure></p>
+</div>
+<h2 id="lanzamiento-del-ataque">Lanzamiento del ataque.<a class="headerlink" href="#lanzamiento-del-ataque" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/ofensiva/130.png" width="800">
+</figure>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Atacante: IP 192.168.0.9 conectado a la interfaz ether1 del router y con puerta de enlace 192.168.0.7.</span>
+<span class="c1">#Servidor SNMP: 192.168.88.1</span>
+<span class="c1">#Víctima: IP 192.168.88.254 conectado a la interfaz ether5.</span>
+sudo<span class="w"> </span>python3<span class="w"> </span>snmpddos.py<span class="w"> </span>-d<span class="w"> </span><span class="m">192</span>.168.88.1<span class="w"> </span>-c<span class="w"> </span>public<span class="w"> </span>-v<span class="w"> </span><span class="m">192</span>.168.88.254<span class="w"> </span>-s<span class="w"> </span><span class="m">10000000</span>
+</code></pre></div>
+<h3 id="entrada-de-peticiones-snmp-eth1">Entrada de peticiones SNMP (eth1).<a class="headerlink" href="#entrada-de-peticiones-snmp-eth1" title="Permanent link">¶</a></h3>
+<ul>
+<li>El router está recibiendo por la boca 1 una petición de la ip 192.168.88.254 de 16.2Kbps. Obviamente esta IP está spoofeada, puesto que realmente dicho equipo se encuentra conectado en el puerto 5. </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">No se está transmitiendo nada por dicho puerto, puesto que la respuesta, se está enviando por la boca ether5.</p>
+</div>
+<figure>
+  <img src="imagenes/ofensiva/130.png" width="800">
+</figure>
+
+<h3 id="salidas-de-las-respuestas-snmp-eth5">Salidas de las respuestas SNMP (eth5).<a class="headerlink" href="#salidas-de-las-respuestas-snmp-eth5" title="Permanent link">¶</a></h3>
+<ul>
+<li>En esta imagen se puede observar que por la boca 5 se está transmitiendo 103.3kb (unos 6-7 veces más de tráfico que los 16.2 originales), dicha boca conecta con la víctima que realmente tiene la 192.168.88.254. </li>
+</ul>
+<figure>
+  <img src="imagenes/ofensiva/130.png" width="800">
+</figure>
+
+<h2 id="mitigacion">Mitigación.<a class="headerlink" href="#mitigacion" title="Permanent link">¶</a></h2>
+<p>🔥   El servicio SNMP debería estar únicamente limitado a las IPs de nuestra red interna. No suele haber ninguna razón para dejar abierto el servicio a una IP externa de nuestra WAN. En tal caso debería hacerse a través de una VPN si fuera posible.</p>
+<p>🔥   Evitar el IP spoofing mediante reglas en nuestro firewalls para que los ataques no se puedan generar desde nuestra red.</p>
+<p>🔥   No utilizar las communities por defecto public y private. </p>
+<p>🔥   Utilizar SNMP v3 cifra los datos y  la autenticación es más robusta, aunque no es una panacea.</p>
+<figure>
+  <img src="imagenes/ofensiva/134.png" width="800">
+</figure>
+
+<p>🔥   Al configurar un nuevo equipo, comprobar que no tiene habilitado SNMP por defecto.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2284,10 +2496,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/ciber/", "features": ["header.autohide", "toc.integrate", "toc.follow", "navigation.indexes", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.tracking"], "search": "/ciber/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "toc.integrate", "toc.follow", "navigation.indexes", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.tracking"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="/ciber/assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
