@@ -14,7 +14,7 @@
         <link rel="prev" href="25_Bypass.html">
       
       
-        <link rel="next" href="34_WiFi_Protocolos.html">
+        <link rel="next" href="40_SMTP.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -509,6 +509,8 @@
   
     
     
+      
+        
       
         
       
@@ -1329,10 +1331,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1349,7 +1347,7 @@
   
   
   <span class="md-ellipsis">
-    WiFi
+    Correo
     
   </span>
   
@@ -1359,6 +1357,133 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Correo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="40_SMTP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SMTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="41_POP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    POP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="42_IMAP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IMAP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WiFi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             WiFi
           </label>
@@ -2466,6 +2591,9 @@ wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Software/jo
 </figure>
 </center>
 
+<div class="admonition tip">
+<p class="admonition-title">Los primeros 16 bytes son el Client Challenge, los 0s están reservados y son fijos y los siguientes 24 bytes son el Challenge Response.</p>
+</div>
 <h2 id="ataque-por-diccionario">Ataque por diccionario.<a class="headerlink" href="#ataque-por-diccionario" title="Permanent link">¶</a></h2>
 <p>A continuación nos bajamos el script "chap2asleap" que hará uso de los comandos <ins class="critic">“asleap” y “genkeys”</ins> para romper la seguridad.</p>
 <div class="admonition tip">

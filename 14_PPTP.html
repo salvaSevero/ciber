@@ -524,6 +524,8 @@
       
         
       
+        
+      
     
     
     
@@ -1231,10 +1233,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -1251,7 +1249,7 @@
   
   
   <span class="md-ellipsis">
-    WiFi
+    Correo
     
   </span>
   
@@ -1261,6 +1259,133 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Correo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="40_SMTP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SMTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="41_POP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    POP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="42_IMAP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IMAP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WiFi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             WiFi
           </label>
@@ -2404,7 +2529,7 @@
 <p>4️⃣ Se cifra el Challenge Hash (H) usando un total de 3 algoritmos DES y obteniendo el <strong>Challenge Response R</strong>. Cada algoritmo cifra una sección de H.</p>
 <div class="highlight"><pre><span></span><code>1.  Al estar usando 3 algoritmos DES independiente, necesitamos 3 claves DES diferente, por lo que dividimos el MD4 (16 bytes) en tres.
 
-2.  Cada clave simétrica DES usará 7 bytes y necesitamos 3 claves, por tanto 21 bytes. Pero **MD5 solo tiene 16 bytes**, así que añadimos 5 bytes vacíos (ceros) al final del MD4 y así obtenemos 21 bytes.
+2.  Cada clave simétrica DES usará 7 bytes y necesitamos 3 claves, por tanto 21 bytes. Pero **MD5 solo tiene 16 bytes**, así que añadimos 5 bytes vacíos (ceros) al final del MD4 y así obtenemos 21 bytes. La salida será de 24 bytes.
 
     ✍️ 8846F7EAEE8FB117AD06BDD830B7586C ➡️ 8846F7EAEE8FB1 (1 clave simétrica DES) + 17AD06BDD830B7 (2 clave simétrica DES) + 586C0000000000 (3 clave simétrica DES).
 </code></pre></div>
