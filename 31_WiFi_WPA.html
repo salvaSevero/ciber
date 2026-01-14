@@ -2747,19 +2747,18 @@ airodump-ng<span class="w"> </span>-w<span class="w"> </span>pruebawpa<span clas
 <p class="admonition-title">En este ejemplo vamos a atacar un TP_Link que por defecto tiene una contraseñas de 8 números.</p>
 </div>
 <ul>
-<li>Cambiamos el fichero .cap a una extensión que entienda el comando hashcat.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>/usr/share/hashcat-utils/cap2hccapx.bin<span class="w"> </span>ficheroWPA.cap<span class="w"> </span>wpa2.hccapx
-</code></pre></div>
-<ul>
 <li>
-<p>Usamos hashcat <strong>2500 (WPA)</strong> y le decimos que es un ataque de fuerza bruta <strong>(-a 3)</strong>. </p>
+<p>Transformamos el fichero .cap a una extensión que entienda el comando hashcat módulo 22000.</p>
+<p>💥 Para ello podemos visitar la página oficial de <a href="https://hashcat.net/cap2hashcat/">hashcat.</a></p>
+</li>
+<li>
+<p>Usamos hashcat <strong>22000 (WPA2)</strong> y le decimos que es un ataque de fuerza bruta <strong>(-a 3)</strong>. </p>
 </li>
 <li>
 <p>Le indicamos que la contraseña tiene un formato de 8 números <strong>(?d?d?d?d?d?d?d?d)</strong>.</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>hashcat<span class="w"> </span>-m<span class="w"> </span><span class="m">2500</span><span class="w"> </span>-a<span class="w"> </span><span class="m">3</span><span class="w"> </span>wpa2.hccapx<span class="w"> </span>?d?d?d?d?d?d?d?d
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>hashcat<span class="w"> </span>-m<span class="w"> </span><span class="m">22000</span><span class="w"> </span>-a<span class="w"> </span><span class="m">3</span><span class="w"> </span>wpa2.hc22000<span class="w"> </span>?d?d?d?d?d?d?d?d
 </code></pre></div>
 <figure>
   <img src="imagenes/ofensiva/92.png" width="600">
