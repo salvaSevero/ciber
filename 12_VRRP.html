@@ -2650,6 +2650,10 @@
 </li>
 </ul>
 <h2 id="vrrp-virtual-router-redundancy-protocol">VRRP (Virtual Router Redundancy Protocol).<a class="headerlink" href="#vrrp-virtual-router-redundancy-protocol" title="Permanent link">¶</a></h2>
+<figure>
+  <img src="imagenes/defensiva/51.png" width="600">
+</figure>
+
 <ul>
 <li>
 <p>Es un protocolo prácticamente idéntico a HSRP pero se trata de un <ins class="critic">protocolo no propietario</ins>, por lo que es más habitual su uso.</p>
@@ -2703,11 +2707,9 @@
 <p class="admonition-title">Warning</p>
 <p>Todo se configura dentro de la interfaz donde activaremos el protocolo.</p>
 </div>
-<center>
 <figure>
   <img src="imagenes/defensiva/7.png" width="300">
 </figure>
-</center>
 
 <p><ins class="critic">Configuración ejemplo en ambos routers:</ins></p>
 <div class="highlight"><pre><span></span><code>int Gi0/0
@@ -2717,31 +2719,29 @@ glbp 10 priority 200
 glbp preempt delay 30
 glbp 10 load-balancing host-dependent
 </code></pre></div>
-<ul>
-<li>
-<p>El 10 de los ejemplos es el identificador del grupo GLBP, es como un nombre.</p>
-</li>
-<li>
-<p>Configurar la IP virtual (Ej: 10.0.0.1). Se usa una IP libre de la misma red física.</p>
-</li>
-<li>
-<p>Establecer una contraseña para unirse al grupo (ochoa).</p>
-</li>
-<li>
-<p>Configurar una prioridad (Ej: 200).</p>
-</li>
-<li>
-<p>Si un router con más prioridad levanta, no tira al otro con menor prioridad que está como maestro hasta que hay una caída. No obstante, podemos forzar que el router con mayor prioridad siempre sea el maestro con la opción de "preempt". Esto tendrá sentido si hay una diferencia de calidad entre el equipamiento que tenemos como maestro/esclavo. Se le puede añadir un temporizador de espera, esto es recomendable por si el router o cable está cayendo y levantando continuamente que no haya un cambio de maestro cada pocos segundos.</p>
-</li>
-<li>
-<p>Crear balanceo de carga. Por defecto es Round Robin.</p>
-</li>
-</ul>
-<center>
+<p>🔥   <strong>Identificador</strong> del grupo GLBP ➡️ 10.</p>
+<p>🔥   <mark class="critic"><strong>IP virtual</strong></mark>: Se usa una IP libre de la misma red física (Ej: 10.0.0.1), será la puerta de enlace de los hosts.</p>
+<p>🔥   <strong>Contraseña</strong> para unirse al grupo (ochoa).</p>
+<p>🔥   <strong>Prioridad</strong> ➡️ 200.</p>
+<div class="admonition note">
+<p class="admonition-title">preempt.</p>
+<p>Tras una caída, si el router con mayor prioridad levanta, no vuelve a funcionar como maestro, al no ser que el otro caiga. </p>
+<p>No obstante, podemos forzar que el router con mayor prioridad siempre sea el maestro con la opción de <strong>preempt</strong> ➡️ Se usa cuando hay una diferencia de calidad entre routers.</p>
+<p>Se le puede añadir un temporizador de espera, esto es recomendable por si el router o cable está cayendo y levantando continuamente que no haya un cambio de maestro cada pocos segundos.</p>
+</div>
+<p>🔥   <strong>Load-Balance host-dependent</strong> ➡️ Se asigna una serie de clientes a cada router, cada cliente siempre sale por el mismo router.</p>
+<div class="admonition tip">
+<p class="admonition-title">Por defecto el balanceo de carga es Round Robin.</p>
+</div>
 <figure>
   <img src="imagenes/defensiva/6.png" width="700">
 </figure>
-</center></div>
+
+<h3 id="video-de-ejemplo-en-cisco">Vídeo de Ejemplo en Cisco.<a class="headerlink" href="#video-de-ejemplo-en-cisco" title="Permanent link">¶</a></h3>
+<iframe width="1335" height="751" src="https://www.youtube.com/embed/sNe3KDDM-2o" title="VRRP CISCO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="video-de-ejemplo-en-juniper">Vídeo de Ejemplo en Juniper.<a class="headerlink" href="#video-de-ejemplo-en-juniper" title="Permanent link">¶</a></h3>
+<iframe width="1335" height="751" src="https://www.youtube.com/embed/igifoZ50guY" title="VRRP Juniper" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 
 
