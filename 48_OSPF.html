@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://salvasevero.github.io/ciber/32_WiFi_Deauth.html">
+        <link rel="canonical" href="https://salvasevero.github.io/ciber/48_OSPF.html">
       
       
-        <link rel="prev" href="33_WiFi_Ataques.html">
+        <link rel="prev" href="12_VRRP.html">
       
       
-        <link rel="next" href="35_EvilTwin.html">
+        <link rel="next" href="13_VPN.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Deautenticar - CiberSeguridad Redes.</title>
+        <title>OSPF - CiberSeguridad Redes.</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deautenticar" class="md-skip">
+        <a href="#ospf" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deautenticar
+              OSPF
             
           </span>
         </div>
@@ -653,10 +653,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -684,11 +682,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -704,7 +702,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OFENSIVA
@@ -1499,10 +1497,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1520,11 +1516,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
@@ -1540,7 +1536,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             WiFi
@@ -1597,32 +1593,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Deautenticar
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="32_WiFi_Deauth.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="32_WiFi_Deauth.html" class="md-nav__link">
         
   
   
@@ -1633,44 +1607,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#escanear" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escanear.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deauther-dstrike" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deauther dstrike.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1764,8 +1700,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1787,11 +1725,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1807,7 +1745,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             DEFENSIVA
@@ -1887,10 +1825,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="48_OSPF.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    OSPF
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="48_OSPF.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1901,6 +1861,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ospf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSPF.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route-Map.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobacion-de-rutas-y-estado-del-ospf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de rutas y estado del OSPF.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2645,45 +2652,192 @@
 
 
 
-<div><h1 id="deautenticar">Deautenticar.<a class="headerlink" href="#deautenticar" title="Permanent link">¶</a></h1>
-<p>Muchas veces necesitamos desconectar a los clientes para realizar el ataque, por ejemplo:</p>
-<p>🔥   Necesitamos capturar su inicio de sesión (<strong>handshake</strong>).</p>
-<p>🔥   Necesitamos que se conecten a un <strong>Evil Twin</strong>.</p>
-<p>🔥   Queremos simplemente <strong>denegar el servicio</strong> de ese AP.</p>
-<h2 id="escanear">Escanear.<a class="headerlink" href="#escanear" title="Permanent link">¶</a></h2>
+<div><h1 id="ospf">OSPF.<a class="headerlink" href="#ospf" title="Permanent link">¶</a></h1>
+<p>Ya vimos la teoría de <a href="https://salvasevero.github.io/ciber/9_EnrutamientoDinamico.html">enrutamiento dinámico en el warmup</a>.</p>
+<h2 id="ospf_1">OSPF.<a class="headerlink" href="#ospf_1" title="Permanent link">¶</a></h2>
 <ul>
-<li>Escaneamos la red en busca de <strong>puntos de acceso</strong>, para ello tenemos dos opciones:</li>
+<li>
+<p><mark class="critic"><strong>DR y BDR</strong></mark>: Se elige un router maestro (DR - Designated Router) y un router de respaldo (BDR - Backup Designated Router).</p>
+</li>
+<li>
+<p><mark class="critic"><strong>LSA</strong></mark>: La información de las rutas conocidas por cada router se conocen como LSA.</p>
+</li>
+<li>
+<p><mark class="critic"><strong>Multicast 224.0.0.5</strong></mark>: Las LSA se transfieren a través de la IP multicast 224.0.0.5</p>
+</li>
 </ul>
-<p><strong>1. Interfaz gráfica.</strong></p>
-<figure>
-  <img src="imagenes/ofensiva/88.png" width="900">
-</figure>
-
-<p><strong>2. Terminal.</strong></p>
-<figure>
-  <img src="imagenes/ofensiva/89.png" width="700">
-</figure>
-
-<div class="admonition tip">
-<p class="admonition-title">Nos interesa el <strong>canal</strong> en el que está emitiendo la víctima (AP).</p>
+<div class="admonition important">
+<p class="admonition-title">LSA.</p>
+<p>Los routers (vecinos) envían su LSA únicamente al DR y BDR y el DR será los que se encargarán a posteriori de enviárselo a los demás. Esto permite un mejor control de que todos los routers tengan la misma tabla rutas en todo momento, pero por el contrario el DR sufre más carga de trabajo que el resto, por lo que se recomienda que sea un equipo potente.</p>
 </div>
+<h3 id="ejemplo-de-un-vecino-mandando-su-lsa">Ejemplo de un vecino mandando su LSA.<a class="headerlink" href="#ejemplo-de-un-vecino-mandando-su-lsa" title="Permanent link">¶</a></h3>
+<center>
 <figure>
-  <img src="imagenes/ofensiva/95.png" width="900">
+  <img src="imagenes/warmup/91.png" width="400">
 </figure>
+  </center>
 
+<h3 id="ejemplo-del-dr-enviando-los-lsa">Ejemplo del DR enviando los LSA.<a class="headerlink" href="#ejemplo-del-dr-enviando-los-lsa" title="Permanent link">¶</a></h3>
+<center>
+<figure>
+  <img src="imagenes/warmup/90.png" width="400">
+</figure>
+  </center>
+
+<h3 id="ejemplo-de-configuracion-basica">Ejemplo de configuración básica.<a class="headerlink" href="#ejemplo-de-configuracion-basica" title="Permanent link">¶</a></h3>
+<p><ins class="critic">Configuramos la interfaz/subinterfaz</ins></p>
+<div class="highlight"><pre><span></span><code>interface FastEthernet0/0.5
+ encapsulation dot1Q 5
+ ip address 192.168.5.1 255.255.255.0
+ ip ospf authentication-key salva
+ ip ospf dead-interval 5
+ ip ospf hello-interval 1
+ ip ospf priority 255
+ ip ospf cost 50
+</code></pre></div>
+<ul>
+<li>
+<p><strong>ip ospf authentication-key salva</strong>: Contraseña para que no cualquier router conectado a la red pueda asociarse al protocolo y tener nuestra table de rutas.</p>
+</li>
+<li>
+<p><strong>ip ospf dead-interval X</strong>: Segundos tras los cual si no contesta un vecino se le da por muerto y se anulan las rutas que pasan por él. Por defecto 40 segundos.</p>
+</li>
+<li>
+<p><strong>ip ospf hello-interval X</strong>: Segundos tras los que manda un saludo a sus vecinos con el fin de comprobar si ha habido alguna avería. Por defecto su valor es 10 segundos.</p>
+</li>
+</ul>
 <div class="admonition warning">
-<p class="admonition-title">Hasta que no se detenga el ataque los clientes no tendrán servicio.</p>
+<p class="admonition-title">Para que el protocolo levante todos los routers configurados deben tener los mismos intervalos y la misma contraseña.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">También podemos lanzar el ataque a todos los canales, cada 5 segundos saltaría de canal en canal deautenticando.</p>
+<ul>
+<li>
+<p><strong>ip ospf priority X</strong>: Prioridad de cada router para ser el router designado (DR), el router designado de reserva (BDR) o un simple nodo. Si la prioridad es 0 jamás podrá ser el router designado. A mayor número mayor prioridad (255).</p>
+</li>
+<li>
+<p><strong>ip ospf cost X</strong>: Esta es la métrica, el valor que le da a las rutas conocidas por esa subinterfaz a través de OSPF. A más baja, mejor métrica/coste. La métrica por defecto es 1.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Para alcanzar una red que conocemos por dos caminos usaremos aquel con métrica menor.</p>
 </div>
-<h2 id="deauther-dstrike">Deauther dstrike.<a class="headerlink" href="#deauther-dstrike" title="Permanent link">¶</a></h2>
-<p>Como curiosidad existe un dispositivo para deautenticar y lanzar ataques desde un reloj.</p>
-<figure>
-  <img src="imagenes/ofensiva/3.jpg" width="200">
-</figure>
+<p><ins class="critic">Configuramos el proceso OSPF.</ins></p>
+<div class="highlight"><pre><span></span><code>router ospf 123
+ router-id 192.168.5.1
+ redistribute connected subnets
+ redistribute static subnets
+ network 192.168.5.0 0.0.0.255 area 1
+ distance 120
+ default-information originate
+</code></pre></div>
+<ul>
+<li>
+<p><strong>router-id</strong>: Es la IP con la que el router se identificará con sus vecinos. Normalmente es la IP que tiene asignada en la interfaz/subinterfaz donde hemos configurado el proceso.</p>
+</li>
+<li>
+<p><strong>redistribute connected subnets</strong>: Indica que va a redistribuir todas las redes y subredes que aparezcan como conectadas directamente en su tabla de rutas.</p>
+</li>
+<li>
+<p><strong>redistribute static subnets</strong>: Indica que va a redistribuir todas las redes y subredes que aparezcan como estáticas en su tabla de rutas.</p>
+</li>
+<li>
+<p><strong>network 192.168.5.0 0.0.0.255 area 1</strong>: Activa el proceso OSPF en las interfaces donde tenga esa red configurada. </p>
+</li>
+<li>
+<p><strong>distance 120</strong>: Es el valor de la distancia administrativa. En cisco OSPF por defecto tiene 110. A más baja mejor distancia.</p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">La distancia solo se usa en caso de que tengamos varios protocolos de enrutamiento y queramos priorizar uno de ellos, por ejemplo si quisieramos priorizar la decisión de OSPF frente a las de BGP.</p>
+</div>
+<div class="center-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Protocolo</th>
+<th style="text-align: center;"><center> Distancia Administrativa </center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>Conectada</code></td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>Estática</code></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>eBGP</code></td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>EIGRP</code></td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>OSPF</code></td>
+<td style="text-align: center;">110</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>iBGP</code></td>
+<td style="text-align: center;">200</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Si hay una ruta que conocemos tanto estáticamente (1) como por OSPF (110), preferiremos enviarlo por donde nos diga la ruta estática porque tiene menor distancia administrativa.</p>
+</div>
+<ul>
+<li><strong>default-information originate</strong>: Envía su información respecto a la ruta por defecto que tenga.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Rutas Estáticas.</p>
+<p>Las rutas estáticas pueden ser un problema, pues no detectan caídas de redes externas y por tanto se siguen manteniendo en la tabla de rutas aún cuando haya habido un corte de servicio.</p>
+</div>
+<h2 id="route-map">Route-Map.<a class="headerlink" href="#route-map" title="Permanent link">¶</a></h2>
+<ul>
+<li>Podemos especificar que redes en concreto queremos que se alcancen por un camino y mientras que otras redes se alcancen por otro camino. Esto es interesante para <strong>balancear el tráfico</strong>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>router ospf 2
+router-id 10.2.2.3
+network 10.2.2.0 0.0.0.255 area 0
+redistribute connected route-map prioServ
 
-<p><a href="https://www.youtube.com/watch?v=H0kRS5zR3-w">Vídeo de uso del deauther</a></p></div>
+ip prefix-list clientes seq 10 permit 192.168.20.0/24
+
+ip prefix-list servidores seq 10 permit 192.168.10.0/24
+
+route-map prioServ permit 10
+ match ip address prefix-list servidores
+ set metric 15
+
+route-map prioServ permit 20
+ match ip address prefix-list clientes
+ set metric 200
+
+route-map prioServ permit 50
+</code></pre></div>
+<ul>
+<li><strong>prefix-list</strong>: No es más que una lista de redes. </li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">En el ejemplo hay dos listas (clientes y servidores) y cada una contiene una red.</p>
+</div>
+<ul>
+<li><strong>route-map</strong>: Asocia una métrica a las redes dentro de una lista.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Muy importante al final permitir el resto de redes (route-map prioServ permit 50).</p>
+</div>
+<ul>
+<li><strong>redistribute connected route-map prioServ</strong>: Redistribuye las rutas con las nuevas métricas establecidas.</li>
+</ul>
+<h2 id="comprobacion-de-rutas-y-estado-del-ospf">Comprobación de rutas y estado del OSPF.<a class="headerlink" href="#comprobacion-de-rutas-y-estado-del-ospf" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>show ip route
+show ip route ospf
+show ip ospf neighbor
+</code></pre></div></div>
 
 
 

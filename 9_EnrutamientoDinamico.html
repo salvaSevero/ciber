@@ -489,19 +489,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Enrutamiento Dinámico
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="9_EnrutamientoDinamico.html" class="md-nav__link md-nav__link--active">
         
   
@@ -513,34 +500,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ospf" class="md-nav__link">
-    <span class="md-ellipsis">
-      OSPF.
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1770,6 +1729,8 @@
       
         
       
+        
+      
     
     
     
@@ -1876,6 +1837,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="48_OSPF.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OSPF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1897,10 +1881,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -1913,8 +1897,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             VPN
           </label>
@@ -2659,68 +2643,7 @@
 <div class="admonition note">
 <p class="admonition-title">Sistema Autónomo</p>
 <p>Un AS es una entidad bajo la cual existen una o varias redes. Se puede ver como un identificador para una empresa.</p>
-</div>
-<h2 id="ospf">OSPF.<a class="headerlink" href="#ospf" title="Permanent link">¶</a></h2>
-<p>Se elige un router maestro, conocido como <ins class="critic">“DR o router designado”</ins>, además se elige un <ins class="critic">router de backup o BDR</ins>.</p>
-<p>La información con las rutas de cada router se conocen como <ins class="critic">LSA</ins>.</p>
-<p>El DR es el encargado de enviarle el LSA de todo el conjunto de routers al resto de vecinos asociados al protocolo, esto se hace mediante la <ins class="critic">IP reservada multicast 224.0.0.5</ins>.</p>
-<p>Un vecino envía su LSA únicamente al DR y BDR y éstos serán los que se encargarán a posteriori de enviárselo a los demás. Esto permite un mejor control de que todos los routers tengan la misma tabla rutas en todo momento, pero por el contrario el DR sufre más carga de trabajo que el resto de routers, por lo que se recomienda que sea un equipo potente.</p>
-<h3 id="ejemplo-del-dr-enviando-los-lsa">Ejemplo del DR enviando los LSA.<a class="headerlink" href="#ejemplo-del-dr-enviando-los-lsa" title="Permanent link">¶</a></h3>
-<center>
-<figure>
-  <img src="imagenes/warmup/90.png" width="400">
-</figure>
-  </center>
-
-<h3 id="ejemplo-de-un-vecino-mandando-su-lsa">Ejemplo de un vecino mandando su LSA.<a class="headerlink" href="#ejemplo-de-un-vecino-mandando-su-lsa" title="Permanent link">¶</a></h3>
-<center>
-<figure>
-  <img src="imagenes/warmup/91.png" width="400">
-</figure>
-  </center>
-
-<h3 id="ejemplo-de-configuracion-basica">Ejemplo de configuración básica.<a class="headerlink" href="#ejemplo-de-configuracion-basica" title="Permanent link">¶</a></h3>
-<p><ins class="critic">Configuramos la interfaz/subinterfaz</ins></p>
-<div class="highlight"><pre><span></span><code>interface FastEthernet0/0.5
- encapsulation dot1Q 5
- ip address 192.168.5.1 255.255.255.0
- ip ospf authentication-key salva
- ip ospf dead-interval 5
- ip ospf hello-interval 1
- ip ospf priority 255
-</code></pre></div>
-<ul>
-<li>
-<p><strong>ip ospf authentication-key salva</strong>: Contraseña para que no cualquier router conectado a la red pueda asociarse al protocolo y tener nuestra table de rutas.</p>
-</li>
-<li>
-<p><strong>ip ospf dead-interval X</strong>: Segundos tras los cual si no contesta un vecino se le da por muerto y se anulan las rutas que pasan por él. Por defecto 40 segundos.</p>
-</li>
-<li>
-<p><strong>ip ospf hello-interval X</strong>: Segundos tras los que manda un saludo a sus vecinos con el fin de comprobar si ha habido alguna avería. Por defecto su valor es 10 segundos.</p>
-</li>
-<li>
-<p><strong>ip ospf priority X</strong>: Prioridad de cada router para ser el router designado (DR), el router designado de reserva (BDR) o un simple nodo. Si la prioridad es 0 jamás podrá ser el router designado. A mayor número mayor prioridad (255).</p>
-</li>
-</ul>
-<p>Para que el protocolo levante todos los routers configurados deben tener los mismos intervalos y la misma contraseña.</p>
-<p><ins class="critic">Configuramos el proceso OSPF.</ins></p>
-<div class="highlight"><pre><span></span><code>router ospf 123
- router-id 192.168.5.1
- redistribute connected subnets
- network 192.168.5.0 0.0.0.255 area 1
-</code></pre></div>
-<ul>
-<li>
-<p><strong>router-id</strong>: Es la IP con la que el router se identificará con sus vecinos. Normalmente es la IP que tiene asignada en la interfaz/subinterfaz donde hemos configurado el proceso.</p>
-</li>
-<li>
-<p><strong>redistribute connected subnets</strong>: Indica que va a redistribuir todas las redes y subredes que conozca que estén conectadas directamente.</p>
-</li>
-<li>
-<p><strong>network 192.168.5.0 0.0.0.255 area 1</strong>: Activa el proceso OSPF en las interfaces donde tenga esa red configurada. </p>
-</li>
-</ul></div>
+</div></div>
 
 
 

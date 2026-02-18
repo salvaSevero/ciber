@@ -1,14 +1,12 @@
-[data-md-color-scheme="javi"] {
-  --md-primary-fg-color:        #0077b6;
-  --md-primary-fg-color--light: #0077b6;
-  --md-primary-fg-color--dark:  #0077b6;
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:               rgb(246, 241, 241); 
 }
 
 [data-md-color-scheme="slate"] {
     --md-primary-fg-color:        #0077b6;
 
   /* Default color shades */
-   --md-default-fg-color:               hsla(0, 0%, 100%, 1); 
+   --md-default-fg-color:               rgba(255, 255, 255, 0.883); 
    --md-default-fg-color--light:        hsla(0, 0%, 100%, 0.87); 
    --md-default-fg-color--lighter:      hsla(0, 0%, 100%, 0.32); 
    --md-default-fg-color--lightest:     hsla(0, 0%, 100%, 0.12); 
@@ -58,7 +56,9 @@
   }
 
   h2 {
-    color: #34baeb;
+     color: #0077b6;
+     border-left: 5px solid #0077b6;
+     padding-left: 10px;
   }
 
   h3 {
@@ -71,12 +71,13 @@
     margin: 0 auto;
   }
 
-  .md-typeset .admonition,
+.md-typeset .admonition,
 .md-typeset details {
-  border-width: 3;
-  border-left-width: 4px;
+  border-left-width: 6px;
   font-size: 15px;
+  border-radius: 6px;
 }
+
 
 .md-main__inner.md-grid {
     max-width: initial;
